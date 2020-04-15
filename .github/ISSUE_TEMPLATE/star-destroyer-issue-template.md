@@ -13,6 +13,8 @@ As a user, when I am on the single board view, there should be some way to go ba
 WHEN the page loads I should see all boards
 THEN click a button to see all pins
 AND  click a button to return back to my boards
+## WIREFRAMES
+
 ## DEV NOTES
 ****
 ```
@@ -21,5 +23,5 @@ AND  click a button to return back to my boards
 3. add the button to the in index.html
 
 ```
-## Related Tickets
+## RELATED TICKETS
 EX. #1
