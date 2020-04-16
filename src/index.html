@@ -6,8 +6,38 @@
   <title>Ewoks</title>
 </head>
 <body>
-  <h1>Ewoks</h1>
-  <button class="btn btn-primary">Test Button</button>
+   <!-- NAVBAR -->
+   <nav class="navbar navbar-expand-sm navbar-light bg-light">
+    <a class="navbar-brand d-flex flex-nowrap" href="./index.html">
+      <img class="logo" src="https://vignette.wikia.nocookie.net/starwars/images/8/84/VictoryClassStarDestroyer-SWArmada.png/revision/latest?cb=20160721023340" width="30" height="30" alt="">
+      <h1 id="team-name">STAR DESTROYER</h1>
+    </a>
+    <div class="ml-md-auto" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="">PERSONNEL<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="">WEAPONS</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="">ENEMIES</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="">PLANETARY SECTOR</a>
+        </li>
+      </ul>
+    </div>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <button class="nav-link btn btn-danger" id="navbar-logout-button">Logout</button>
+        </li>
+      </ul>
+    </div>
+  </nav>
   <div id="auth"></div>
+
+
 </body>
 </html>
