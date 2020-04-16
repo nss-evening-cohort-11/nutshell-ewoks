@@ -1,0 +1,203 @@
+{
+	"enemy": {
+		"1": {
+			"name": "Obi-Wan Kenobi",
+			"strength": "Negotiation",
+			"special_skills": "Force use, lightsabers",
+			"weakness": "Overconfidence",
+			"faction_id": "",
+			"sector_id": "",
+			"imageUrl": "https://vignette.wikia.nocookie.net/starwars/images/4/4e/ObiWanHS-SWE.jpg/revision/latest/scale-to-width-down/500?cb=20111115052816",
+			"uid": ""
+		},
+		"2": {
+			"name": "Maul",
+			"strength": "Telekinetics",
+			"special_skills": "Force use, lightsabers, acrobatics",
+			"weakness": "Ambition",
+			"faction_id": "",
+			"sector_id": "",
+			"imageUrl": "https://vignette.wikia.nocookie.net/starwars/images/8/89/MaulHS_SWI185.png/revision/latest/scale-to-width-down/500?cb=20181108061212",
+			"uid": ""
+		},
+		"3": {
+			"name": "Ezra Bridger",
+			"strength": "Force control of the natural world",
+			"special_skills": "Force use, lightsabers, infiltration",
+			"weakness": "Dark side tendencies",
+			"faction_id": "",
+			"sector_id": "https://vignette.wikia.nocookie.net/starwarsrebels/images/c/ce/Ezra_Render.png/revision/latest/scale-to-width-down/241?cb=20141110211327",
+			"uid": ""
+		},
+		"4": {
+			"name": "Hera Syndulla",
+			"strength": "Leadership",
+			"special_skills": "Piloting",
+			"weakness": "Force wielders",
+			"faction_id": "",
+			"sector_id": "",
+			"imageUrl": "https://vignette.wikia.nocookie.net/starwars/images/5/5c/Hera_Syndulla-FA.png/revision/latest/scale-to-width-down/200?cb=20171218114858",
+			"uid": ""
+		},
+		"5": {
+			"name": "Sabine Wren",
+			"strength": "Adaptability",
+			"special_skills": "Mandalorian armor, Darksaber training, engineering",
+			"weakness": "Nothing notable",
+			"faction_id": "",
+			"sector_id": "",
+			"imageUrl": "https://vignette.wikia.nocookie.net/starwars/images/d/de/SabineWren-Fathead.png/revision/latest/scale-to-width-down/200?cb=20161109025759",
+			"uid": ""
+		},
+		"6": {
+			"name": "Ahsoka Tano",
+			"strength": "Lightsaber duelist",
+			"special_skills": "Force use, telekenesis, precognition",
+			"weakness": "Reliance on second lightsaber",
+			"faction_id": "",
+			"sector_id": "",
+			"imageUrl": "https://upload.wikimedia.org/wikipedia/en/3/3f/Ahsoka_Tano%2C_Star_Wars_Rebels_appearance.jpg",
+			"uid": ""
+		},
+		"7": {
+			"name": "Chopper (C1-10P)",
+			"strength": "Mechanical systems",
+			"special_skills": "Infiltration, engineering",
+			"weakness": "Damaged logic circuits sometimes causes unpredicatble behavior",
+			"faction_id": "",
+			"sector_id": "",
+			"imageUrl": "https://vignette.wikia.nocookie.net/starwars/images/a/a6/Chopper.png/revision/latest/scale-to-width-down/500?cb=20180116134729",
+			"uid": ""
+		},
+		"8": {
+			"name": "Kanan Jarrus",
+			"strength": "Blindness, can see through the Force",
+			"special_skills": "Force use, precognition",
+			"weakness": "Power attacks",
+			"faction_id": "",
+			"sector_id": "",
+			"imageUrl": "https://vignette.wikia.nocookie.net/starwarsrebels/images/6/6a/Kanan_Jarrus_Full.jpg/revision/latest/scale-to-width-down/310?cb=20140804215035",
+			"uid": ""
+		},
+		"9": {
+			"name": "Luke Skywalker",
+			"strength": "Inspiration",
+			"special_skills": "Force use, Force projection",
+			"weakness": "Fear of failure",
+			"faction_id": "",
+			"sector_id": "",
+			"imageUrl": "https://upload.wikimedia.org/wikipedia/en/thumb/9/9b/Luke_Skywalker.png/220px-Luke_Skywalker.png",
+			"uid": ""
+		},
+		"10": {
+			"name": "Leia Organa",
+			"strength": "Leadership, inspiration, diplomacy",
+			"special_skills": "Force sensitive",
+			"weakness": "Nothing notable",
+			"faction_id": "",
+			"sector_id": "",
+			"imageUrl": "http://images2.fanpop.com/image/photos/9300000/leia-princess-leia-organa-solo-skywalker-9301321-576-1010.jpg",
+			"uid": ""
+		},
+		"11": {
+			"name": "Han Solo",
+			"strength": "Leadership",
+			"special_skills": "Infiltration, espionage",
+			"weakness": "Underestimates Force wielders",
+			"faction_id": "",
+			"sector_id": "",
+			"imageUrl": "https://img4.wikia.nocookie.net/__cb20131104113452/starwars/images/2/27/HanSoloPromo-MOSW.png",
+			"uid": ""
+		},
+		"12": {
+			"name": "Davits Draven",
+			"strength": "Leadership",
+			"special_skills": "Infiltration, sabotage, assassination",
+			"weakness": "Stubborness, agressiveness",
+			"faction_id": "",
+			"sector_id": "",
+			"imageUrl": "https://vignette3.wikia.nocookie.net/starwars/images/8/89/Davits_Card_Trader.png/revision/latest?cb=20170123040324",
+			"uid": ""
+		},
+		"13": {
+			"name": "Chewbacca",
+			"strength": "Strength, bravery, loyalty",
+			"special_skills": "Piloting, engineering, bowcaster use",
+			"weakness": "Stubborness, dislike of losing",
+			"faction_id": "",
+			"sector_id": "",
+			"imageUrl": "https://images2.wikia.nocookie.net/__cb20070221012456/starwars/images/7/72/Chewie19BBY-CVD.jpg",
+			"uid": ""
+		},
+		"14": {
+			"name": "R2-D2",
+			"strength": "Independent",
+			"special_skills": "Engineering, mechanics, data retrieval and transport",
+			"weakness": "Electrical discharges",
+			"faction_id": "",
+			"sector_id": "",
+			"imageUrl": "https://vignette2.wikia.nocookie.net/starwars/images/e/eb/ArtooTFA2-Fathead.png/revision/latest?cb=20150909022306",
+			"uid": ""
+		},
+		"15": {
+			"name": "C3PO",
+			"strength": "Communications, loyalty, commitment",
+			"special_skills": "Language translation",
+			"weakness": "Protocal , routine, unable to lie due to programming",
+			"faction_id": "",
+			"sector_id": "",
+			"imageUrl": "http://www.theoldrobots.com/images27/c3po_05.JPG",
+			"uid": ""
+		},
+		"16": {
+			"name": "Jan Dodonna",
+			"strength": "Leadership, calm demeanor",
+			"special_skills": "Strategy",
+			"weakness": "Protectiion of Leia Organa",
+			"faction_id": "",
+			"sector_id": "",
+			"imageUrl": "https://vignette.wikia.nocookie.net/awakening-of-the-rebellion/images/4/4f/Jan_Dodonna.jpg/revision/latest?cb=20181003212651",
+			"uid": ""
+		},
+		"17": {
+			"name": "Yoda",
+			"strength": "Wisdom",
+			"special_skills": "Force use, lightsaber duelist, telekenesis, Force visions",
+			"weakness": "Blind to the dark side of the Force",
+			"faction_id": "",
+			"sector_id": "",
+			"imageUrl": "https://vignette.wikia.nocookie.net/starwars/images/d/d6/Yoda_SWSB.png/revision/latest?cb=20150206140125",
+			"uid": ""
+		},
+		"18": {
+			"name": "Mon Mothma",
+			"strength": "Leadership",
+			"special_skills": "Inspiration, strategy, diplomacy",
+			"weakness": "Pacifist in wartime",
+			"faction_id": "",
+			"sector_id": "",
+			"imageUrl": "https://fsmedia.imgix.net/ef/b6/3e/2d/86db/44f4/8435/fa943e975257/rogue-one-a-star-wars-story-mon-mothmajpg.jpeg?dpr=2&auto=format%2Ccompress&w=650",
+			"uid": ""
+		},
+		"19": {
+			"name": "Gial Ackbar",
+			"strength": "Military leadership",
+			"special_skills": "Military tactics, military command",
+			"weakness": "Nothing notable",
+			"faction_id": "",
+			"sector_id": "",
+			"imageUrl": "https://static2.wikia.nocookie.net/__cb20120108175438/starwars/images/c/c8/AckbarFull-SWE.png",
+			"uid": ""
+		},
+		"20": {
+			"name": "Jun Sato",
+			"strength": "Leadership",
+			"special_skills": "Strategy, discipline",
+			"weakness": "Nothing notable",
+			"faction_id": "",
+			"sector_id": "",
+			"imageUrl": "https://vignette2.wikia.nocookie.net/starwarsrebels/images/b/b3/Sato.jpg/revision/latest?cb=20150618002120",
+			"uid": ""
+		}
+	}
+}
