@@ -1,4 +1,6 @@
 {
+  "weaponTyps": "weaponTypes",
+  "occupationType": "occupations",
   "weapons": "monique",
   "personnel": "ola",
   "planetarySector": "todd",
