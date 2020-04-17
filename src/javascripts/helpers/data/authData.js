@@ -9,7 +9,6 @@ const checkLoginStatus = () => {
     if (user) {
       authDiv.addClass('hide');
       logoutButton.removeClass('hide');
-      // sectorArea.buildSectors();
     } else {
       authDiv.removeClass('hide');
       logoutButton.addClass('hide');
