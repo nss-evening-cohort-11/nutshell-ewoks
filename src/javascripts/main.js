@@ -14,6 +14,7 @@ const init = () => {
   authData.checkLoginStatus();
   auth.loginButton();
   myNavbar.logoutEvent();
+  myNavbar.navbarClickEvents();
 };
 
 init();
