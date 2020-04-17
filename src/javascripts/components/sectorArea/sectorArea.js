@@ -12,7 +12,6 @@ const buildSectors = () => {
       domString += '<h2 class="text-center">This will be the Sectors Area</h2>';
       domString += '<div class="d-flex flex-wrap">';
       sectors.forEach((sector) => {
-        // domString += `${sector.name}`;
         domString += sectorComponent.sectorMaker(sector);
       });
       domString += '</div>';

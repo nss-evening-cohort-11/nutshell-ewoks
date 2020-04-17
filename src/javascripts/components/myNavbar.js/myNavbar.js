@@ -1,6 +1,15 @@
 import firebase from 'firebase/app';
 import 'firebase/auth';
 
+import sectorBuilder from '../sectorArea/sectorArea';
+
+const navbarClickEvents = () => {
+  $('#sectors-navbar-button').click((e) => {
+    e.preventDefault();
+    sectorBuilder.buildSectors();
+  });
+};
+
 const logoutEvent = () => {
   $('#navbar-logout-button').click((e) => {
     e.preventDefault();
@@ -8,4 +17,4 @@ const logoutEvent = () => {
   });
 };
 
-export default { logoutEvent };
+export default { logoutEvent, navbarClickEvents };
