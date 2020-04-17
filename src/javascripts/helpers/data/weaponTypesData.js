@@ -6,7 +6,6 @@ const baseUrl = apiKeys.firebaseKeys.databaseURL;
 const getWeaponTypes = () => new Promise((resolve, reject) => {
   axios.get(`${baseUrl}/weaponTypes.json`)
     .then((response) => {
-      console.log('response', response);
       const myWeapon = response.data;
       const weapontype = [];
       Object.keys(myWeapon).forEach((weapontypeId) => {
