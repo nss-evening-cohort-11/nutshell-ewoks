@@ -1,0 +1,27 @@
+{
+	"weaponType1": {
+		"name": "Ground Assault",
+		"description": "These vehicles are used for planetary ground assaults.",
+		"uid": "0orRtpIbmOTHR2yRIOwR5InTFIO2"
+	},
+	"weaponType2": {
+		"name": "Air Assault",
+		"description": "These vehicles are used in space and atmospheric combat.",
+		"uid": "0orRtpIbmOTHR2yRIOwR5InTFIO2"
+	},
+	"weaponType3": {
+		"name": "Turbolaser",
+		"description": "Laser turrets that can be used for ship to ship combat or planetary bombardments.",
+		"uid": "0orRtpIbmOTHR2yRIOwR5InTFIO2"
+	},
+	"weaponType4": {
+		"name": "Ion Cannon",
+		"description": "Ion cannons fire ionized particles capable of disrupting electronic systems",
+		"uid": "0orRtpIbmOTHR2yRIOwR5InTFIO2"
+	},
+	"weaponType5": {
+		"name": "Tractor Beam",
+		"description": "These projectors capture and/or divert space ships.",
+		"uid": "0orRtpIbmOTHR2yRIOwR5InTFIO2"
+	}
+}
