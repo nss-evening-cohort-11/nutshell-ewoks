@@ -6,8 +6,6 @@ import sectorComponent from '../sector/sector';
 const buildSectors = () => {
   sectorData.getSectors()
     .then((sectors) => {
-      // console.error('inside your buildSectors function');
-      // console.error('buildSectors worked!');
       let domString = '';
       domString += '<h2 class="text-center">This will be the Sectors Area</h2>';
       domString += '<div class="d-flex flex-wrap">';

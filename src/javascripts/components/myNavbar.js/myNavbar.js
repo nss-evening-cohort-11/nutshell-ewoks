@@ -3,12 +3,19 @@ import 'firebase/auth';
 
 import sectorBuilder from '../sectorArea/sectorArea';
 
-const navbarClickEvents = () => {
+
+const sectorsNavbarClickEvent = () => {
   $('#sectors-navbar-button').click((e) => {
     e.preventDefault();
     sectorBuilder.buildSectors();
   });
 };
+
+
+const navbarClickEvents = () => {
+  sectorsNavbarClickEvent();
+};
+
 
 const logoutEvent = () => {
   $('#navbar-logout-button').click((e) => {

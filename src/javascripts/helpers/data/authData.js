@@ -1,6 +1,5 @@
 import firebase from 'firebase/app';
 import 'firebase/auth';
-// import sectorArea from '../../components/sectorArea/sectorArea';
 
 const authDiv = $('#auth');
 const logoutButton = $('#navbar-logout-button');

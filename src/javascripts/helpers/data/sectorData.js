@@ -7,7 +7,6 @@ const getSectors = () => new Promise((resolve, reject) => {
   axios.get(`${baseUrl}/planetarySector.json`)
     .then((response) => {
       const theSectors = response.data;
-      console.log(theSectors);
       const sectors = [];
 
       Object.keys(theSectors).forEach((sectorId) => {

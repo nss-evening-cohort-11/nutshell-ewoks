@@ -1,8 +1,6 @@
 const sectorMaker = (sector) => {
-  // console.error('inside your sectorMaker');
   let domString = '';
   domString += '<div class="col-3">';
-  // domString += `<div class="card" id="${sector.id}">`;
   domString += '<div class="card">';
   domString += `<img src="${sector.imageUrl}" class="card-img-top" alt="...">`;
   domString += '<div class="card-body">';
