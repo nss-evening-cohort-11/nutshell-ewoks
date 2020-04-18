@@ -17,7 +17,9 @@ const getWeapons = () => new Promise((resolve, reject) => {
     .catch((err) => reject(err));
 });
 
+const getSingleWeapon = (weaponId) => axios.get(`${baseUrl}/weapons/${weaponId}.json`);
+
 // const getWeaponsById = (weaponId) => axios.get(`${baseUrl}/weapons/${weaponId}.json`);
 const deleteWeapons = (weaponId) => axios.delete(`${baseUrl}/weapons/${weaponId}.json`);
 
-export default { getWeapons, deleteWeapons };
+export default { getWeapons, deleteWeapons, getSingleWeapon };
