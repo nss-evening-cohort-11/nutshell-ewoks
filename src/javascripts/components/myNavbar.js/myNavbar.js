@@ -4,10 +4,12 @@ import 'firebase/auth';
 import sectorBuilder from '../sectorArea/sectorArea';
 
 const weapontypeDiv = $('#weapontype');
+
 const sectorsNavbarClickEvent = () => {
   $('#sectors-navbar-button').click((e) => {
     e.preventDefault();
     sectorBuilder.buildSectors();
+    $('#create-sector-button').removeClass('hide');
     weapontypeDiv.addClass('hide');
   });
 };
