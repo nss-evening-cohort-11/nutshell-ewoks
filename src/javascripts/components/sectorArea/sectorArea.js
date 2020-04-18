@@ -14,8 +14,19 @@ const buildSectors = () => {
       });
       domString += '</div>';
       utils.printToDom('print-sector-cards-here', domString);
+      // eslint-disable-next-line no-use-before-define
+      $('body').on('click', '#delete-sector-button', removeSector);
     })
     .catch((err) => console.error('oh no. get sectors broke', err));
 };
+
+
+const removeSector = (e) => {
+  const sectorId = e.target.closest('.card').id;
+  sectorData.deleteSector(sectorId)
+    .then(() => buildSectors())
+    .catch((err) => console.error('oh no. could not delete Sector', err));
+};
+
 
 export default { buildSectors };
