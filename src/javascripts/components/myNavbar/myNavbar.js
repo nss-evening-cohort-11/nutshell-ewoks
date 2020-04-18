@@ -15,7 +15,7 @@ const sectorsNavbarClickEvent = () => {
   $('#sectors-navbar-button').click((e) => {
     e.preventDefault();
     sectorBuilder.buildSectors();
-    $('#create-sector-button').removeClass('hide');
+    $('#create-new-sector-button').removeClass('hide');
     weaponTypeDiv.addClass('hide');
     viewWeaponDiv.addClass('hide');
     sectorDiv.removeClass('hide');
