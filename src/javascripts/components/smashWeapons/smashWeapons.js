@@ -4,6 +4,7 @@ import './smashWeapons.scss';
 
 
 const weapontypeDiv = $('#weapontype');
+const viewweaponDiv = $('#view-weapon');
 
 const removeWeapon = (e) => {
   const weaponId = e.target.closest('.card').id;
@@ -42,6 +43,7 @@ const buildWeaponsByType = (e) => {
           domString += '</div>';
           domString += '</div>';
           weapontypeDiv.addClass('hide');
+          viewweaponDiv.removeClass('hide');
           utils.printToDom('view-weapon', domString);
           $('body').on('click', '.delete-weapons', removeWeapon);
         }
