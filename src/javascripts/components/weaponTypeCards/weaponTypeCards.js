@@ -1,4 +1,4 @@
-import './weaponCards.scss';
+import './weaponTypeCards.scss';
 
 const weaponMaker = (weaponType) => {
   let domString = '';
