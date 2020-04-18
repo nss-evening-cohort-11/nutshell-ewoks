@@ -18,4 +18,7 @@ const getSectors = () => new Promise((resolve, reject) => {
     .catch((err) => reject(err));
 });
 
-export default { getSectors };
+
+const deleteSector = (sectorId) => axios.delete(`${baseUrl}/planetarySector/${sectorId}.json`);
+
+export default { getSectors, deleteSector };
