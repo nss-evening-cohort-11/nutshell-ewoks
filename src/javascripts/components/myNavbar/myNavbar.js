@@ -1,11 +1,13 @@
 import firebase from 'firebase/app';
 import 'firebase/auth';
 
+import personnelBuilder from '../personnelArea/personnelArea';
 import sectorBuilder from '../sectorArea/sectorArea';
 import buildWeapons from '../weaponTypes/weaponTypes';
 
-const weapontypeDiv = $('#weapontype');
-const viewweaponDiv = $('#view-weapon');
+const weaponTypeDiv = $('#weapontype');
+const personnelDiv = $('#print-personnel-cards-here');
+const viewWeaponDiv = $('#view-weapon');
 const sectorDiv = $('#print-sector-cards-here');
 
 
@@ -14,9 +16,21 @@ const sectorsNavbarClickEvent = () => {
     e.preventDefault();
     sectorBuilder.buildSectors();
     $('#create-sector-button').removeClass('hide');
-    weapontypeDiv.addClass('hide');
-    viewweaponDiv.addClass('hide');
+    weaponTypeDiv.addClass('hide');
+    viewWeaponDiv.addClass('hide');
     sectorDiv.removeClass('hide');
+    personnelDiv.addClass('hide');
+  });
+};
+
+const personnelNavbarClickEvent = () => {
+  $('#personnel-navbar-button').click((e) => {
+    e.preventDefault();
+    personnelBuilder.buildPersonnel();
+    weaponTypeDiv.addClass('hide');
+    viewWeaponDiv.addClass('hide');
+    sectorDiv.addClass('hide');
+    personnelDiv.removeClass('hide');
   });
 };
 
@@ -25,8 +39,9 @@ const weaponsNavbarClickEvent = () => {
     e.preventDefault();
     console.error('inside the weapon button event');
     buildWeapons.buildWeaponTypes();
-    weapontypeDiv.removeClass('hide');
-    viewweaponDiv.addClass('hide');
+    weaponTypeDiv.removeClass('hide');
+    viewWeaponDiv.addClass('hide');
+    personnelDiv.addClass('hide');
     sectorDiv.addClass('hide');
   });
 };
@@ -34,6 +49,7 @@ const weaponsNavbarClickEvent = () => {
 const navbarClickEvents = () => {
   sectorsNavbarClickEvent();
   weaponsNavbarClickEvent();
+  personnelNavbarClickEvent();
 };
 
 
