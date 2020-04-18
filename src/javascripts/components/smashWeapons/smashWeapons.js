@@ -70,7 +70,7 @@ const buildWeaponsByType = (e) => {
           utils.printToDom('view-weapon', domString);
           $('body').on('click', '.delete-weapons', removeWeapon);
           $('body').on('click', '#form-weapontype-creator', makeNewWeapon);
-          $('#create-new-weapontype-form').click(createNewWeaponType.buildNewWeapon);// button on buildWeaponType
+          $('#create-new-weapontype-form').click(createNewWeaponType.buildNewWeapon);// button on buildWeaponType will build form
         }
       });
     })
