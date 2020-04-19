@@ -1,4 +1,8 @@
+import firebase from 'firebase/app';
+import 'firebase/auth';
+
 import weaponsData from '../../helpers/data/weaponsData';
+import createNewWeaponType from '../createNewWeaponType/createNewWeaponType';
 import utils from '../../helpers/utils';
 import './smashWeapons.scss';
 
@@ -14,6 +18,25 @@ const removeWeapon = (e) => {
     .catch((err) => console.error('could not delete weapons', err));
 };
 
+const makeNewWeapon = (e) => {
+  e.preventDefault();
+  const weapontypeId = $(e.target)[0].dataset.weapontype;
+  const newWeapon = {
+    name: $('#new-weaponType-name').val(),
+    description: $('#weaponType-description').val(),
+    imageUrl: $('#weaponType-imageUrl').val(),
+    uid: firebase.auth().currentUser.uid,
+    type_id: weapontypeId,
+  };
+  weaponsData.addWeapon(newWeapon)
+    .then(() => {
+      // eslint-disable-next-line no-use-before-define
+      buildWeaponsByType(newWeapon.type_id);
+      utils.printToDom('add-new-weapon', '');
+    })
+    .catch((err) => console.err('could not add board', err));
+};
+
 
 const buildWeaponsByType = (e) => {
   let weapontypeId = '';
@@ -26,7 +49,7 @@ const buildWeaponsByType = (e) => {
     .then((weapon) => {
       let domString = '';
       domString += '<div class="text-center">';
-      domString += '<h2 class="text-center">Weapons</h2>';
+      domString += `<button class="btn btn btn-dark" id="create-new-weapontype-form" data-weapontype=${weapontypeId}>Add Weapon</button>`;
       domString += '<div class= "d-flex flex-wrap">';
       weapon.forEach((weapons) => {
         if (weapons.type_id === weapontypeId) {
@@ -46,6 +69,8 @@ const buildWeaponsByType = (e) => {
           viewweaponDiv.removeClass('hide');
           utils.printToDom('view-weapon', domString);
           $('body').on('click', '.delete-weapons', removeWeapon);
+          $('body').on('click', '#form-weapontype-creator', makeNewWeapon);
+          $('#create-new-weapontype-form').click(createNewWeaponType.buildNewWeapon);// button on buildWeaponType will build form
         }
       });
     })

@@ -18,6 +18,4 @@ const getWeaponTypes = () => new Promise((resolve, reject) => {
 });
 
 const getSingleWeaponType = (weapontypeId) => axios.get(`${baseUrl}/weaponTypes/${weapontypeId}.json`);
-const addWeaponType = (newWeapon) => axios.post(`${baseUrl}/weaponTypes.json`, newWeapon);
-
-export default { getWeaponTypes, getSingleWeaponType, addWeaponType };
+export default { getWeaponTypes, getSingleWeaponType };
