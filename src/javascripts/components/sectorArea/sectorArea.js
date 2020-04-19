@@ -27,20 +27,21 @@ const buildSectors = () => {
 
 const makeNewSector = (e) => {
   e.preventDefault();
-  // make new sector object
+  // 1. make new sector object
   const newSector = {
     explored: $('#user-entered-explored-info').val(),
     imageUrl: $('#user-entered-sector-image').val(),
     name: $('#user-entered-sector-name').val(),
     occupied: $('#user-entered-occupied-info').val(),
   };
-  // showCreateForm.showFormToCreateSector().reset();
+  // 2. save to firebase
   sectorData.addSector(newSector)
-    .then(() => {})
+    .then(() => {
+      // 3. reprint sectors and hide form
+      buildSectors();
+      utils.printToDom('update-create-sector-cards-here', '');
+    })
     .catch((err) => console.error('make new sector broke', err));
-  // save to firebase
-
-  // reprint sectors
 };
 
 
