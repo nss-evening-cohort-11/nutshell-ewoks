@@ -2,6 +2,7 @@ import sectorData from '../../helpers/data/sectorData';
 import utils from '../../helpers/utils';
 import sectorComponent from '../sector/sector';
 import showCreateForm from '../createSector/createSector';
+import editSectorComponent from '../editSector/editSector';
 
 
 const buildSectors = () => {
@@ -21,9 +22,14 @@ const buildSectors = () => {
       $('body').on('click', '#submit-user-created-sector-infomation-button', makeNewSector);
       // eslint-disable-next-line no-use-before-define
       $('body').on('click', '#create-new-sector-button', showCreateForm.showFormToCreateSector);
+      // eslint-disable-next-line no-use-before-define
+      $('body').on('click', '#edit-sector-button', editSector);
+      // eslint-disable-next-line no-use-before-define
+      $('body').on('click', '#submit-user-edited-sector-infomation-button', submitUserSectorEdits);
     })
     .catch((err) => console.error('oh no. get sectors broke', err));
 };
+
 
 const makeNewSector = (e) => {
   e.preventDefault();
@@ -42,6 +48,33 @@ const makeNewSector = (e) => {
       utils.printToDom('update-create-sector-cards-here', '');
     })
     .catch((err) => console.error('make new sector broke', err));
+};
+
+
+const submitUserSectorEdits = (e) => {
+  e.preventDefault();
+  const sectorId = e.target.closest('.edit-sector-form').id;
+  const editedSector = {
+    explored: $('#user-edited-explored-info').val(),
+    imageUrl: $('#user-edited-sector-image').val(),
+    name: $('#user-edited-sector-name').val(),
+    occupied: $('#user-edited-occupied-info').val(),
+  };
+  sectorData.updateSector(sectorId, editedSector)
+    .then(() => {
+    // 3. reprint sectors and hide form
+      buildSectors();
+      utils.printToDom('update-create-sector-cards-here', '');
+    })
+    .catch((err) => console.error('submitUserSectorEdits broke', err));
+};
+
+
+const editSector = (e) => {
+  e.preventDefault();
+  const sectorId = e.target.closest('.card').id;
+  // console.log('sectorId inside editSector,', sectorId);
+  editSectorComponent.showEditSectorForm(sectorId);
 };
 
 
