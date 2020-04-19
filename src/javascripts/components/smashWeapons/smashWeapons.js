@@ -60,6 +60,7 @@ const modifyWeapon = (e) => {
   weaponsData.updateWeapon(weaponId, modifiedWeapon)
     .then(() => {
       // eslint-disable-next-line no-use-before-define
+      buildWeaponsByType();
       utils.printToDom('edit-weapon', '');
     })
     .catch((err) => console.error('could not modify weapon', err));
@@ -87,8 +88,8 @@ const buildWeaponsByType = (e) => {
           domString += `<h5 class="card-title">${weapons.name}</h5>`;
           domString += `<p class="card-text">${weapons.description}</p>`;
           domString += '<div class="text-left">';
-          domString += '<button class="btn btn-dark delete-weapons"><i class="fas fa-trash-alt"></i></button>';
-          domString += `<button class="btn btn-dark edit-weapons" data-weapontype=${weapontypeId}><i class="fas fa-pencil-alt"></i></button>`;
+          domString += '<button class="btn btn-dark delete-weapons" id="buttonhide"><i class="fas fa-trash-alt"></i></button>';
+          domString += `<button class="btn btn-dark edit-weapons" id="buttonhide" data-weapontype=${weapontypeId}><i class="fas fa-pencil-alt"></i></button>`;
           domString += '</div>';
           domString += '</div>';
           domString += '</div>';
