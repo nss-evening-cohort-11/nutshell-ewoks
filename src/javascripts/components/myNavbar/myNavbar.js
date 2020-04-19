@@ -10,10 +10,12 @@ const personnelDiv = $('#print-personnel-cards-here');
 const viewWeaponDiv = $('#view-weapon');
 const sectorDiv = $('#print-sector-cards-here');
 
+
 const sectorsNavbarClickEvent = () => {
   $('#sectors-navbar-button').click((e) => {
     e.preventDefault();
     sectorBuilder.buildSectors();
+    $('#create-new-sector-button').removeClass('hide');
     weaponTypeDiv.addClass('hide');
     viewWeaponDiv.addClass('hide');
     sectorDiv.removeClass('hide');

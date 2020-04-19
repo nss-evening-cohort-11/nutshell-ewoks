@@ -1,6 +1,6 @@
 const sectorMaker = (sector) => {
   let domString = '';
-  domString += '<div class="col-3">';
+  domString += '<div class="col-4">';
   domString += `<div class="card" id="${sector.id}">`;
   domString += `<img src="${sector.imageUrl}" class="card-img-top" alt="...">`;
   domString += '<div class="card-body">';

@@ -3,6 +3,7 @@ import apiKeys from '../apiKeys.json';
 
 const baseUrl = apiKeys.firebaseKeys.databaseURL;
 
+
 const getSectors = () => new Promise((resolve, reject) => {
   axios.get(`${baseUrl}/planetarySector.json`)
     .then((response) => {
@@ -21,4 +22,7 @@ const getSectors = () => new Promise((resolve, reject) => {
 
 const deleteSector = (sectorId) => axios.delete(`${baseUrl}/planetarySector/${sectorId}.json`);
 
-export default { getSectors, deleteSector };
+const addSector = (newSector) => axios.post(`${baseUrl}/planetarySector.json`, newSector);
+
+
+export default { getSectors, deleteSector, addSector };
