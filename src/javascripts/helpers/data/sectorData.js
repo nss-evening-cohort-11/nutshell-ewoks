@@ -20,9 +20,16 @@ const getSectors = () => new Promise((resolve, reject) => {
 });
 
 
+const getSingleSector = (sectorId) => axios.get(`${baseUrl}/planetarySector/${sectorId}.json`);
+
 const deleteSector = (sectorId) => axios.delete(`${baseUrl}/planetarySector/${sectorId}.json`);
 
 const addSector = (newSector) => axios.post(`${baseUrl}/planetarySector.json`, newSector);
 
 
-export default { getSectors, deleteSector, addSector };
+export default {
+  getSectors,
+  deleteSector,
+  addSector,
+  getSingleSector,
+};

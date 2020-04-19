@@ -48,9 +48,12 @@ const makeNewSector = (e) => {
     .catch((err) => console.error('make new sector broke', err));
 };
 
+
 const editSector = (e) => {
   e.preventDefault();
-  editSectorComponent.showEditSectorForm();
+  const sectorId = e.target.closest('.card').id;
+  console.log('sectorId', sectorId);
+  editSectorComponent.showEditSectorForm(sectorId);
 };
 
 
