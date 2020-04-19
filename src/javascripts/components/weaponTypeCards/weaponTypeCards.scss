@@ -1,7 +1,8 @@
 .mycard-body{
   background-color: black;
   height: 150px;
-  width:150;
+  width:250;
+  float: left;
   text-align: center;
   color: white ;
   }
@@ -17,3 +18,11 @@
  h2{
    font-family: 'Franklin Gothic Medium'; 
  }
+ img.weapon-image{
+   display: block;
+   margin: auto;
+   height: 600px;
+   width: 1900px;
+   align-items: center;
+ }
+ 

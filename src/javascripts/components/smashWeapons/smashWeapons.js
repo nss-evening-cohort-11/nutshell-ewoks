@@ -5,10 +5,12 @@ import weaponsData from '../../helpers/data/weaponsData';
 import createNewWeaponType from '../createNewWeaponType/createNewWeaponType';
 import utils from '../../helpers/utils';
 import './smashWeapons.scss';
+import editWeapon from '../editWeapon/editWeapon';
 
 
 const weapontypeDiv = $('#weapontype');
 const viewweaponDiv = $('#view-weapon');
+
 
 const removeWeapon = (e) => {
   const weaponId = e.target.closest('.card').id;
@@ -16,6 +18,13 @@ const removeWeapon = (e) => {
   // eslint-disable-next-line no-use-before-define
     .then(() => buildWeaponsByType($(e.target).closest('.card')[0].dataset.weapontype))// added a dataset to make this work
     .catch((err) => console.error('could not delete weapons', err));
+};
+
+const editWeaponEvent = (e) => {
+  e.preventDefault();
+  const weaponId = e.target.closest('.card').id;
+  console.log('weaponId', weaponId);
+  editWeapon.showForm(weaponId);
 };
 
 const makeNewWeapon = (e) => {
@@ -37,6 +46,24 @@ const makeNewWeapon = (e) => {
     .catch((err) => console.err('could not add board', err));
 };
 
+const modifyWeapon = (e) => {
+  e.preventDefault();
+  const weaponId = e.target.closest('.edit-weapon-form-tag').id;
+  const modifiedWeapon = {
+    name: $('#edit-weapon-name').val(),
+    description: $('#edit-weapon-description').val(),
+    imageUrl: $('#edit-weapon-imageUrl').val(),
+  };
+  console.log('modified weapon clicked');
+  console.log('modifiedWeapon', modifiedWeapon);
+  console.log('weaponId', weaponId);
+  weaponsData.updateWeapon(weaponId, modifiedWeapon)
+    .then(() => {
+      // eslint-disable-next-line no-use-before-define
+      utils.printToDom('edit-weapon', '');
+    })
+    .catch((err) => console.error('could not modify weapon', err));
+};
 
 const buildWeaponsByType = (e) => {
   let weapontypeId = '';
@@ -57,10 +84,11 @@ const buildWeaponsByType = (e) => {
           domString += '<div>';
           domString += `<img class="card-img-top width 250px height 250px" src="${weapons.imageUrl}"></img>`;
           domString += '<div class="weaponcard-body">';
-          domString += `<h5>${weapons.name}</h5>`;
-          domString += `<p>${weapons.description}</p>`;
+          domString += `<h5 class="card-title">${weapons.name}</h5>`;
+          domString += `<p class="card-text">${weapons.description}</p>`;
           domString += '<div class="text-left">';
-          domString += '<button class="btn btn-danger delete-weapons"><i class="fas fa-trash-alt"></i></button>';
+          domString += '<button class="btn btn-dark delete-weapons"><i class="fas fa-trash-alt"></i></button>';
+          domString += `<button class="btn btn-dark edit-weapons" data-weapontype=${weapontypeId}><i class="fas fa-pencil-alt"></i></button>`;
           domString += '</div>';
           domString += '</div>';
           domString += '</div>';
@@ -69,6 +97,8 @@ const buildWeaponsByType = (e) => {
           viewweaponDiv.removeClass('hide');
           utils.printToDom('view-weapon', domString);
           $('body').on('click', '.delete-weapons', removeWeapon);
+          $('body').on('click', '.edit-weapons', editWeaponEvent);
+          $('body').on('click', '#form-edit-weapon-creator', modifyWeapon);
           $('body').on('click', '#form-weapontype-creator', makeNewWeapon);
           $('#create-new-weapontype-form').click(createNewWeaponType.buildNewWeapon);// button on buildWeaponType will build form
         }
