@@ -26,10 +26,12 @@ const deleteSector = (sectorId) => axios.delete(`${baseUrl}/planetarySector/${se
 
 const addSector = (newSector) => axios.post(`${baseUrl}/planetarySector.json`, newSector);
 
+const updateSector = (sectorId, editedSector) => axios.put(`${baseUrl}/planetarySector/${sectorId}.json`, editedSector);
 
 export default {
   getSectors,
   deleteSector,
   addSector,
   getSingleSector,
+  updateSector,
 };
