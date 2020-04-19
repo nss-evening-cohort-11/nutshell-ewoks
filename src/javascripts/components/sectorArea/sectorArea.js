@@ -9,7 +9,8 @@ const buildSectors = () => {
   sectorData.getSectors()
     .then((sectors) => {
       let domString = '';
-      domString += '<h2 class="text-center">This will be the Sectors Area</h2>';
+      domString += '<button id="create-new-sector-button" class="">Create New Sector</button>';
+      domString += '<h2 class="text-center">Sector Area</h2>';
       domString += '<div class="d-flex flex-wrap">';
       sectors.forEach((sector) => {
         domString += sectorComponent.sectorMaker(sector);
