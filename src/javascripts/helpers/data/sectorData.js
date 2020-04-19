@@ -21,4 +21,6 @@ const getSectors = () => new Promise((resolve, reject) => {
 
 const deleteSector = (sectorId) => axios.delete(`${baseUrl}/planetarySector/${sectorId}.json`);
 
-export default { getSectors, deleteSector };
+const addSector = (newSector) => axios.post(`${baseUrl}/planetarySector.json`, newSector);
+
+export default { getSectors, deleteSector, addSector };

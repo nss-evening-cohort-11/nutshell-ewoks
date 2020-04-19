@@ -34,7 +34,10 @@ const makeNewSector = (e) => {
     name: $('#user-entered-sector-name').val(),
     occupied: $('#user-entered-occupied-info').val(),
   };
-  console.error('newSector', newSector);
+  // showCreateForm.showFormToCreateSector().reset();
+  sectorData.addSector(newSector)
+    .then(() => {})
+    .catch((err) => console.error('make new sector broke', err));
   // save to firebase
 
   // reprint sectors

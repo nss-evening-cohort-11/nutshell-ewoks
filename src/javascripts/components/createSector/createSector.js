@@ -43,7 +43,7 @@ const showFormToCreateSector = () => {
   // // occupied radio buttons
   // domString += '<label class="form-check-label" for="exampleCheck1">Is this Sector occupied?</label>';
   // domString += '<div class="form-check">';
-  // domString += '<input class="form-check-input" type="radio" name="occupied-radio-buttons" id="occupied-radio-button-true" value="true" checked>'; // will i need to send both radio button selections?
+  // domString += '<input class="form-check-input" type="radio" name="occupied-radio-buttons" id="occupied-radio-button-true" value="true" checked>';
   // domString += '<label class="form-check-label" for="occupied-radio-buttons">This Sector is occupied.</label>';
   // domString += '</div>';
 
