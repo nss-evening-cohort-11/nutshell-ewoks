@@ -77,19 +77,20 @@ const buildWeaponsByType = (e) => {
     .then((weapon) => {
       let domString = '';
       domString += '<div class="text-center">';
-      domString += `<button class="btn btn btn-dark" id="create-new-weapontype-form" data-weapontype=${weapontypeId}>Add Weapon</button>`;
+      domString += '<img class="mb-imp" src="https://img1.etsystatic.com/007/0/6874471/il_fullxfull.373082541_bz6u.jpg"/>';
+      domString += `<button class="btn btn-dark" id="create-new-weapontype-form" data-weapontype=${weapontypeId}>Add Weapon</button>`;
       domString += '<div class= "d-flex flex-wrap">';
       weapon.forEach((weapons) => {
         if (weapons.type_id === weapontypeId) {
           domString += `<div class="col-3 card" id="${weapons.id}" data-weapontype= ${weapontypeId}>`;
           domString += '<div>';
-          domString += `<img class="card-img-top width 250px height 250px" src="${weapons.imageUrl}"></img>`;
+          domString += `<img class="mb-card-img-top" src="${weapons.imageUrl}"></img>`;
           domString += '<div class="weaponcard-body">';
           domString += `<h5 class="card-title">${weapons.name}</h5>`;
           domString += `<p class="card-text">${weapons.description}</p>`;
           domString += '<div class="text-left">';
-          domString += '<button class="btn btn-dark delete-weapons" id="buttonhide"><i class="fas fa-trash-alt"></i></button>';
-          domString += `<button class="btn btn-dark edit-weapons" id="buttonhide" data-weapontype=${weapontypeId}><i class="fas fa-pencil-alt"></i></button>`;
+          domString += '<button class="btn btn-dark delete-weapons"><i class="fas fa-trash-alt"></i></button>';
+          domString += `<button class="btn btn-dark edit-weapons" data-weapontype=${weapontypeId}><i class="fas fa-pencil-alt"></i></button>`;
           domString += '</div>';
           domString += '</div>';
           domString += '</div>';

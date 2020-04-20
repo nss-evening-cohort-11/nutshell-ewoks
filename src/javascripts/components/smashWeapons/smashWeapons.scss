@@ -19,9 +19,22 @@
    font-family: 'Franklin Gothic Medium'; 
  }
 
- .img.card-img-top{
+ img.mb-card-img-top{
    display: block;
-   height: 200px;
-   width: 200px;
+   height: 350px;
+   width: 100%;
 
  }
+
+ img.card-img-top{
+  display: block;
+  height: 600px;
+  width: 100%;
+}
+
+.mb-imp{
+  display: block;
+  height: 400px;
+  width: 400px;
+  margin: auto;
+}
