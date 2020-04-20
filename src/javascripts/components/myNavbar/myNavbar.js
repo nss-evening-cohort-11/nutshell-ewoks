@@ -9,7 +9,7 @@ const weaponTypeDiv = $('#weapontype');
 const personnelDiv = $('#print-personnel-cards-here');
 const viewWeaponDiv = $('#view-weapon');
 const sectorDiv = $('#print-sector-cards-here');
-
+const mainDiv = $('#main-view');
 
 const sectorsNavbarClickEvent = () => {
   $('#sectors-navbar-button').click((e) => {
@@ -20,6 +20,7 @@ const sectorsNavbarClickEvent = () => {
     viewWeaponDiv.addClass('hide');
     sectorDiv.removeClass('hide');
     personnelDiv.addClass('hide');
+    mainDiv.addClass('hide');
   });
 };
 
@@ -31,6 +32,7 @@ const personnelNavbarClickEvent = () => {
     viewWeaponDiv.addClass('hide');
     sectorDiv.addClass('hide');
     personnelDiv.removeClass('hide');
+    mainDiv.addClass('hide');
   });
 };
 
@@ -43,6 +45,7 @@ const weaponsNavbarClickEvent = () => {
     viewWeaponDiv.addClass('hide');
     personnelDiv.addClass('hide');
     sectorDiv.addClass('hide');
+    mainDiv.addClass('hide');
   });
 };
 
