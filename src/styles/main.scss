@@ -1,11 +1,21 @@
 @import "~bootstrap/scss/bootstrap";
 @import "~@fortawesome/fontawesome-free/css/all.min.css";
 
+@import "../javascripts/components/auth/auth";
+@import "../javascripts/components/myNavbar/myNavbar";
+
+// sector scss imports below
+@import "../javascripts/components/sectorArea/sectorArea";
+@import "../javascripts/components/sector/sector";
+@import "../javascripts/components/createSector/createSector";
+@import "../javascripts/components/editSector/editSector";
+// sector scss imports above
 
 body {
   background-image: url(https://wallpapercave.com/wp/bV3WiYh.jpg);
   color: white;
 }
+
 
 .hide {
   display: none;
