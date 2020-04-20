@@ -1,0 +1,25 @@
+.sector-card {
+  background-color: black;
+  border-color: white;
+  border-style: solid;
+  border-width: thin;
+}
+
+#edit-sector-button:hover {
+  background-color: #556567
+}
+
+#delete-sector-button:hover {
+background-color: #BC1E22
+}
+
+
+.sector-card-image {
+  display: block;
+   height: 300px;
+   width: 100%;
+}
+
+.sector-card, h5 {
+  color:white
+}
