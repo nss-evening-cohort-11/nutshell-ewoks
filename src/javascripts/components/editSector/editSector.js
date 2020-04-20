@@ -8,7 +8,7 @@ const showEditSectorForm = (sectorId) => {
       const sector = response.data;
       let domString = '';
 
-      domString += '<h3>Edit Sector Below</h3>';
+      domString += '<h3 class="edit-sector-title">Edit Sector Below</h3>';
       domString += '<br>';
       domString += `<form class="edit-sector-form" id=${sectorId}>`;
 
@@ -32,7 +32,7 @@ const showEditSectorForm = (sectorId) => {
       domString += `<input type="text" class="form-control" id="user-edited-occupied-info" value=${sector.occupied}>`;
       domString += '</div>';
 
-      domString += '<button type="submit" class="btn btn-primary" id="submit-user-edited-sector-infomation-button">Submit Your Edits</button>';
+      domString += '<button type="submit" class="btn btn-dark" id="submit-user-edited-sector-infomation-button">Submit Your Edits</button>';
 
       domString += '</form>';
 
