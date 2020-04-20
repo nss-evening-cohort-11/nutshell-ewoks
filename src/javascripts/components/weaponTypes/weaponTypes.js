@@ -9,7 +9,7 @@ const buildWeaponTypes = () => {
     .then((weaponTypes) => {
       let domString = '';
       domString += '<div>';
-      domString += '<h2 class="text-center">Weapon Types</h2>';
+      domString += '<img class="weapon-image" src="https://i.ytimg.com/vi/nY2Jr-9vvTg/maxresdefault.jpg"/>';
       domString += '</div>';
       domString += '<div class= "d-flex flex-wrap">';
       weaponTypes.forEach((weaponType) => {
