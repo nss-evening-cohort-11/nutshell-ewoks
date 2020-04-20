@@ -131,5 +131,40 @@
 		"imageUrl":"https://i.ytimg.com/vi/gR7VIFmMv24/maxresdefault.jpg",
     "uid": "0orRtpIbmOTHR2yRIOwR5InTFIO2",
     "type_id":"weaponType5"
+	},
+	"weapon20": {
+		"name": "Tie-X",
+		"description": "These vehicles are used in space and atmospheric combat.",
+    "imageUrl":"https://i.kinja-img.com/gawker-media/image/upload/t_original/xvatxdozgeeopqtmpghs.jpg",
+    "uid": "0orRtpIbmOTHR2yRIOwR5InTFIO2",
+    "type_id":"weaponType2"
+	},
+	"weapon21": {
+		"name": "TIE Line Varsity Superior",
+		"description": "These vehicles are used in space and atmospheric combat.",
+    "imageUrl":"https://i.ytimg.com/vi/rlUEdVskwck/maxresdefault.jpg",
+    "uid": "0orRtpIbmOTHR2yRIOwR5InTFIO2",
+    "type_id":"weaponType2"
+	},
+	"weapon22": {
+		"name": "Tractor Beam",
+		"description": "These projectors capture and/or divert space ships.",
+		"imageUrl":"http://forcefields.net/wp-content/uploads/2016/02/Tractor_Beam.jpg",
+    "uid": "0orRtpIbmOTHR2yRIOwR5InTFIO2",
+    "type_id":"weaponType5"
+	},
+	"weapon23": {
+		"name": "AT-AT CAT",
+    "description": "These vehicles are used for planetary ground assaults.",
+    "imageUrl":"https://i.pinimg.com/736x/ac/3b/b5/ac3bb5c34e4798dade0732849859367c--at-at-walker-boba-fett.jpg",
+    "uid": "0orRtpIbmOTHR2yRIOwR5InTFIO2",
+    "type_id":"weaponType1"
+	},
+	"weapon24": {
+		"name": "AT-ST BANDIA",
+    "description": "These vehicles are used for planetary ground assaults.",
+    "imageUrl":"https://www.gunjap.net/site/wp-content/uploads/2015/03/5Xs6aHf.jpg",
+    "uid": "0orRtpIbmOTHR2yRIOwR5InTFIO2",
+    "type_id":"weaponType1"
 	}
 }
