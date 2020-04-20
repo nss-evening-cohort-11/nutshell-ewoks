@@ -18,14 +18,15 @@ const getWeapons = () => new Promise((resolve, reject) => {
 });
 
 const getSingleWeapon = (weaponId) => axios.get(`${baseUrl}/weapons/${weaponId}.json`);
-
-// const getWeaponsById = (weaponId) => axios.get(`${baseUrl}/weapons/${weaponId}.json`);
 const deleteWeapons = (weaponId) => axios.delete(`${baseUrl}/weapons/${weaponId}.json`);
 const addWeapon = (newWeapon) => axios.post(`${baseUrl}/weapons.json`, newWeapon);
+
+const updateWeapon = (weaponId, modifiedWeapon) => axios.patch(`${baseUrl}/weapons/${weaponId}.json`, modifiedWeapon);
 
 export default {
   getWeapons,
   deleteWeapons,
   getSingleWeapon,
   addWeapon,
+  updateWeapon,
 };
