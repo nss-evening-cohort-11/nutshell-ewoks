@@ -3,9 +3,9 @@ import utils from '../../helpers/utils';
 const showFormToCreateSector = () => {
   let domString = '';
 
-  domString += '<h3>Create New Sector Below</h3>';
+  domString += '<h3 class="create-new-sector-title">Create New Sector Below</h3>';
   domString += '<br>';
-  domString += '<form>';
+  domString += '<form class="create-new-sector-form">';
 
   domString += '<div class="form-group">';
   domString += '<label for="user-entered-sector-name">Sector Name</label>';
@@ -27,7 +27,7 @@ const showFormToCreateSector = () => {
   domString += '<input type="text" class="form-control" id="user-entered-occupied-info">';
   domString += '</div>';
 
-  domString += '<button type="submit" class="btn btn-primary" id="submit-user-created-sector-infomation-button">Create New Sector</button>';
+  domString += '<button type="submit" class="btn btn-dark" id="submit-user-created-sector-infomation-button">Create New Sector</button>';
 
   domString += '</form>';
 
