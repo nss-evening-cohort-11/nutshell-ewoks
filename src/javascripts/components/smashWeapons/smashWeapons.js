@@ -2,7 +2,7 @@ import firebase from 'firebase/app';
 import 'firebase/auth';
 
 import weaponsData from '../../helpers/data/weaponsData';
-import createNewWeaponType from '../createNewWeaponType/createNewWeaponType';
+// import createNewWeaponType from '../createNewWeaponType/createNewWeaponType';
 import utils from '../../helpers/utils';
 import './smashWeapons.scss';
 import editWeapon from '../editWeapon/editWeapon';
@@ -102,7 +102,7 @@ const buildWeaponsByType = (e) => {
           $('body').on('click', '.edit-weapons', editWeaponEvent);
           $('body').on('click', '#form-edit-weapon-creator', modifyWeapon);
           $('body').on('click', '#form-weapontype-creator', makeNewWeapon);
-          $('#create-new-weapontype-form').click(createNewWeaponType.buildNewWeapon);// button on buildWeaponType will build form
+          // $('#create-new-weapontype-form').click(createNewWeaponType.buildNewWeapon);// button on buildWeaponType will build form
         }
       });
     })
