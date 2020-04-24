@@ -1,0 +1,88 @@
+{
+	"Personnel": {
+		"1": {
+			"name": "Captain Rex",
+			"occuapationTypeId": "Clone Trooper",
+			"description": "Clone Captain Rex served the Republic during the Clone Wars, often taking orders from Anakin Skywalker and Ahsoka Tano",
+			"imageUrl": "https://keizama.com/wp-content/uploads/2019/06/captainrex_ec.png",
+			"uid": ""
+		},
+		"2": {
+			"name": "Fives",
+			"occuapationTypeId": "Clone Trooper",
+			"description": "Also known as CT-27-5555, Fives trained with Domino Squad on Kamino before being shipped out to the Rishi Moon listening outpost. ",
+			"imageUrl": "https://pbs.twimg.com/profile_images/579493145521471488/Qo-Q0a6A.jpg",
+			"uid": ""
+		},
+		"3": {
+			"name": "Echo",
+			"occuapationTypeId": "Clone Trooper",
+			"description": "Echo was a soldier in the Grand Army of the Republic, known for his strict adherence to orders and rules",
+			"imageUrl": "https://steamuserimages-a.akamaihd.net/ugc/777360850314614687/7171B0DB8651EC90D585AEA9065A500741EAC41C/",
+			"uid": ""
+		},
+		"4": {
+			"name": "Commander Cody",
+			"occuapationTypeId": "Clone Trooper",
+			"description": "A natural and practical leader in the clone army, Cody was a good fit for General Kenobi, to whom he was particularly loyal.",
+			"imageUrl": "https://www.sideshow.com/product-asset/903736",
+			"uid": ""
+		},
+		"5": {
+			"name": "Grand Moff Tarkin",
+			"occuapationTypeId": "General",
+			"description": "As commander of the first Death Star, he proved to be the perfect blend of ruthless, calculating, and arrogant",
+			"imageUrl": "https://vignette.wikia.nocookie.net/starwars/images/4/4e/ObiWanHS-SWE.jpg/revision/latest/scale-to-width-down/500?cb=20111115052816",
+			"uid": ""
+		},
+		"6": {
+			"name": "Grand Admiral Thrawn",
+			"occuapationTypeId": "Admiral",
+			"description": "The blue-skinned Chiss was known for his love of art and strategy, and he used the latter to deconstruct his enemies. ",
+			"imageUrl": "https://vignette.wikia.nocookie.net/starwars/images/4/4e/ObiWanHS-SWE.jpg/revision/latest/scale-to-width-down/500?cb=20111115052816",
+			"uid": ""
+		},
+		"7": {
+			"name": "Orson Krennic",
+			"occuapationTypeId": "General",
+			"description": "Orson rose in the Imperial ranks along with the completion of the Death Star, until his unchecked ambition led to his reckoning on Scarif.",
+			"imageUrl": "https://vignette.wikia.nocookie.net/starwars/images/4/4e/ObiWanHS-SWE.jpg/revision/latest/scale-to-width-down/500?cb=20111115052816",
+			"uid": ""
+		},
+		"8": {
+			"name": "General Hux",
+			"occuapationTypeId": "General",
+			"description": "Like most of his ilk, Armitage Hux is ruthless and cunning, and like Tarkin before him, he’s not afraid to stand up to his Force-wielding counterparts ",
+			"imageUrl": "https://vignette.wikia.nocookie.net/starwars/images/4/4e/ObiWanHS-SWE.jpg/revision/latest/scale-to-width-down/500?cb=20111115052816",
+			"uid": ""
+		},
+		"9": {
+			"name": "Emperor Palpatine",
+			"occuapationTypeId": "Supreme Leader",
+			"description": "Scheming, powerful, and evil to the core, Darth Sidious restored the Sith and destroyed the Jedi Order. ",
+			"imageUrl": "https://vignette.wikia.nocookie.net/starwars/images/4/4e/ObiWanHS-SWE.jpg/revision/latest/scale-to-width-down/500?cb=20111115052816",
+			"uid": ""
+		},
+		"10": {
+			"name": "Kylo Ren",
+			"occuapationTypeId": "Supreme Leader",
+			"description": "The son of Han Solo and Leia Organa, Ben Solo was seduced by the dark side of the Force and renamed himself Kylo Ren",
+			"imageUrl": "https://vignette.wikia.nocookie.net/starwars/images/4/4e/ObiWanHS-SWE.jpg/revision/latest/scale-to-width-down/500?cb=20111115052816",
+			"uid": ""
+		},
+		"11": {
+			"name": "Snoke",
+			"occuapationTypeId": "Supreme Leader",
+			"description": "Snoke is powerful with the dark side of the Force, and seduced Ben Solo into abandoning the Jedi path to become his apprentice",
+			"imageUrl": "https://vignette.wikia.nocookie.net/starwars/images/4/4e/ObiWanHS-SWE.jpg/revision/latest/scale-to-width-down/500?cb=20111115052816",
+			"uid": ""
+		},
+		"12": {
+			"name": "Captain Phasma",
+			"occuapationTypeId": "Stormtrooper",
+			"description": "she has no use for fancy titles or complex war rooms, preferring to lead her troops in battle against the First Order’s enemies",
+			"imageUrl": "https://vignette.wikia.nocookie.net/starwars/images/4/4e/ObiWanHS-SWE.jpg/revision/latest/scale-to-width-down/500?cb=20111115052816",
+			"uid": ""
+		}
+  }
+}
