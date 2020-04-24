@@ -3,20 +3,20 @@ import apiKeys from '../apiKeys.json';
 
 const baseUrl = apiKeys.firebaseKeys.databaseURL;
 
-const getPersonnel = () => new Promise((resolve, reject) => {
-  axios.get(`${baseUrl}/occupationType.json`)
+const getAllPersonnel = () => new Promise((resolve, reject) => {
+  axios.get(`${baseUrl}/personnel.json`)
     .then((response) => {
-      console.error('please work');
       const thePersonnel = response.data;
       const personnel = [];
-
-      Object.keys(thePersonnel).forEach((personnelId) => {
-        thePersonnel[personnelId].id = personnelId;
-        personnel.push(thePersonnel[personnelId]);
-      });
+      if (thePersonnel) {
+        Object.keys(thePersonnel).forEach((personnelId) => {
+          thePersonnel[personnelId].id = personnelId;
+          personnel.push(thePersonnel[personnelId]);
+        });
+      }
       resolve(personnel);
     })
     .catch((err) => reject(err));
 });
 
-export default { getPersonnel };
+export default { getAllPersonnel };
