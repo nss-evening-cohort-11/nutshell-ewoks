@@ -3,8 +3,8 @@ import './weaponTypeCards.scss';
 const weaponMaker = (weaponType) => {
   let domString = '';
   domString += '<div class="col-3 text-center">';
-  domString += `<div class=" card weapontype-card" id="${weaponType.id}">`;
-  domString += `<div class= "card-header">${weaponType.name}</div>`;
+  domString += `<div class="card weapontype-card" id="${weaponType.id}">`;
+  domString += `<div class= "card-header"><h2>${weaponType.name}</h2></div>`;
   domString += '<div class="mycard-body">';
   domString += `<p>${weaponType.description}</p>`;
   domString += '</div>';

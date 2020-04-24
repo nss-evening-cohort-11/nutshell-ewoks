@@ -1,5 +1,4 @@
 {
-	"enemy": {
 		"1": {
 			"name": "Obi-Wan Kenobi",
 			"strength": "Negotiation",
@@ -198,6 +197,5 @@
 			"sector_id": "",
 			"imageUrl": "https://vignette2.wikia.nocookie.net/starwarsrebels/images/b/b3/Sato.jpg/revision/latest?cb=20150618002120",
 			"uid": ""
-		}
 	}
 }
