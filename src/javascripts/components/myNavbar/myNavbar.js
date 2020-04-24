@@ -1,7 +1,6 @@
 import firebase from 'firebase/app';
 import 'firebase/auth';
 
-import personnelBuilder from '../personnelArea/personnelArea';
 import sectorBuilder from '../sectorArea/sectorArea';
 import buildWeapons from '../weaponTypes/weaponTypes';
 
@@ -27,7 +26,6 @@ const sectorsNavbarClickEvent = () => {
 const personnelNavbarClickEvent = () => {
   $('#personnel-navbar-button').click((e) => {
     e.preventDefault();
-    personnelBuilder.buildPersonnel();
     weaponTypeDiv.addClass('hide');
     viewWeaponDiv.addClass('hide');
     sectorDiv.addClass('hide');
