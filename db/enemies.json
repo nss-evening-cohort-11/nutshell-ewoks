@@ -5,9 +5,9 @@
 			"strength": "Negotiation",
 			"special_skills": "Force use, lightsabers",
 			"weakness": "Overconfidence",
-			"faction_id": "",
-			"sector_id": "",
-			"imageUrl": "https://vignette.wikia.nocookie.net/starwars/images/4/4e/ObiWanHS-SWE.jpg/revision/latest/scale-to-width-down/500?cb=20111115052816",
+			"faction_id": "jedi",
+			"sector_id": "outer-rim",
+			"imageUrl": "https://lumiere-a.akamaihd.net/v1/images/Obi-Wan-Kenobi_6d775533.jpeg?region=0%2C0%2C1536%2C864",
 			"uid": ""
 		},
 		"2": {
@@ -15,9 +15,9 @@
 			"strength": "Telekinetics",
 			"special_skills": "Force use, lightsabers, acrobatics",
 			"weakness": "Ambition",
-			"faction_id": "",
-			"sector_id": "",
-			"imageUrl": "https://vignette.wikia.nocookie.net/starwars/images/8/89/MaulHS_SWI185.png/revision/latest/scale-to-width-down/500?cb=20181108061212",
+			"faction_id": "sith",
+			"sector_id": "mid-rim",
+			"imageUrl": "https://lumiere-a.akamaihd.net/v1/images/Darth-Maul_632eb5af.jpeg?region=75%2C42%2C1525%2C858",
 			"uid": ""
 		},
 		"3": {
@@ -25,8 +25,9 @@
 			"strength": "Force control of the natural world",
 			"special_skills": "Force use, lightsabers, infiltration",
 			"weakness": "Dark side tendencies",
-			"faction_id": "",
-			"sector_id": "https://vignette.wikia.nocookie.net/starwarsrebels/images/c/ce/Ezra_Render.png/revision/latest/scale-to-width-down/241?cb=20141110211327",
+			"faction_id": "jedi",
+			"sector_id": "mid-rim",
+			"imageUrl": "https://lumiere-a.akamaihd.net/v1/images/ezra_s-lightsaber-new_1c682dc3.jpeg?region=0%2C0%2C1560%2C878&width=1536",
 			"uid": ""
 		},
 		"4": {
@@ -34,9 +35,9 @@
 			"strength": "Leadership",
 			"special_skills": "Piloting",
 			"weakness": "Force wielders",
-			"faction_id": "",
-			"sector_id": "",
-			"imageUrl": "https://vignette.wikia.nocookie.net/starwars/images/5/5c/Hera_Syndulla-FA.png/revision/latest/scale-to-width-down/200?cb=20171218114858",
+			"faction_id": "rebel",
+			"sector_id": "mid-id",
+			"imageUrl": "https://lumiere-a.akamaihd.net/v1/images/hera-syndulla-s3_cf5e7f07.jpeg?region=0%2C0%2C1560%2C878&width=1536",
 			"uid": ""
 		},
 		"5": {
@@ -44,9 +45,9 @@
 			"strength": "Adaptability",
 			"special_skills": "Mandalorian armor, Darksaber training, engineering",
 			"weakness": "Nothing notable",
-			"faction_id": "",
-			"sector_id": "",
-			"imageUrl": "https://vignette.wikia.nocookie.net/starwars/images/d/de/SabineWren-Fathead.png/revision/latest/scale-to-width-down/200?cb=20161109025759",
+			"faction_id": "rebel",
+			"sector_id": "mid-rim",
+			"imageUrl": "https://lumiere-a.akamaihd.net/v1/images/sabine-wren-s3_b9553ce2.jpeg?region=0%2C0%2C1560%2C878&width=1536",
 			"uid": ""
 		},
 		"6": {
@@ -54,9 +55,9 @@
 			"strength": "Lightsaber duelist",
 			"special_skills": "Force use, telekenesis, precognition",
 			"weakness": "Reliance on second lightsaber",
-			"faction_id": "",
-			"sector_id": "",
-			"imageUrl": "https://upload.wikimedia.org/wikipedia/en/3/3f/Ahsoka_Tano%2C_Star_Wars_Rebels_appearance.jpg",
+			"faction_id": "jedi",
+			"sector_id": "outer-rim",
+			"imageUrl": "https://lumiere-a.akamaihd.net/v1/images/gone-with-a-trace-main_c7b447f5.jpeg?region=36%2C0%2C966%2C544",
 			"uid": ""
 		},
 		"7": {
@@ -64,9 +65,9 @@
 			"strength": "Mechanical systems",
 			"special_skills": "Infiltration, engineering",
 			"weakness": "Damaged logic circuits sometimes causes unpredicatble behavior",
-			"faction_id": "",
-			"sector_id": "",
-			"imageUrl": "https://vignette.wikia.nocookie.net/starwars/images/a/a6/Chopper.png/revision/latest/scale-to-width-down/500?cb=20180116134729",
+			"faction_id": "rebel",
+			"sector_id": "mid-rim",
+			"imageUrl": "https://lumiere-a.akamaihd.net/v1/images/chopper-s3_9d2acaf7.jpeg?region=0%2C0%2C1560%2C878&width=1536",
 			"uid": ""
 		},
 		"8": {
@@ -74,9 +75,9 @@
 			"strength": "Blindness, can see through the Force",
 			"special_skills": "Force use, precognition",
 			"weakness": "Power attacks",
-			"faction_id": "",
-			"sector_id": "",
-			"imageUrl": "https://vignette.wikia.nocookie.net/starwarsrebels/images/6/6a/Kanan_Jarrus_Full.jpg/revision/latest/scale-to-width-down/310?cb=20140804215035",
+			"faction_id": "jedi",
+			"sector_id": "mid-rim",
+			"imageUrl": "https://lumiere-a.akamaihd.net/v1/images/kanan-jarrus-s3_94b2ce6e.jpeg?region=60%2C62%2C1338%2C754",
 			"uid": ""
 		},
 		"9": {
@@ -84,9 +85,9 @@
 			"strength": "Inspiration",
 			"special_skills": "Force use, Force projection",
 			"weakness": "Fear of failure",
-			"faction_id": "",
-			"sector_id": "",
-			"imageUrl": "https://upload.wikimedia.org/wikipedia/en/thumb/9/9b/Luke_Skywalker.png/220px-Luke_Skywalker.png",
+			"faction_id": "jedi",
+			"sector_id": "outer-rim",
+			"imageUrl": "https://lumiere-a.akamaihd.net/v1/images/luke-skywalker-main_5a38c454_461eebf5.jpeg?region=0%2C0%2C1536%2C864",
 			"uid": ""
 		},
 		"10": {
@@ -94,9 +95,9 @@
 			"strength": "Leadership, inspiration, diplomacy",
 			"special_skills": "Force sensitive",
 			"weakness": "Nothing notable",
-			"faction_id": "",
-			"sector_id": "",
-			"imageUrl": "http://images2.fanpop.com/image/photos/9300000/leia-princess-leia-organa-solo-skywalker-9301321-576-1010.jpg",
+			"faction_id": "rebel",
+			"sector_id": "outer-rim",
+			"imageUrl": "https://lumiere-a.akamaihd.net/v1/images/leia-organa-feature-image_d0f5e953.jpeg?region=0%2C0%2C1280%2C720",
 			"uid": ""
 		},
 		"11": {
@@ -104,9 +105,9 @@
 			"strength": "Leadership",
 			"special_skills": "Infiltration, espionage",
 			"weakness": "Underestimates Force wielders",
-			"faction_id": "",
-			"sector_id": "",
-			"imageUrl": "https://img4.wikia.nocookie.net/__cb20131104113452/starwars/images/2/27/HanSoloPromo-MOSW.png",
+			"faction_id": "rebel",
+			"sector_id": "mid-rim",
+			"imageUrl": "https://lumiere-a.akamaihd.net/v1/images/han-solo-main_a4c8ff79.jpeg?region=0%2C0%2C1920%2C1080&width=1536",
 			"uid": ""
 		},
 		"12": {
@@ -114,9 +115,9 @@
 			"strength": "Leadership",
 			"special_skills": "Infiltration, sabotage, assassination",
 			"weakness": "Stubborness, agressiveness",
-			"faction_id": "",
-			"sector_id": "",
-			"imageUrl": "https://vignette3.wikia.nocookie.net/starwars/images/8/89/Davits_Card_Trader.png/revision/latest?cb=20170123040324",
+			"faction_id": "rebel",
+			"sector_id": "mid-rim",
+			"imageUrl": "https://lumiere-a.akamaihd.net/v1/images/general-draven-main_dc9f0eb2.jpeg?region=0%2C0%2C1560%2C878&width=1536",
 			"uid": ""
 		},
 		"13": {
@@ -124,9 +125,9 @@
 			"strength": "Strength, bravery, loyalty",
 			"special_skills": "Piloting, engineering, bowcaster use",
 			"weakness": "Stubborness, dislike of losing",
-			"faction_id": "",
-			"sector_id": "",
-			"imageUrl": "https://images2.wikia.nocookie.net/__cb20070221012456/starwars/images/7/72/Chewie19BBY-CVD.jpg",
+			"faction_id": "rebel",
+			"sector_id": "outer-rim",
+			"imageUrl": "https://lumiere-a.akamaihd.net/v1/images/chewie-main_e1968a8a.jpeg?region=131%2C0%2C951%2C536",
 			"uid": ""
 		},
 		"14": {
@@ -134,9 +135,9 @@
 			"strength": "Independent",
 			"special_skills": "Engineering, mechanics, data retrieval and transport",
 			"weakness": "Electrical discharges",
-			"faction_id": "",
-			"sector_id": "",
-			"imageUrl": "https://vignette2.wikia.nocookie.net/starwars/images/e/eb/ArtooTFA2-Fathead.png/revision/latest?cb=20150909022306",
+			"faction_id": "rebel",
+			"sector_id": "mid-rim",
+			"imageUrl": "https://lumiere-a.akamaihd.net/v1/images/r2-d2-main_042e8d4f.jpeg?region=320%2C0%2C960%2C540",
 			"uid": ""
 		},
 		"15": {
@@ -144,9 +145,9 @@
 			"strength": "Communications, loyalty, commitment",
 			"special_skills": "Language translation",
 			"weakness": "Protocal , routine, unable to lie due to programming",
-			"faction_id": "",
-			"sector_id": "",
-			"imageUrl": "http://www.theoldrobots.com/images27/c3po_05.JPG",
+			"faction_id": "rebel",
+			"sector_id": "mid-rim",
+			"imageUrl": "https://lumiere-a.akamaihd.net/v1/images/c-3po-main_417a2902.jpeg?region=176%2C0%2C951%2C536",
 			"uid": ""
 		},
 		"16": {
@@ -154,9 +155,9 @@
 			"strength": "Leadership, calm demeanor",
 			"special_skills": "Strategy",
 			"weakness": "Protectiion of Leia Organa",
-			"faction_id": "",
-			"sector_id": "",
-			"imageUrl": "https://vignette.wikia.nocookie.net/awakening-of-the-rebellion/images/4/4f/Jan_Dodonna.jpg/revision/latest?cb=20181003212651",
+			"faction_id": "rebel",
+			"sector_id": "mid-rim",
+			"imageUrl": "https://lumiere-a.akamaihd.net/v1/images/databank_generaldodonna_01_169_d3a64fe4.jpeg?region=4%2C0%2C1561%2C878&width=1536",
 			"uid": ""
 		},
 		"17": {
@@ -164,9 +165,9 @@
 			"strength": "Wisdom",
 			"special_skills": "Force use, lightsaber duelist, telekenesis, Force visions",
 			"weakness": "Blind to the dark side of the Force",
-			"faction_id": "",
-			"sector_id": "",
-			"imageUrl": "https://vignette.wikia.nocookie.net/starwars/images/d/d6/Yoda_SWSB.png/revision/latest?cb=20150206140125",
+			"faction_id": "jedi",
+			"sector_id": "outer-rim",
+			"imageUrl": "https://lumiere-a.akamaihd.net/v1/images/Yoda-Retina_2a7ecc26.jpeg?region=0%2C0%2C1536%2C864",
 			"uid": ""
 		},
 		"18": {
@@ -174,9 +175,9 @@
 			"strength": "Leadership",
 			"special_skills": "Inspiration, strategy, diplomacy",
 			"weakness": "Pacifist in wartime",
-			"faction_id": "",
-			"sector_id": "",
-			"imageUrl": "https://fsmedia.imgix.net/ef/b6/3e/2d/86db/44f4/8435/fa943e975257/rogue-one-a-star-wars-story-mon-mothmajpg.jpeg?dpr=2&auto=format%2Ccompress&w=650",
+			"faction_id": "rebel",
+			"sector_id": "mid-rim",
+			"imageUrl": "https://lumiere-a.akamaihd.net/v1/images/databank_monmothma_01_169_b62808e8.jpeg?region=0%2C0%2C1560%2C878&width=1536",
 			"uid": ""
 		},
 		"19": {
@@ -184,9 +185,9 @@
 			"strength": "Military leadership",
 			"special_skills": "Military tactics, military command",
 			"weakness": "Nothing notable",
-			"faction_id": "",
-			"sector_id": "",
-			"imageUrl": "https://static2.wikia.nocookie.net/__cb20120108175438/starwars/images/c/c8/AckbarFull-SWE.png",
+			"faction_id": "rebel",
+			"sector_id": "mid-rim",
+			"imageUrl": "https://lumiere-a.akamaihd.net/v1/images/databank_ackbar_01_169_55137220.jpeg?region=0%2C0%2C1560%2C878&width=1536",
 			"uid": ""
 		},
 		"20": {
@@ -194,9 +195,9 @@
 			"strength": "Leadership",
 			"special_skills": "Strategy, discipline",
 			"weakness": "Nothing notable",
-			"faction_id": "",
-			"sector_id": "",
-			"imageUrl": "https://vignette2.wikia.nocookie.net/starwarsrebels/images/b/b3/Sato.jpg/revision/latest?cb=20150618002120",
+			"faction_id": "rebel",
+			"sector_id": "outer-rim",
+			"imageUrl": "https://lumiere-a.akamaihd.net/v1/images/commander-jun-sato-main-image_afc16f9c.jpeg?region=0%2C0%2C1560%2C878&width=1536",
 			"uid": ""
 		}
 	}
