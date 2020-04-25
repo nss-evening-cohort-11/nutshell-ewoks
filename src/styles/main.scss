@@ -1,7 +1,5 @@
 @import "~bootstrap/scss/bootstrap";
 @import "~@fortawesome/fontawesome-free/css/all.min.css";
-
-// @import "../javascripts/components/auth/auth";
 @import "../javascripts/components/myNavbar/myNavbar";
 
 // sector scss imports below
@@ -18,6 +16,7 @@
 body {
   background-image: url(https://wallpapercave.com/wp/bV3WiYh.jpg);
   color: white;
+  font-family: 'Pathway Gothic One', sans-serif;
 }
 
 
@@ -30,3 +29,4 @@ body {
   width:100%;
   margin-top: 20px;
 }
+

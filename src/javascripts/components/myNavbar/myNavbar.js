@@ -2,10 +2,11 @@ import firebase from 'firebase/app';
 import 'firebase/auth';
 
 import sectorBuilder from '../sectorArea/sectorArea';
-import buildWeapons from '../weaponTypes/weaponTypes';
+import buildWeapons from '../weaponsType/weaponTypes';
+import personnelBuilder from '../warRoom/warRoom';
 
 const weaponTypeDiv = $('#weapontype');
-const personnelDiv = $('#print-personnel-cards-here');
+const personnelDiv = $('#the-war-room');
 const viewWeaponDiv = $('#view-weapon');
 const sectorDiv = $('#print-sector-cards-here');
 const mainDiv = $('#main-view');
@@ -26,6 +27,7 @@ const sectorsNavbarClickEvent = () => {
 const personnelNavbarClickEvent = () => {
   $('#personnel-navbar-button').click((e) => {
     e.preventDefault();
+    personnelBuilder.printPersonnel();
     weaponTypeDiv.addClass('hide');
     viewWeaponDiv.addClass('hide');
     sectorDiv.addClass('hide');
@@ -37,7 +39,6 @@ const personnelNavbarClickEvent = () => {
 const weaponsNavbarClickEvent = () => {
   $('#weapons-navbar-button').click((e) => {
     e.preventDefault();
-    console.error('inside the weapon button event');
     buildWeapons.buildWeaponTypes();
     weaponTypeDiv.removeClass('hide');
     viewWeaponDiv.addClass('hide');
