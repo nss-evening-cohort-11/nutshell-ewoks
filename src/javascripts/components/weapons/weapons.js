@@ -22,7 +22,6 @@ const removeWeapon = (e) => {
 const editWeaponEvent = (e) => {
   e.preventDefault();
   const weaponId = e.target.closest('.card').id;
-  console.log('weaponId', weaponId);
   editWeapon.showForm(weaponId);
 };
 
@@ -53,9 +52,7 @@ const modifyWeapon = (e) => {
     description: $('#edit-weapon-description').val(),
     imageUrl: $('#edit-weapon-imageUrl').val(),
   };
-  console.log('modified weapon clicked');
-  console.log('modifiedWeapon', modifiedWeapon);
-  console.log('weaponId', weaponId);
+
   weaponsData.updateWeapon(weaponId, modifiedWeapon)
     .then(() => {
       // eslint-disable-next-line no-use-before-define
