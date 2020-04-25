@@ -96,3 +96,12 @@
   text-decoration:none;
 }
 
+
+.delete-btn {
+  display: none;
+}
+
+img:hover + .delete-btn, .delete-btn:hover {
+  display: inline-block;
+}
+

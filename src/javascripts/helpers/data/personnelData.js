@@ -23,5 +23,15 @@ const deletePersonnel = (personnelId) => axios.delete(`${baseUrl}/personnel/${pe
 
 const addPersonnel = (newPersonnel) => axios.post(`${baseUrl}/personnel.json`, newPersonnel);
 
+const updatePersonnel = (personnelId, editedPersonnel) => axios.put(`${baseUrl}/personnel/${personnelId}.json`, editedPersonnel);
 
-export default { getAllPersonnel, deletePersonnel, addPersonnel };
+const getSinglePersonnel = (personnelId) => axios.get(`${baseUrl}/personnel/${personnelId}.json`);
+
+
+export default {
+  getAllPersonnel,
+  deletePersonnel,
+  addPersonnel,
+  updatePersonnel,
+  getSinglePersonnel,
+};

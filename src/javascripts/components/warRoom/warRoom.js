@@ -4,6 +4,36 @@ import 'firebase/auth';
 import personnelData from '../../helpers/data/personnelData';
 import personnelComponent from '../personnel/personnel';
 import utils from '../../helpers/utils';
+import editPersonnelComponent from '../editPersonnel/editPersonnel';
+
+const editPersonnelEvent = (e) => {
+  e.preventDefault();
+  const personnelId = e.target.closest('.user-card').id;
+  $('#personnelEditModal').modal('show');
+  editPersonnelComponent.showForm(personnelId);
+};
+
+const updatePersonnel = (e) => {
+  e.preventDefault();
+  const { uid } = firebase.auth().currentUser;
+  const userId = uid;
+  const radio = $('input[name=optradio]:checked').val();
+  const personnelId = $('.edit-personnel-form-tag').data('id');
+  const editedPersonnel = {
+    uid: userId,
+    name: $('#edit-personnel-name').val(),
+    description: $('#edit-personnel-description').val(),
+    occupationTypeId: radio,
+    imageUrl: $('#edit-personnel-image').val(),
+  };
+  personnelData.updatePersonnel(personnelId, editedPersonnel).then(() => {
+    $('#personnelEditModal').modal('hide');
+    // eslint-disable-next-line no-use-before-define
+    printPersonnel();
+  })
+    .catch((err) => console.error('could not update the personnel', err));
+};
+
 
 const createPersonnel = (e) => {
   e.preventDefault();
@@ -13,7 +43,7 @@ const createPersonnel = (e) => {
     name: $('#name').val(),
     description: $('#decription').val(),
     imageUrl: $('#image').val(),
-    occupationTypeId: $('#radio').val(),
+    occupationTypeId: $('#edit-personnel-occupation-type').val(),
     uid: userId,
   };
   personnelData.addPersonnel(newPersonnel)
@@ -88,6 +118,8 @@ const printPersonnel = () => {
 const clickEvents = () => {
   $('body').on('click', '.delete-personnel-btn', removePersonnel);
   $('body').on('click', '.add-personnel-btn', createPersonnel);
+  $('body').on('click', '#button-save-edit-personnel', updatePersonnel);
+  $('body').on('click', '.edit-personnel', editPersonnelEvent);
 };
 
 export default { printPersonnel, clickEvents };
