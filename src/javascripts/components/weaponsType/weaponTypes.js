@@ -8,13 +8,12 @@ const buildWeaponTypes = () => {
   weaponTypesData.getWeaponTypes()
     .then((weaponTypes) => {
       let domString = '';
-      domString += '<div>';
-      // domString += '<img class="weapon-image" src="https://i.ytimg.com/vi/nY2Jr-9vvTg/maxresdefault.jpg"/>';
-      domString += '</div>';
+      domString += '<div class="">';
       domString += '<div class= "d-flex flex-wrap m-5 justify-content-center">';
       weaponTypes.forEach((weaponType) => {
         domString += weaponTypeCards.weaponMaker(weaponType);
       });
+      domString += '</div>';
       domString += '</div>';
       utils.printToDom('weapontype', domString);
       $('body').on('click', '.weapontype-card', theseWeapons.buildWeaponsByType);
