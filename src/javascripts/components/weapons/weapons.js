@@ -76,8 +76,35 @@ const buildWeaponsByType = (e) => {
   weaponsData.getWeapons()
     .then((weapon) => {
       let domString = '';
+      domString += '<div class="center">';
+      // eslint-disable-next-line max-len
+      domString += `<button class="btn btn-dark m-3" type="button" id="create-new-weapontype-form" data-weapontype="${weapontypeId}" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Add Weapon</button>`;
+      domString += '</div>';
+      domString += '<div class="collapse" id="collapseExample">';
+      domString += '<div class="container">';
+      domString += '    <div class="row">';
+      domString += '      <div class="form-group text-left col-6">';
+      domString += '        <label for="new-weapontype-name">Name:</label>';
+      domString += '        <input type="text" class="form-control" id="new-weaponType-name" placeholder="Enter Name">';
+      domString += '      </div>';
+      domString += '      <div class="form-group text-left col-6">';
+      domString += '        <label for="weapon-description">Description:</label>';
+      domString += '        <input type="text" class="form-control" id="weaponType-description" placeholder="Enter Description">';
+      domString += '      </div>';
+      domString += '    </div>';
+      domString += '      <div class="row">';
+      domString += '        <div class="form-group col-10 text-left">';
+      domString += '          <label class="col-10" for="weapon-imageUrl">Add Image URL:</label>';
+      domString += '          <input type="text" class="form-control " id="weaponType-imageUrl" placeholder="ImageUrl">';
+      domString += '        </div>';
+      domString += '        <div class="col-2 mt-4">';
+      domString += `          <button type="submit" class="btn btn-dark" id="form-weapontype-creator" data-weapontype=${weapontypeId}>Submit</button>`;
+      domString += '        </div>';
+      domString += '    </div>';
+      domString += '</div>';
+      domString += '</div>';
+      domString += '</div>';
       domString += '<div class="text-center">';
-      domString += `<button class="btn btn-dark" id="create-new-weapontype-form" data-weapontype="${weapontypeId}">Add Weapon</button>`;
       domString += '<div class= "d-flex flex-wrap m-5 justify-content-center">';
       weapon.forEach((weapons) => {
         if (weapons.type_id === weapontypeId) {
