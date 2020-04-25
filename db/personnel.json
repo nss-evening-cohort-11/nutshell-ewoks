@@ -6,13 +6,15 @@
 			"imageUrl": "https://keizama.com/wp-content/uploads/2019/06/captainrex_ec.png",
 			"uid": ""
 		},
+
 		"Personnel2": {
 			"name": "Fives",
 			"occupationTypeId": "Clone Trooper",
-			"description": "Also known as CT-27-5555, Fives trained with Domino Squad on Kamino before being shipped out to the Rishi Moon listening outpost. ",
+    	"description": "Also known as CT-27-5555, Fives trained with Domino Squad on Kamino before being shipped out to the Rishi Moon listening outpost. ",
 			"imageUrl": "https://pbs.twimg.com/profile_images/579493145521471488/Qo-Q0a6A.jpg",
 			"uid": ""
 		},
+
 		"Personell3": {
 			"name": "Echo",
 			"occupationTypeId": "Clone Trooper",
@@ -20,6 +22,7 @@
 			"imageUrl": "https://steamuserimages-a.akamaihd.net/ugc/777360850314614687/7171B0DB8651EC90D585AEA9065A500741EAC41C/",
 			"uid": ""
 		},
+
 		"Personnel4": {
 			"name": "Commander Cody",
 			"occupationTypeId": "Clone Trooper",
@@ -82,5 +85,19 @@
 			"description": "she has no use for fancy titles or complex war rooms, preferring to lead her troops in battle against the First Order’s enemies",
 			"imageUrl": "https://vignette.wikia.nocookie.net/starwars/images/4/4e/ObiWanHS-SWE.jpg/revision/latest/scale-to-width-down/500?cb=20111115052816",
 			"uid": ""
-		}
+		},
+    "Personnel13": {
+			"name": "Grand Moff Tarkin",
+			"occuapationTypeId": "General",
+			"description": "As commander of the first Death Star, he proved to be the perfect blend of ruthless, calculating, and arrogant",
+			"imageUrl": "https://starwarsblog.starwars.com/wp-content/uploads/2016/06/Tarkin-ep-4-3-1536x864-272967555746.jpg",
+			"uid": ""
+		},
+		"Personnel14": {
+			"name": "Grand Admiral Thrawn",
+			"occuapationTypeId": "Admiral",
+			"description": "The blue-skinned Chiss was known for his love of art and strategy, and he used the latter to deconstruct his enemies. ",
+			"imageUrl": "https://lumiere-a.akamaihd.net/v1/images/grand-admiral-thrawn2_bda317f3.jpeg?region=0%2C0%2C1560%2C878&width=1536",
+			"uid": ""
+		}  
 }

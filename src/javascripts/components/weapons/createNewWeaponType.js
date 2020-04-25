@@ -1,6 +1,5 @@
 import utils from '../../helpers/utils';
 
-
 const buildNewWeapon = (e) => {
   const weapontypeId = $(e.target)[0].dataset.weapontype;
   let domString = '';

@@ -2,25 +2,30 @@
 	"weaponType1": {
 		"name": "Ground Assault",
 		"description": "These vehicles are used for planetary ground assaults.",
+		"imageUrl": "https://pbs.twimg.com/media/Cv7h7QnXgAAoSjw.jpg",
 		"uid": "0orRtpIbmOTHR2yRIOwR5InTFIO2"
 	},
 	"weaponType2": {
 		"name": "Air Assault",
 		"description": "These vehicles are used in space and atmospheric combat.",
+		"imageUrl": "https://cdn.newsledge.com/wp-content/uploads/2017/10/star-wars-battlefront-2-starfighter-assault-1155x700.jpg",
 		"uid": "0orRtpIbmOTHR2yRIOwR5InTFIO2"
 	},
 	"weaponType3": {
 		"name": "Turbolaser",
+		"imageUrl": "https://ideascdn.lego.com/media/generate/lego_ci/76cbc1e3-1793-46de-a443-f3687ab81781/resize:800:450",
 		"description": "Laser turrets that can be used for ship to ship combat or planetary bombardments.",
 		"uid": "0orRtpIbmOTHR2yRIOwR5InTFIO2"
 	},
 	"weaponType4": {
 		"name": "Ion Cannon",
 		"description": "Ion cannons fire ionized particles capable of disrupting electronic systems",
+		"imageUrl": "https://vignette.wikia.nocookie.net/starwars/images/3/3b/V-150_ion_cannon_SWB.png/revision/latest/scale-to-width-down/340?cb=20151128052218",
 		"uid": "0orRtpIbmOTHR2yRIOwR5InTFIO2"
 	},
 	"weaponType5": {
 		"name": "Tractor Beam",
+		"imageUrl": "https://cdnb.artstation.com/p/assets/images/images/000/639/191/large/ryan-dening-05-imp-roundviewblckr-01-layout.jpg?1429481602",
 		"description": "These projectors capture and/or divert space ships.",
 		"uid": "0orRtpIbmOTHR2yRIOwR5InTFIO2"
 	}
