@@ -5,9 +5,9 @@ const weaponMaker = (weaponType) => {
   domString += '<div class="text-center card-group">';
   domString += `<div class="card profile-card-3 m-3 weapontype-card" id="${weaponType.id}">`;
   domString += '<div class="background-block">';
-  domString += `<img width="300px" src="${weaponType.imageUrl}">`;
+  domString += `<img width="300px" src="${weaponType.imageUrl}" alt="image of "${weaponType.name}>`;
   domString += '</div>';
-  domString += '<div class=" mb-auto card-content">';
+  domString += '<div class="mb-auto card-content">';
   domString += `<h2>${weaponType.name}</h2>`;
   domString += `<div class="card-body p-0">${weaponType.description}</div>`;
   domString += '<div class="icon-block"><i class="fas fa-eye"></i></div>';
