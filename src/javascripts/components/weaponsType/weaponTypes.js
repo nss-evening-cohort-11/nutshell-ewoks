@@ -8,7 +8,7 @@ const buildWeaponTypes = () => {
   weaponTypesData.getWeaponTypes()
     .then((weaponTypes) => {
       let domString = '';
-      domString += '<div class="">';
+      domString += '<div>';
       domString += '<div class= "d-flex flex-wrap m-5 justify-content-center">';
       weaponTypes.forEach((weaponType) => {
         domString += weaponTypeCards.weaponMaker(weaponType);
