@@ -3,7 +3,7 @@ import 'firebase/auth';
 
 import personnelBuilder from '../personnelArea/personnelArea';
 import sectorBuilder from '../sectorArea/sectorArea';
-import buildWeapons from '../weaponTypes/weaponTypes';
+import buildWeapons from '../weaponsType/weaponTypes';
 
 const weaponTypeDiv = $('#weapontype');
 const personnelDiv = $('#print-personnel-cards-here');
