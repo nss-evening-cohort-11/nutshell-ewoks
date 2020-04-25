@@ -1,6 +1,5 @@
 import firebase from 'firebase/app';
 import 'firebase/auth';
-
 import weaponsData from '../../helpers/data/weaponsData';
 import createNewWeaponType from './createNewWeaponType';
 import utils from '../../helpers/utils';
@@ -132,6 +131,7 @@ const buildWeaponsByType = (e) => {
     })
     .catch((err) => console.error('problem with weapons', err));
 };
+
 const weaponsClickEvent = () => {
   $('body').on('click', '.delete-weapons', removeWeapon);
   $('body').on('click', '.edit-weapons', editWeaponEvent);

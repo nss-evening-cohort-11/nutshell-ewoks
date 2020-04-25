@@ -1,13 +1,16 @@
-const personnelMaker = (personnel) => {
+const buildPersonnel = (personnel) => {
   let domString = '';
-  domString += '<div class="col-3">';
-  domString += '<div class="card">';
-  domString += `<img src="${personnel.imageUrl}" class="card-img-top" alt="...">`;
-  domString += '<div class="card-body">';
-  domString += `<h5 class="card-title">${personnel.name}</h5>`;
-  domString += `<h5 class="card-title">${personnel.description}</h5>`;
-  domString += '<button class="btn btn-danger delete-personnel" id="delete-personnel-button">Delete Personnel</button>';
-  domString += '<button class="btn btn-primary" id="edit-personnel-button">Edit Personnel</button>';
+  domString += `<div class="user-card" id=${personnel.id}>`;
+  domString += '<div class="card profile-card-3 mb-3 mt-3 ml-3 mr-3">';
+  domString += '<div class="background-block">';
+  domString += '<img src="https://images.pexels.com/photos/459225/pexels-photo-459225.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="profile-sample1" class="background"/>';
+  domString += '</div>';
+  domString += '<div class="profile-thumb-block">';
+  domString += `<img src="${personnel.imageUrl}" alt="profile-image" class="profile"/>`;
+  domString += '</div>';
+  domString += '<div class="card-content">';
+  domString += `<div><h2>${personnel.name}<small>${personnel.occupationTypeId}</small></h3></div>`;
+  domString += '<div class="icon-block"><i class="fas fa-times delete-btn"></i><i class="fas fa-pencil-alt edit-btn"></i> </div>';
   domString += '</div>';
   domString += '</div>';
   domString += '</div>';
@@ -15,4 +18,4 @@ const personnelMaker = (personnel) => {
   return domString;
 };
 
-export default { personnelMaker };
+export default { buildPersonnel };
