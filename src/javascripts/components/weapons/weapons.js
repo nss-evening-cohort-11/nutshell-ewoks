@@ -2,10 +2,10 @@ import firebase from 'firebase/app';
 import 'firebase/auth';
 
 import weaponsData from '../../helpers/data/weaponsData';
-import createNewWeaponType from '../createNewWeaponType/createNewWeaponType';
+import createNewWeaponType from './createNewWeaponType';
 import utils from '../../helpers/utils';
-import './smashWeapons.scss';
-import editWeapon from '../editWeapon/editWeapon';
+import './weapons.scss';
+import editWeapon from './editWeapon';
 
 
 const weapontypeDiv = $('#weapontype');
@@ -43,7 +43,7 @@ const makeNewWeapon = (e) => {
       buildWeaponsByType(newWeapon.type_id);
       utils.printToDom('add-new-weapon', '');
     })
-    .catch((err) => console.err('could not add board', err));
+    .catch((err) => console.error('could not add board', err));
 };
 
 const modifyWeapon = (e) => {

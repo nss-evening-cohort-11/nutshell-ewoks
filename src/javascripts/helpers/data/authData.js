@@ -1,7 +1,6 @@
 import firebase from 'firebase/app';
 import 'firebase/auth';
 
-
 const authDiv = $('#auth');
 const logoutButton = $('#navbar-logout-button');
 
