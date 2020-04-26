@@ -1,6 +1,7 @@
 import firebase from 'firebase/app';
 import 'firebase/auth';
 import warRoom from '../../components/warRoom/warRoom';
+import weapons from '../../components/weapons/weapons';
 
 const authDiv = $('#auth');
 const logoutButton = $('#navbar-logout-button');
@@ -15,6 +16,7 @@ const checkLoginStatus = () => {
       authDiv.removeClass('hide');
       logoutButton.addClass('hide');
     }
+    weapons.weaponsClickEvent();
   });
 };
 
