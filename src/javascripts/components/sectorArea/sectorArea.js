@@ -1,3 +1,6 @@
+// import firebase from 'firebase/app';
+// import 'firebase/auth';
+
 import sectorData from '../../helpers/data/sectorData';
 import utils from '../../helpers/utils';
 import sectorComponent from '../sector/sector';
@@ -46,12 +49,22 @@ const makeNewSector = (e) => {
 
 const submitUserSectorEdits = (e) => {
   e.preventDefault();
+  console.error('inside your update sector form submit click event');
   const sectorId = e.target.closest('.edit-sector-form').id;
+  const exploredRadio = $('input[name=explored-radio-buttons]:checked').val();
+  const occupiedRadio = $('input[name=occupied-radio-buttons]:checked').val();
+
+  console.error('exploredRadio', exploredRadio);
+  console.error('occupiedRadio', occupiedRadio);
+
   const editedSector = {
-    explored: $('#user-edited-explored-info').val(),
+    // explored: $('#user-edited-explored-info').val(),
+    explored: exploredRadio,
     imageUrl: $('#user-edited-sector-image').val(),
     name: $('#user-edited-sector-name').val(),
-    occupied: $('#user-edited-occupied-info').val(),
+    // occupied: $('#user-edited-occupied-info').val(),
+    occupied: occupiedRadio,
+    // uid: firebase.auth().currentUser.uid.val(), // new addition
   };
   sectorData.updateSector(sectorId, editedSector)
     .then(() => {

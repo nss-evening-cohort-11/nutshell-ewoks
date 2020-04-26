@@ -23,16 +23,24 @@ const showEditSectorForm = (sectorId) => {
       domString += '</div>';
 
 
-      domString += '<label for="explored">Has this Sector been Explored?</label><br>'; // label for Explored radio
+      domString += '<label for="user-edited-explored-info">Has this Sector been Explored?</label><br>'; // label for Explored radio
+
       domString += '<div>';
-      domString += '<label for="explored">True</label><input type="radio" id="explored" name="explored-radio-buttons" value="explored">';
-      domString += '<label for="not-explored">False</label><input type="radio" id="not-explored" name="explored-radio-buttons" value="not-explored">';
+      domString += '<label for="user-edited-explored-info">True</label>';
+      domString += '<input type="radio" id="user-edited-explored-info" name="explored-radio-buttons" value="true">';
+
+      domString += '<label for="user-edited-explored-info">False</label>';
+      domString += '<input type="radio" id="user-edited-explored-info" name="explored-radio-buttons" value="false">';
       domString += '</div>';
 
       domString += '<label for="occupied">Is this Sector Occupied?</label><br>'; // label for Occupied radio
+
       domString += '<div>';
-      domString += '<label for="occupied">True</label><input type="radio" id="occupied" name="occupied-radio-buttons" value="true">';
-      domString += '<label for="not-occupied">False</label><input type="radio" id="not-occupied" name="occupied-radio-buttons" value="false">';
+      domString += '<label for="user-edited-occupied-info">True</label>';
+      domString += '<input type="radio" id="user-edited-occupied-info" name="occupied-radio-buttons" value="true">';
+
+      domString += '<label for="user-edited-occupied-info">False</label>';
+      domString += '<input type="radio" id="user-edited-occupied-info" name="occupied-radio-buttons" value="false">';
       domString += '</div>';
 
       // old form fields
