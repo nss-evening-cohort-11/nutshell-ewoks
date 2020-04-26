@@ -19,16 +19,6 @@ const buildSectors = () => {
       });
       domString += '</div>';
       utils.printToDom('print-sector-cards-here', domString);
-      // eslint-disable-next-line no-use-before-define
-      $('body').on('click', '#delete-sector-button', removeSector);
-      // eslint-disable-next-line no-use-before-define
-      $('body').on('click', '#submit-user-created-sector-infomation-button', makeNewSector);
-      // eslint-disable-next-line no-use-before-define
-      $('body').on('click', '#create-new-sector-button', showCreateForm.showFormToCreateSector);
-      // eslint-disable-next-line no-use-before-define
-      $('body').on('click', '#edit-sector-button', editSector);
-      // eslint-disable-next-line no-use-before-define
-      $('body').on('click', '#submit-user-edited-sector-infomation-button', submitUserSectorEdits);
     })
     .catch((err) => console.error('oh no. get sectors broke', err));
 };
@@ -43,7 +33,7 @@ const makeNewSector = (e) => {
     name: $('#user-entered-sector-name').val(),
     occupied: $('#user-entered-occupied-info').val(),
   };
-  // 2. save to firebase
+  // 2. save to firebase with axios post
   sectorData.addSector(newSector)
     .then(() => {
       // 3. reprint sectors and hide form
@@ -72,11 +62,9 @@ const submitUserSectorEdits = (e) => {
     .catch((err) => console.error('submitUserSectorEdits broke', err));
 };
 
-
 const editSector = (e) => {
   e.preventDefault();
   const sectorId = e.target.closest('.card').id;
-  // console.log('sectorId inside editSector,', sectorId);
   editSectorComponent.showEditSectorForm(sectorId);
 };
 
@@ -88,5 +76,17 @@ const removeSector = (e) => {
     .catch((err) => console.error('oh no. could not delete Sector', err));
 };
 
+const sectorClickEvents = () => {
+  // eslint-disable-next-line no-use-before-define
+  $('body').on('click', '#delete-sector-button', removeSector);
+  // eslint-disable-next-line no-use-before-define
+  $('body').on('click', '#submit-user-created-sector-infomation-button', makeNewSector);
+  // eslint-disable-next-line no-use-before-define
+  $('body').on('click', '#create-new-sector-button', showCreateForm.showFormToCreateSector);
+  // eslint-disable-next-line no-use-before-define
+  $('body').on('click', '#edit-sector-button', editSector);
+  // eslint-disable-next-line no-use-before-define
+  $('body').on('click', '#submit-user-edited-sector-infomation-button', submitUserSectorEdits);
+};
 
-export default { buildSectors };
+export default { buildSectors, sectorClickEvents };
