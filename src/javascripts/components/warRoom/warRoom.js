@@ -38,12 +38,13 @@ const updatePersonnel = (e) => {
 const createPersonnel = (e) => {
   e.preventDefault();
   const { uid } = firebase.auth().currentUser;
+  const radiobtn = $('input[name=optradiocreate]:checked').val();
   const userId = uid;
   const newPersonnel = {
     name: $('#name').val(),
     description: $('#decription').val(),
     imageUrl: $('#image').val(),
-    occupationTypeId: $('#edit-personnel-occupation-type').val(),
+    occupationTypeId: radiobtn,
     uid: userId,
   };
   personnelData.addPersonnel(newPersonnel)
@@ -92,11 +93,11 @@ const printPersonnel = () => {
       domString += '</div>';
       domString += '<div class="row-md-5 mb-3 space-around ml-5 pl-4 form-check">';
       domString += '<label for="country">Occupation Type:</label>';
-      domString += '<span class="ml-3 mr-3"><input type="radio" name="optradio" id="radio" value="General">Clone Trooper</span>';
-      domString += '<span class="mr-3"><input type="radio" name="optradio" id="radio" value="General">General</span>';
-      domString += '<span class="mr-3"><input type="radio" name="optradio" id="radio" value="Admiral">Admiral</span>';
-      domString += '<span class="mr-3"><input type="radio" name="optradio" id="radio" value="Supreme Leader">Supreme Leader</span>';
-      domString += '<span class="mr-3"><input type="radio" name="optradio" id="radio" value="Snoke">Snoke</span>';
+      domString += '<span class="ml-3 mr-3"><input type="radio" name="optradiocreate" id="radio-input-clone" value="Clone Trooper">Clone Trooper</span>';
+      domString += '<span class="mr-3"><input type="radio" name="optradiocreate" id="radio-input-general" value="General">General</span>';
+      domString += '<span class="mr-3"><input type="radio" name="optradiocreate" id="radio-inout-admiral" value="Admiral">Admiral</span>';
+      domString += '<span class="mr-3"><input type="radio" name="optradiocreate" id="radio-input-supreme" value="Supreme Leader">Supreme Leader</span>';
+      domString += '<span class="mr-3"><input type="radio" name="optradiocreate" id="radio-input-snoke" value="Snoke">Snoke</span>';
       domString += '</div>';
       domString += '</div>';
       domString += '<div class="row justify-content-center">';
