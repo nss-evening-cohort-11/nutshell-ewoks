@@ -19,7 +19,7 @@ const getAllEnemies = () => new Promise((resolve, reject) => {
     .catch((err) => reject(err));
 });
 
-// const deleteCrew = (crewId) => axios.delete(`${baseUrl}/crew/${crewId}.json`);
+const deleteEnemy = (enemiesId) => axios.delete(`${baseUrl}/enemies/${enemiesId}.json`);
 
 // const addCrew = (newCrew) => axios.post(`${baseUrl}/crew.json`, newCrew);
 
@@ -27,4 +27,4 @@ const getAllEnemies = () => new Promise((resolve, reject) => {
 
 // const updateCrew = (crewId, modifiedCrew) => axios.put(`${baseUrl}/crew/${crewId}.json`, modifiedCrew);
 
-export default { getAllEnemies };
+export default { getAllEnemies, deleteEnemy };

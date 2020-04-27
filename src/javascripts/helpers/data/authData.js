@@ -17,6 +17,7 @@ const checkLoginStatus = () => {
       authDiv.removeClass('hide');
       logoutButton.addClass('hide');
     }
+    enemies.clickEvents();
   });
 };
 

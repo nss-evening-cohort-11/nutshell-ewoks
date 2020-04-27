@@ -3,6 +3,21 @@ import enemyComponent from './enemiesComponent';
 import utils from '../../helpers/utils';
 import './enemies.scss';
 
+// ---------------------------------------------------------------- deletes enemy--//
+
+const deleteEnemy = (e) => {
+  const selectedPersonnelId = e.target.closest('.user-card').id;
+  enemyData.deleteEnemy(selectedPersonnelId)
+    .then(() => {
+    // eslint-disable-next-line no-use-before-define
+      printEnemy();
+    })
+    // eslint-disable-next-line no-console
+    .catch((err) => console.err('cannot remove enemy', err));
+};
+
+// ---------------------------------------------------------------- prints enemy
+
 const printEnemy = () => {
   console.error('click me');
   enemyData.getAllEnemies()
@@ -17,4 +32,8 @@ const printEnemy = () => {
     .catch((err) => console.error('get enemy broke', err));
 };
 
-export default { printEnemy };
+const clickEvents = () => {
+  $('body').on('click', '.delete-enemy-btn', deleteEnemy);
+};
+
+export default { printEnemy, clickEvents };

@@ -15,6 +15,7 @@ const buildEnemies = (enemies) => {
   domString += `<p>${enemies.special_skills}</p>`;
   domString += '<small>Weakness</small>';
   domString += `<p>${enemies.weakness}</p>`;
+  domString += '<div class="icon-block"><i class="fas fa-times delete-enemy-btn"></i></div>';
   domString += '</div>';
   domString += '</div>';
   domString += '</div>';
