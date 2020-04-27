@@ -43,7 +43,7 @@ const deleteEnemy = (e) => {
 const printEnemy = () => {
   console.error('click me');
   enemyData.getAllEnemies()
-    .then((theEnemy) => {
+    .then((enemies) => {
       let domString = '';
       domString += '<div class="accordion" id="accordionExample">';
       domString += '<h2>';
@@ -81,8 +81,8 @@ const printEnemy = () => {
       domString += '</div>';
       domString += '</div>';
       domString += '<div class="d-flex flex-wrap justify-content-center">';
-      theEnemy.forEach((enemies) => {
-        domString += enemyComponent.printEnemy(enemies);
+      enemies.forEach((enemy) => {
+        domString += enemyComponent.printEnemy(enemy);
       });
       utils.printToDom('enemy-area', domString);
     })
