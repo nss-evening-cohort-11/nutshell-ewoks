@@ -21,10 +21,10 @@ const getAllEnemies = () => new Promise((resolve, reject) => {
 
 const deleteEnemy = (enemiesId) => axios.delete(`${baseUrl}/enemies/${enemiesId}.json`);
 
-// const addCrew = (newCrew) => axios.post(`${baseUrl}/crew.json`, newCrew);
+const addEnemy = (newEnemies) => axios.post(`${baseUrl}/enemies.json`, newEnemies);
 
 // const getSingleEnemy = (enemiesId) => axios.get(`${baseUrl}/enemies/${enemiesId}.json`);
 
 // const updateCrew = (crewId, modifiedCrew) => axios.put(`${baseUrl}/crew/${crewId}.json`, modifiedCrew);
 
-export default { getAllEnemies, deleteEnemy };
+export default { getAllEnemies, deleteEnemy, addEnemy };
