@@ -49,6 +49,7 @@ const editWeaponEvent = (e) => {
 };
 
 const modifyWeapon = (e, weaponId) => {
+  console.log('e', $(e.target).closest('edit-weapons'));
   const weapontypeId = $(e.target)[0].dataset.weapontype;
   e.preventDefault();
   const modifiedWeapon = {
