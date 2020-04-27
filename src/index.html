@@ -45,7 +45,30 @@
 
   <!--personnel stuff below-->
   <div class="hide" id="the-war-room"></div>
+
+  <!--------------------------------------------- enemy stuff -->
   <div class="hide" id="enemy-area"></div>
+
+  <div class="modal fade" id="enemyEditModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel"></h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div id="edit-enemy"></div>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button id="button-save-edit-enemy" type="button" class="btn btn-primary edit-enemy-btn">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
 
 <!--sector stuff below-->
