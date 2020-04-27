@@ -29,12 +29,14 @@ const buildSectors = () => {
 
 const makeNewSector = (e) => {
   e.preventDefault();
+  const exploredRadio = $('input[name=explored-radio-buttons]:checked').val();
+  const occupiedRadio = $('input[name=occupied-radio-buttons]:checked').val();
   // 1. make new sector object
   const newSector = {
-    explored: $('#user-entered-explored-info').val(),
     imageUrl: $('#user-entered-sector-image').val(),
     name: $('#user-entered-sector-name').val(),
-    occupied: $('#user-entered-occupied-info').val(),
+    explored: exploredRadio,
+    occupied: occupiedRadio,
   };
   // 2. save to firebase with axios post
   sectorData.addSector(newSector)
@@ -49,23 +51,18 @@ const makeNewSector = (e) => {
 
 const submitUserSectorEdits = (e) => {
   e.preventDefault();
-  console.error('inside your update sector form submit click event');
   const sectorId = e.target.closest('.edit-sector-form').id;
   const exploredRadio = $('input[name=explored-radio-buttons]:checked').val();
   const occupiedRadio = $('input[name=occupied-radio-buttons]:checked').val();
 
-  console.error('exploredRadio', exploredRadio);
-  console.error('occupiedRadio', occupiedRadio);
-
+  // 1. edit sector object
   const editedSector = {
-    // explored: $('#user-edited-explored-info').val(),
     explored: exploredRadio,
     imageUrl: $('#user-edited-sector-image').val(),
     name: $('#user-edited-sector-name').val(),
-    // occupied: $('#user-edited-occupied-info').val(),
     occupied: occupiedRadio,
-    // uid: firebase.auth().currentUser.uid.val(), // new addition
   };
+  // 2. send updates to firebase with axios put
   sectorData.updateSector(sectorId, editedSector)
     .then(() => {
     // 3. reprint sectors and hide form
@@ -74,6 +71,7 @@ const submitUserSectorEdits = (e) => {
     })
     .catch((err) => console.error('submitUserSectorEdits broke', err));
 };
+
 
 const editSector = (e) => {
   e.preventDefault();
@@ -89,6 +87,7 @@ const removeSector = (e) => {
     .catch((err) => console.error('oh no. could not delete Sector', err));
 };
 
+
 const sectorClickEvents = () => {
   // eslint-disable-next-line no-use-before-define
   $('body').on('click', '#delete-sector-button', removeSector);
@@ -101,5 +100,6 @@ const sectorClickEvents = () => {
   // eslint-disable-next-line no-use-before-define
   $('body').on('click', '#submit-user-edited-sector-infomation-button', submitUserSectorEdits);
 };
+
 
 export default { buildSectors, sectorClickEvents };
