@@ -2,7 +2,7 @@ import utils from '../../helpers/utils';
 import weaponsData from '../../helpers/data/weaponsData';
 
 const showForm = (weaponId) => {
-  weaponsData.getSingleWeapon(weaponId)
+  weaponsData.getSingleWeapon(weaponId) // this gives the typeId notes for greg
     .then((resp) => {
       const weapons = resp.data;
       console.log('single weapon', weapons);

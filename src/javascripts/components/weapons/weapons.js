@@ -20,13 +20,6 @@ const removeWeapon = (e) => {
     .catch((err) => console.error('could not delete weapons', err));
 };
 
-const editWeaponEvent = (e) => {
-  e.preventDefault();
-  const weaponId = e.target.closest('.card').id;
-  $('#weaponseditmodal').modal('show');
-  console.log('weaponId', weaponId);
-  editWeapon.showForm(weaponId);
-};
 
 const makeNewWeapon = (e) => {
   e.preventDefault();
@@ -47,23 +40,30 @@ const makeNewWeapon = (e) => {
     .catch((err) => console.error('could not add weapon', err));
 };
 
-const modifyWeapon = (e) => {
+const editWeaponEvent = (e) => {
   e.preventDefault();
+  const weaponId = e.target.closest('.card').id;
+  $('#weaponseditmodal').modal('show');
+  console.log('weaponId', weaponId);
+  editWeapon.showForm(weaponId);
+};
+
+const modifyWeapon = (e, weaponId) => {
   const weapontypeId = $(e.target)[0].dataset.weapontype;
-  console.log('weaponId', weapontypeId);
+  e.preventDefault();
   const modifiedWeapon = {
     name: $('#edit-weapon-name').val(),
     description: $('#edit-weapon-description').val(),
     imageUrl: $('#edit-weapon-imageUrl').val(),
     uid: firebase.auth().currentUser.uid,
-    type_id: weapontypeId,
+    type_id: weapontypeId, // this field is coming up undefined notes for greg
   };
-  console.log('modified weapon clicked');
+  console.log('weapontypeId', weapontypeId);
   console.log('modifiedWeapon', modifiedWeapon);
-  weaponsData.updateWeapon(weapontypeId, modifiedWeapon)
+  weaponsData.updateWeapon(weaponId, modifiedWeapon)
     .then(() => {
       // eslint-disable-next-line no-use-before-define
-      weaponsData.getSingleWeapon(weapontypeId);
+      buildWeaponsByType();
       utils.printToDom('edit-weapon', '');
     })
     .catch((err) => console.error('could not modify weapon', err));
