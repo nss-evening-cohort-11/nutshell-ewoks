@@ -13,9 +13,9 @@ const createEnemy = (e) => {
   const userId = uid;
   const newEnemy = {
     name: $('#name').val(),
-    strength: $('#strength').val(),
+    special_skills: $('#skills').val(),
     imageUrl: $('#image').val(),
-    faction: $('#faction').val(),
+    weakness: $('#weakness').val(),
     uid: userId,
   };
   enemyData.addEnemy(newEnemy)
@@ -41,7 +41,7 @@ const deleteEnemy = (e) => {
 // ---------------------------------------------------------------- prints enemy
 
 const printEnemy = () => {
-  console.error('click me');
+  console.error('did it work');
   enemyData.getAllEnemies()
     .then((enemies) => {
       let domString = '';
@@ -60,17 +60,17 @@ const printEnemy = () => {
       domString += '<input type="text" class="form-control" id="name">';
       domString += '</div>';
       domString += '<div class="col-md-3 mb-3">';
-      domString += '<label for="state">Description:</label>';
-      domString += '<input type="text" class="form-control" id="strength">';
+      domString += '<label for="state">Skills:</label>';
+      domString += '<input type="text" class="form-control" id="skills">';
       domString += '</div>';
       domString += '<div class="col-md-2 mb-3">';
-      domString += '<label for="country">imageUrl:</label>';
-      domString += '<input type="text" class="form-control" id="image">';
+      domString += '<label for="country">Weakness:</label>';
+      domString += '<input type="text" class="form-control" id="weakness">';
       domString += '</div>';
       domString += '</div>';
       domString += '<div class="row-md-5 mb-3 space-around ml-5 pl-4 form-check">';
-      domString += '<label for="country">faction:Type:</label>';
-      domString += '<input type="text" class="form-control" id="faction">';
+      domString += '<label for="country">imageUrl:Type:</label>';
+      domString += '<input type="text" class="form-control" id="image">';
       domString += '</div>';
       domString += '</div>';
       domString += '<div class="row justify-content-center">';
@@ -82,7 +82,7 @@ const printEnemy = () => {
       domString += '</div>';
       domString += '<div class="d-flex flex-wrap justify-content-center">';
       enemies.forEach((enemy) => {
-        domString += enemyComponent.printEnemy(enemy);
+        domString += enemyComponent.buildEnemies(enemy);
       });
       utils.printToDom('enemy-area', domString);
     })
