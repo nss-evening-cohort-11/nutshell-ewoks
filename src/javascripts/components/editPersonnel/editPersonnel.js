@@ -1,5 +1,6 @@
 import utils from '../../helpers/utils';
 import personnelDataComponent from '../../helpers/data/personnelData';
+import occupationDataComponent from '../../helpers/data/occupationType';
 
 const showForm = (personnelId) => {
   personnelDataComponent.getSinglePersonnel(personnelId)
@@ -21,20 +22,24 @@ const showForm = (personnelId) => {
       domString += `<input type="text" class="form-control" id="edit-personnel-image" placeholder="Jumbo-Passenger" value="${personnel.imageUrl}">`;
       domString += '</div>';
       domString += '<div class="form-group text-center">';
-      domString += '<span class="text-center"><label for="personnel-occupation-type">Occupaton Type</label></span>';
-      domString += '<div class="d-flex flex-wrap text-center">';
-      domString += '<span class=""><input type="radio" name="optradio" id="radio-clone" value="Clone Trooper">Clone Trooper</span>';
-      domString += '<span class="ml-3"><input type="radio" name="optradio" id="radio-general" value="General">General</span>';
-      domString += '<span class="ml-1"><input type="radio" name="optradio" id="radio-admiral" value="Admiral">Admiral</span>';
-      domString += '<span class=""><input type="radio" name="optradio" id="radio-supreme" value="Supreme Leader">Supreme Leader</span>';
-      domString += '<span class=""><input type="radio" name="optradio" id="radio-snoke" value="Snoke">Snoke</span>';
-      domString += '</div>';
-      domString += '</div>';
-      domString += '</form>';
-
-      utils.printToDom('edit-personnel', domString);
-    })
-    .catch((err) => console.error('could not edit the selected personnel', err));
+      domString += '<label class="pr-3" for="occupation">Occupation Type:</label>';
+      domString += '<select id="occupation-btn">';
+      occupationDataComponent.getOccupationTypes()
+        .then((types) => {
+          types.forEach((type) => {
+            domString += `<option value=${type.name}>${type.name}</option>`;
+          });
+          domString += '</select>';
+          domString += '</div>';
+          domString += '</div>';
+          domString += '</form>';
+          domString += '</div>';
+          domString += '</div>';
+          domString += '</div>';
+          utils.printToDom('edit-personnel', domString);
+        })
+        .catch((err) => console.error('could not edit the selected personnel', err));
+    });
 };
 
 export default { showForm };

@@ -1,5 +1,5 @@
 .iconblue {
-  background-color: blue;
+  color: blue;
 }
 
 .label {
@@ -19,6 +19,11 @@ input[type="radio"]{
   color: black;
 }
 
-body {
-  color: black !important;
+.modal-body {
+  color: black;
+}
+
+#drop-down-btn {
+  justify-content: center;
+  padding-right: 70px;
 }

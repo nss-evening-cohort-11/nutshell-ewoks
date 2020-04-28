@@ -1,6 +1,7 @@
 import firebase from 'firebase/app';
 import 'firebase/auth';
 
+import occupationDataComponent from '../../helpers/data/occupationType';
 import personnelData from '../../helpers/data/personnelData';
 import personnelComponent from '../personnel/personnel';
 import utils from '../../helpers/utils';
@@ -17,14 +18,15 @@ const updatePersonnel = (e) => {
   e.preventDefault();
   const { uid } = firebase.auth().currentUser;
   const userId = uid;
-  const radio = $('input[name=optradio]:checked').val();
+  // const radio = $('input[name=optradio]:checked').val();
   const personnelId = $('.edit-personnel-form-tag').data('id');
   const editedPersonnel = {
     uid: userId,
     name: $('#edit-personnel-name').val(),
     description: $('#edit-personnel-description').val(),
-    occupationTypeId: radio,
     imageUrl: $('#edit-personnel-image').val(),
+    occupationTypeId: $('#occupation-btn').val(),
+    occupationName: $('#occupation-btn').val(),
   };
   personnelData.updatePersonnel(personnelId, editedPersonnel).then(() => {
     $('#personnelEditModal').modal('hide');
@@ -38,13 +40,13 @@ const updatePersonnel = (e) => {
 const createPersonnel = (e) => {
   e.preventDefault();
   const { uid } = firebase.auth().currentUser;
-  const radiobtn = $('input[name=optradiocreate]:checked').val();
   const userId = uid;
   const newPersonnel = {
     name: $('#name').val(),
     description: $('#decription').val(),
     imageUrl: $('#image').val(),
-    occupationTypeId: radiobtn,
+    occupationTypeId: $('#occupation-btn').val(),
+    occupationName: $('#occupation-btn').val(),
     uid: userId,
   };
   personnelData.addPersonnel(newPersonnel)
@@ -90,28 +92,33 @@ const printPersonnel = () => {
       domString += '<label for="country">imageUrl:</label>';
       domString += '<input type="text" class="form-control" id="image">';
       domString += '</div>';
-      domString += '</div>';
-      domString += '<div class="row-md-5 mb-3 space-around ml-5 pl-4 form-check">';
-      domString += '<label for="country">Occupation Type:</label>';
-      domString += '<span class="ml-3 mr-3"><input type="radio" name="optradiocreate" id="radio-input-clone" value="Clone Trooper">Clone Trooper</span>';
-      domString += '<span class="mr-3"><input type="radio" name="optradiocreate" id="radio-input-general" value="General">General</span>';
-      domString += '<span class="mr-3"><input type="radio" name="optradiocreate" id="radio-inout-admiral" value="Admiral">Admiral</span>';
-      domString += '<span class="mr-3"><input type="radio" name="optradiocreate" id="radio-input-supreme" value="Supreme Leader">Supreme Leader</span>';
-      domString += '<span class="mr-3"><input type="radio" name="optradiocreate" id="radio-input-snoke" value="Snoke">Snoke</span>';
-      domString += '</div>';
-      domString += '</div>';
-      domString += '<div class="row justify-content-center">';
-      domString += '<button class="btnblue add-personnel-btn btn btn-primary mx-auto d-block" type="submit">Add Personnel</button>';
-      domString += '</div>';
-      domString += '</div>';
-      domString += '</form>';
-      domString += '</div>';
-      domString += '</div>';
-      domString += '<div class="d-flex flex-wrap justify-content-center">';
-      personells.forEach((personnel) => {
-        domString += personnelComponent.buildPersonnel(personnel);
-      });
-      utils.printToDom('the-war-room', domString);
+      domString += '<div class="col-md-7 form-check">';
+      domString += '<label class="pr-3" for="occupation">Occupation Type:</label>';
+      domString += '<select id="occupation-btn">';
+      occupationDataComponent.getOccupationTypes()
+        .then((types) => {
+          types.forEach((type) => {
+            domString += `<option value=${type.name}>${type.name}</option>`;
+          });
+          domString += '</select>';
+          domString += '</div>';
+          domString += '</div>';
+          domString += '</div>';
+          domString += '<button class="btnblue add-personnel-btn btn btn-primary mx-auto d-block" type="submit">Add Personnel</button>';
+          domString += '</div>';
+          domString += '</div>';
+          domString += '</form>';
+          domString += '</div>';
+          domString += '</div>';
+          domString += '<div class="row justify-content-center">';
+          domString += '</div>';
+          domString += '</form>';
+          domString += '<div class="d-flex flex-wrap justify-content-center">';
+          personells.forEach((personnel) => {
+            domString += personnelComponent.buildPersonnel(personnel);
+          });
+          utils.printToDom('the-war-room', domString);
+        });
     })
     .catch((err) => console.error('get personnel broke', err));
 };

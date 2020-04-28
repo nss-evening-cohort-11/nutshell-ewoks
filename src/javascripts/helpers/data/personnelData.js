@@ -19,6 +19,8 @@ const getAllPersonnel = () => new Promise((resolve, reject) => {
     .catch((err) => reject(err));
 });
 
+const getPersonnelOccupationType = (personnelId, occupationTypeId) => axios.get(`${baseUrl}/personnel/${personnelId}/${occupationTypeId}.json`);
+
 const deletePersonnel = (personnelId) => axios.delete(`${baseUrl}/personnel/${personnelId}.json`);
 
 const addPersonnel = (newPersonnel) => axios.post(`${baseUrl}/personnel.json`, newPersonnel);
@@ -34,4 +36,5 @@ export default {
   addPersonnel,
   updatePersonnel,
   getSinglePersonnel,
+  getPersonnelOccupationType,
 };
