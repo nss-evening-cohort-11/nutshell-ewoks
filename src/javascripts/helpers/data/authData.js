@@ -18,6 +18,7 @@ const checkLoginStatus = () => {
       authDiv.removeClass('hide');
       logoutButton.addClass('hide');
     }
+    warRoom.clickEvents();
   });
 };
 
