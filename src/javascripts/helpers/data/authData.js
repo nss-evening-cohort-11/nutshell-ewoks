@@ -6,6 +6,7 @@ import sectorEvents from '../../components/sectorArea/sectorArea';
 const authDiv = $('#auth');
 const logoutButton = $('#navbar-logout-button');
 
+
 const checkLoginStatus = () => {
   firebase.auth().onAuthStateChanged((user) => {
     if (user) {
@@ -16,7 +17,6 @@ const checkLoginStatus = () => {
     } else {
       authDiv.removeClass('hide');
       logoutButton.addClass('hide');
-      sectorEvents.sectorClickEvents();
     }
   });
 };
