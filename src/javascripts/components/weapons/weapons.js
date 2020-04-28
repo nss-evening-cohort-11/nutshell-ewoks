@@ -48,24 +48,25 @@ const editWeaponEvent = (e) => {
   editWeapon.showForm(weaponId);
 };
 
-const modifyWeapon = (e, weaponId) => {
-  console.log('e', $(e.target).closest('edit-weapons'));
-  const weapontypeId = $(e.target)[0].dataset.weapontype;
+const modifyWeapon = (e) => {
+  const weaponId = e.target.closest('.edit-weapon-form-tag').id;
+  console.log('modify weaponId', weaponId);
+  const weapontypeId = $('#edit-weapon-type_id').val();
   e.preventDefault();
   const modifiedWeapon = {
     name: $('#edit-weapon-name').val(),
     description: $('#edit-weapon-description').val(),
     imageUrl: $('#edit-weapon-imageUrl').val(),
     uid: firebase.auth().currentUser.uid,
-    type_id: weapontypeId, // this field is coming up undefined notes for greg
+    type_id: $('#edit-weapon-type_id').val(), // this field is coming up undefined notes for greg
   };
-  console.log('weapontypeId', weapontypeId);
   console.log('modifiedWeapon', modifiedWeapon);
   weaponsData.updateWeapon(weaponId, modifiedWeapon)
     .then(() => {
       // eslint-disable-next-line no-use-before-define
-      buildWeaponsByType();
+      buildWeaponsByType(weapontypeId);
       utils.printToDom('edit-weapon', '');
+      $('#weaponseditmodal').modal('hide');
     })
     .catch((err) => console.error('could not modify weapon', err));
 };
@@ -140,7 +141,7 @@ const buildWeaponsByType = (e) => {
 const weaponsClickEvent = () => {
   $('body').on('click', '.delete-weapons', removeWeapon);
   $('body').on('click', '.edit-weapons', editWeaponEvent);
-  $('body').on('click', '#btn-save-edit-weapons', modifyWeapon);
+  $('body').on('click', '#form-edit-weapon-creator', modifyWeapon);// changed back to regular form button
   $('body').on('click', '#form-weapontype-creator', makeNewWeapon);
   $('body').on('click', '#create-new-weapontype-form', createNewWeaponType.buildNewWeapon);
 };
