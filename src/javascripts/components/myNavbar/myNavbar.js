@@ -54,23 +54,15 @@ const navbarClickEvents = () => {
   personnelNavbarClickEvent();
 };
 
-// hide everything. switch statement to determain which item was just clicked on then unhide the thing
-// const hideOtherDivs = (e) => {
-//   console.error(e.target.id);
-// };
-
 
 const logoutEvent = () => {
   $('#navbar-logout-button').click(() => {
-    // e.preventDefault();
     firebase.auth().signOut();
-    // document.reload();
     weaponTypeDiv.addClass('hide');
     viewWeaponDiv.addClass('hide');
     personnelDiv.addClass('hide');
     sectorDiv.addClass('hide');
     mainDiv.removeClass('hide');
-    // hideOtherDivs(e);
   });
 };
 
