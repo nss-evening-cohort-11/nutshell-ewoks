@@ -105,3 +105,61 @@ img:hover + .delete-btn, .delete-btn:hover {
   display: inline-block;
 }
 
+.personnel-profile-thumb-block img {
+  width: 140px;
+  height: 100px;
+}
+
+.personnel-background-block img {
+  width: 275px !important;
+  height: 200px !important;
+}
+
+.delete-personnel-btn {
+  display: none !important;
+}
+.user-card:hover .delete-personnel-btn {
+  display: inline-block !important;
+  transition: 0.3s;
+  z-index: 999999999;
+}
+
+.edit-personnel {
+  display: none !important;
+}
+.user-card:hover .edit-personnel {
+  display: inline-block !important;
+}
+
+// .overlay {
+//   position: absolute;
+//   top: 0;
+//   bottom: 0;
+//   left: 0;
+//   right: 0;
+//   height: 100%;
+//   width: 100%;
+//   opacity: 0;
+//   transition: .5s ease;
+//   background-color: grey;
+//   z-index: 99999999;
+//   backdrop-filter: blur(5px);
+// }
+
+// .user-card:hover .overlay {
+//   opacity: 1;
+// }
+// .text {
+//   color: white;
+//   font-size: 15px;
+//   position: absolute;
+//   top: 50%;
+//   left: 50%;
+//   -webkit-transform: translate(-50%, -50%);
+//   -ms-transform: translate(-50%, -50%);
+//   transform: translate(-50%, -50%);
+// }
+// .delete-personnel-btn:hover {
+//   display: none;
+// }
+
