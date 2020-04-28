@@ -60,7 +60,6 @@ const modifyWeapon = (e) => {
     uid: firebase.auth().currentUser.uid,
     type_id: $('#edit-weapon-type_id').val(), // this field is coming up undefined notes for greg
   };
-  console.log('modifiedWeapon', modifiedWeapon);
   weaponsData.updateWeapon(weaponId, modifiedWeapon)
     .then(() => {
       // eslint-disable-next-line no-use-before-define
