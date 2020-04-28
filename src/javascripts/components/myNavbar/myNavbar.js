@@ -56,9 +56,13 @@ const navbarClickEvents = () => {
 
 
 const logoutEvent = () => {
-  $('#navbar-logout-button').click((e) => {
-    e.preventDefault();
+  $('#navbar-logout-button').click(() => {
     firebase.auth().signOut();
+    weaponTypeDiv.addClass('hide');
+    viewWeaponDiv.addClass('hide');
+    personnelDiv.addClass('hide');
+    sectorDiv.addClass('hide');
+    mainDiv.removeClass('hide');
   });
 };
 

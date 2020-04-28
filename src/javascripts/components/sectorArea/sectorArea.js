@@ -1,3 +1,6 @@
+// import firebase from 'firebase/app';
+// import 'firebase/auth';
+
 import sectorData from '../../helpers/data/sectorData';
 import utils from '../../helpers/utils';
 import sectorComponent from '../sector/sector';
@@ -19,16 +22,6 @@ const buildSectors = () => {
       });
       domString += '</div>';
       utils.printToDom('print-sector-cards-here', domString);
-      // eslint-disable-next-line no-use-before-define
-      $('body').on('click', '#delete-sector-button', removeSector);
-      // eslint-disable-next-line no-use-before-define
-      $('body').on('click', '#submit-user-created-sector-infomation-button', makeNewSector);
-      // eslint-disable-next-line no-use-before-define
-      $('body').on('click', '#create-new-sector-button', showCreateForm.showFormToCreateSector);
-      // eslint-disable-next-line no-use-before-define
-      $('body').on('click', '#edit-sector-button', editSector);
-      // eslint-disable-next-line no-use-before-define
-      $('body').on('click', '#submit-user-edited-sector-infomation-button', submitUserSectorEdits);
     })
     .catch((err) => console.error('oh no. get sectors broke', err));
 };
@@ -36,14 +29,16 @@ const buildSectors = () => {
 
 const makeNewSector = (e) => {
   e.preventDefault();
+  const exploredRadio = $('input[name=explored-radio-buttons]:checked').val();
+  const occupiedRadio = $('input[name=occupied-radio-buttons]:checked').val();
   // 1. make new sector object
   const newSector = {
-    explored: $('#user-entered-explored-info').val(),
     imageUrl: $('#user-entered-sector-image').val(),
     name: $('#user-entered-sector-name').val(),
-    occupied: $('#user-entered-occupied-info').val(),
+    explored: exploredRadio,
+    occupied: occupiedRadio,
   };
-  // 2. save to firebase
+  // 2. save to firebase with axios post
   sectorData.addSector(newSector)
     .then(() => {
       // 3. reprint sectors and hide form
@@ -57,12 +52,17 @@ const makeNewSector = (e) => {
 const submitUserSectorEdits = (e) => {
   e.preventDefault();
   const sectorId = e.target.closest('.edit-sector-form').id;
+  const exploredRadio = $('input[name=explored-radio-buttons]:checked').val();
+  const occupiedRadio = $('input[name=occupied-radio-buttons]:checked').val();
+
+  // 1. edit sector object
   const editedSector = {
-    explored: $('#user-edited-explored-info').val(),
+    explored: exploredRadio,
     imageUrl: $('#user-edited-sector-image').val(),
     name: $('#user-edited-sector-name').val(),
-    occupied: $('#user-edited-occupied-info').val(),
+    occupied: occupiedRadio,
   };
+  // 2. send updates to firebase with axios put
   sectorData.updateSector(sectorId, editedSector)
     .then(() => {
     // 3. reprint sectors and hide form
@@ -76,7 +76,6 @@ const submitUserSectorEdits = (e) => {
 const editSector = (e) => {
   e.preventDefault();
   const sectorId = e.target.closest('.card').id;
-  // console.log('sectorId inside editSector,', sectorId);
   editSectorComponent.showEditSectorForm(sectorId);
 };
 
@@ -89,4 +88,18 @@ const removeSector = (e) => {
 };
 
 
-export default { buildSectors };
+const sectorClickEvents = () => {
+  // eslint-disable-next-line no-use-before-define
+  $('body').on('click', '#delete-sector-button', removeSector);
+  // eslint-disable-next-line no-use-before-define
+  $('body').on('click', '#submit-user-created-sector-infomation-button', makeNewSector);
+  // eslint-disable-next-line no-use-before-define
+  $('body').on('click', '#create-new-sector-button', showCreateForm.showFormToCreateSector);
+  // eslint-disable-next-line no-use-before-define
+  $('body').on('click', '#edit-sector-button', editSector);
+  // eslint-disable-next-line no-use-before-define
+  $('body').on('click', '#submit-user-edited-sector-infomation-button', submitUserSectorEdits);
+};
+
+
+export default { buildSectors, sectorClickEvents };
