@@ -53,9 +53,6 @@ const modifyWeapon = (e) => {
     description: $('#edit-weapon-description').val(),
     imageUrl: $('#edit-weapon-imageUrl').val(),
   };
-  console.log('modified weapon clicked');
-  console.log('modifiedWeapon', modifiedWeapon);
-  console.log('weaponId', weaponId);
   weaponsData.updateWeapon(weaponId, modifiedWeapon)
     .then(() => {
       // eslint-disable-next-line no-use-before-define

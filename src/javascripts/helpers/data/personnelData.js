@@ -19,4 +19,7 @@ const getAllPersonnel = () => new Promise((resolve, reject) => {
     .catch((err) => reject(err));
 });
 
-export default { getAllPersonnel };
+const deletePersonnel = (personnelId) => axios.delete(`${baseUrl}/personnel/${personnelId}.json`);
+
+
+export default { getAllPersonnel, deletePersonnel };
