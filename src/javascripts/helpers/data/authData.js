@@ -16,11 +16,11 @@ const checkLoginStatus = () => {
       warRoom.printPersonnel();
       enemies.printEnemy();
       sectorEvents.sectorClickEvents();
+      enemies.clickEvents();
     } else {
       authDiv.removeClass('hide');
       logoutButton.addClass('hide');
     }
-    enemies.clickEvents();
   });
 };
 

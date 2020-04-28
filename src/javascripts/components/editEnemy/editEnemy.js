@@ -6,8 +6,8 @@ const showForm = (enemiesId) => {
     .then((resp) => {
       const enemies = resp.data;
       let domString = '';
-      domString += '<h2 class="text-center">Edit Personnel</h2>';
-      domString += `<form class="col-10 offset-1 edit-personnel-form-tag" data-id="${enemiesId}">`;
+      domString += '<h2 class="text-center">Edit enemy</h2>';
+      domString += `<form class="col-10 offset-1 edit-enemy-form-tag" data-id="${enemiesId}">`;
       domString += '<div class="form-group text-center">';
       domString += '<label for="enemy-name">Name</label>';
       domString += `<input type="text" class="form-control" id="edit-enemy-name" placeholder="Name" value="${enemies.name}">`;

@@ -27,6 +27,14 @@ const updateEnemies = (enemiesId, editedEnemies) => axios.put(`${baseUrl}/enemie
 
 const getSingleEnemies = (enemiesId) => axios.get(`${baseUrl}/enemies/${enemiesId}.json`);
 
+// const getSingleEnemies = (enemiesId) => new Promise((resolve, reject) => {
+//   axios.get(`${baseUrl}/enemies/${enemiesId}.json`)
+//     .then((response) => {
+//       resolve(response.data);
+//     })
+//     .catch((err) => reject(err));
+// });
+
 
 export default {
   getAllEnemies,

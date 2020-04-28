@@ -8,9 +8,8 @@ import editEnemyComponent from '../editEnemy/editEnemy';
 import './enemies.scss';
 
 const editEnemyEvent = (e) => {
-  console.error('please work');
   e.preventDefault();
-  const enemiesId = e.target.closest('.user-card').id;
+  const enemiesId = $(e.target).closest('.user-card').id;
   $('#enemyEditModal').modal('show');
   editEnemyComponent.showForm(enemiesId);
 };
@@ -123,7 +122,7 @@ const clickEvents = () => {
   $('body').on('click', '.delete-enemy-btn', deleteEnemy);
   $('body').on('click', '.add-enemy-btn', createEnemy);
   $('body').on('click', '#button-save-edit-enemy', updateEnemies);
-  $('body').on('click', '.edit-enemy', editEnemyEvent);
+  $('body').on('click', '.edit-enemies', editEnemyEvent);
 };
 
 export default { printEnemy, clickEvents };
