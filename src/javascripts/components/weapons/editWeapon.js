@@ -8,7 +8,7 @@ const showForm = (weaponId) => {
       console.log('single weapon', weapons);
       let domString = '';
       domString += '<h2 class="text-center">Edit Weapon </h2>';
-      domString += `<form class="col-10 offset-1 edit-weapon-form-tag" id="update-weapon-form" data-weapontypeid=${weapons.type_id} data-id=${weaponId}`;
+      domString += `<form class="col-10 offset-1 edit-weapon-form-tag" id="weapon-form"data-weapontypeid=${weapons.type_id} data-id=${weaponId}`;
       domString += '<div class="form-group">';
       domString += '<label for="edit-weapon-name">Name</label>';
       domString += `<input type="text" class="form-control" id="edit-weapon-name" placeholder="Enter Name" value=${weapons.name}>`;
