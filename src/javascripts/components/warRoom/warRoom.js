@@ -18,15 +18,14 @@ const updatePersonnel = (e) => {
   e.preventDefault();
   const { uid } = firebase.auth().currentUser;
   const userId = uid;
-  // const radio = $('input[name=optradio]:checked').val();
   const personnelId = $('.edit-personnel-form-tag').data('id');
   const editedPersonnel = {
     uid: userId,
     name: $('#edit-personnel-name').val(),
     description: $('#edit-personnel-description').val(),
     imageUrl: $('#edit-personnel-image').val(),
-    occupationTypeId: $('#occupation-btn').val(),
-    occupationName: $('#occupation-btn').val(),
+    occupationTypeId: $('#occupation-update-btn').val(),
+    occupationName: $('#occupation-update-btn').val(),
   };
   personnelData.updatePersonnel(personnelId, editedPersonnel).then(() => {
     $('#personnelEditModal').modal('hide');
@@ -43,7 +42,7 @@ const createPersonnel = (e) => {
   const userId = uid;
   const newPersonnel = {
     name: $('#name').val(),
-    description: $('#decription').val(),
+    description: $('#description').val(),
     imageUrl: $('#image').val(),
     occupationTypeId: $('#occupation-btn').val(),
     occupationName: $('#occupation-btn').val(),
