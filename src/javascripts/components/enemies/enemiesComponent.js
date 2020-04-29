@@ -4,6 +4,7 @@ import './enemies.scss';
 
 const buildEnemies = (enemies) => {
   const userDelete = firebase.auth().currentUser === null ? '' : '<div class="icon-block"><i class="fas fa-times delete-enemy-btn delete-btn"></i></div>';
+  const userAdd = firebase.auth().currentUser === null ? '' : '<div class="icon-block"><i class="iconblue fas fa-2x fa-plus-circle"></i></div>';
   // const userEdit = firebase.auth().currentUser === null ? '' : '<i class="enemy-edit-button edit-btn fas fa-edit fa-2x"></i>';
   let domString = '';
   domString += `<div id=${enemies.id} class="col-md-4 pl-4 user-card">`;
@@ -21,6 +22,7 @@ const buildEnemies = (enemies) => {
   domString += `<p>${enemies.weakness}</p>`;
   domString += `${userDelete}`;
   // domString += `${userEdit}`;
+  domString += `${userAdd}`;
   domString += '</div>';
   domString += '</div>';
   domString += '</div>';

@@ -44,14 +44,14 @@ const deleteEnemy = (e) => {
 // ---------------------------------------------------------------- prints enemy
 
 const printEnemy = () => {
-  console.error('did it work');
+  const userAdd = firebase.auth().currentUser === null ? '' : '<div class="icon-block"><i class="iconblue fas fa-2x fa-plus-circle"></i></div>';
   enemyData.getAllEnemies()
     .then((enemies) => {
       let domString = '';
       domString += '<div class="accordion" id="accordionExample">';
       domString += '<h2>';
       domString += '<button class="btn" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">';
-      domString += '<i class="iconblue fas fa-2x fa-plus-circle"></i></button>';
+      domString += `${userAdd}`;
       domString += '</h2>';
       domString += '</div>';
       domString += '<div id="collapseOne" class="collapse m-2" aria-labelledby="headingOne" data-parent="#accordionExample">';
