@@ -19,10 +19,10 @@ const checkLoginStatus = () => {
       enemies.printEnemy();
       sectorEvents.sectorClickEvents();
       weapons.weaponsClickEvent();
+      enemies.clickEvents();
     } else {
       authDiv.removeClass('hide');
       logoutButton.addClass('hide');
-      enemies.enemies.clickEvents();
     }
     warRoom.clickEvents();
   });

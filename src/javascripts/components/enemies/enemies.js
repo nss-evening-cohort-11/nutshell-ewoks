@@ -22,7 +22,6 @@ const deleteEnemy = (e) => {
 // ---------------------------------------------------------------- prints enemy
 
 const printEnemy = () => {
-  console.error('click me');
   enemyData.getAllEnemies()
     .then((enemies) => {
       let domString = '';
