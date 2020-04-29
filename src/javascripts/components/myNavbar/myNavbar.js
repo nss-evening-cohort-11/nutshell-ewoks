@@ -23,6 +23,7 @@ const sectorsNavbarClickEvent = () => {
     sectorDiv.removeClass('hide');
     personnelDiv.addClass('hide');
     mainDiv.addClass('hide');
+    enemyView.addClass('hide');
   });
 };
 
@@ -61,6 +62,7 @@ const weaponsNavbarClickEvent = () => {
     personnelDiv.addClass('hide');
     sectorDiv.addClass('hide');
     mainDiv.addClass('hide');
+    enemyView.addClass('hide');
   });
 };
 

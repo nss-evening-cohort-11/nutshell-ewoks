@@ -14,7 +14,7 @@ const createEnemy = (e) => {
   const newEnemy = {
     name: $('#name').val(),
     special_skills: $('#skills').val(),
-    imageUrl: $('#image').val(),
+    imageUrl: $('#imageUrl').val(),
     weakness: $('#weakness').val(),
     uid: userId,
   };
@@ -72,8 +72,8 @@ const printEnemy = () => {
       domString += '</div>';
       domString += '</div>';
       domString += '<div class="row-md-5 mb-3 space-around ml-5 pl-4 form-check">';
-      domString += '<label for="country">imageUrl:Type:</label>';
-      domString += '<input type="text" class="form-control" id="image">';
+      domString += '<label for="country">ImageUrl:</label>';
+      domString += '<input type="text" class="form-control" id="imageUrl">';
       domString += '</div>';
       domString += '</div>';
       domString += '<div class="row justify-content-center">';
