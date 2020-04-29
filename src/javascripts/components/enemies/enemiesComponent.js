@@ -3,12 +3,11 @@ import 'firebase/auth';
 import './enemies.scss';
 
 const buildEnemies = (enemies) => {
-  const userDelete = firebase.auth().currentUser === null ? '' : '<div class="icon-block"><i class="fas fa-times delete-enemy-btn delete-btn"></i></div>';
-  const userAdd = firebase.auth().currentUser === null ? '' : '<div class="icon-block"><i class="iconblue fas fa-2x fa-plus-circle"></i></div>';
-  // const userEdit = firebase.auth().currentUser === null ? '' : '<i class="enemy-edit-button edit-btn fas fa-edit fa-2x"></i>';
+  const userDelete = firebase.auth().currentUser === null ? '' : '<div class="icon-block"><i class="fas fa-times delete-enemy-btn"></i></div>';
+  const userEdit = firebase.auth().currentUser === null ? '' : '<i class="edit-enemies fas fa-edit fa-2x"></i>';
   let domString = '';
-  domString += `<div id=${enemies.id} class="col-md-4 pl-4 user-card">`;
-  domString += '<div class="card profile-card-3">';
+  domString += '<div class="col-md-4 pl-4">'; // id=${enemies.id}
+  domString += `<div class="card profile-card-3 user-card" id="${enemies.id}">`;
   domString += '<div class="background-block">';
   domString += '<img src="https://images.wallpaperscraft.com/image/fractal_shape_heart_patterns_neon_116698_2048x1152.jpg" class="background"/>';
   domString += '</div>';
@@ -20,9 +19,10 @@ const buildEnemies = (enemies) => {
   domString += `<p>${enemies.special_skills}</p>`;
   domString += '<small>Weakness</small>';
   domString += `<p>${enemies.weakness}</p>`;
+  domString += '<div>';
   domString += `${userDelete}`;
-  // domString += `${userEdit}`;
-  domString += `${userAdd}`;
+  domString += `${userEdit}`;
+  domString += '</div>';
   domString += '</div>';
   domString += '</div>';
   domString += '</div>';
