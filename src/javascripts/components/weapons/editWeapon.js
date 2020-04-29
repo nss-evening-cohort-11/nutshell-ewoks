@@ -6,7 +6,6 @@ const showForm = (weaponId) => {
     .then((resp) => {
       const weapons = resp.data;
       let domString = '';
-      domString += '<h2 class="text-center">Edit Weapon </h2>';
       domString += `<form class="col-10 offset-1 edit-weapon-form-tag" id=${weaponId}>`;
       domString += '<div class="form-group">';
       domString += '<label for="edit-weapon-name">Name</label>';
