@@ -3,7 +3,7 @@
   position: relative;
   float: left;
   overflow: hidden;
-  width: 275px;
+  width: 100%;
   text-align: center;
   height:368px;
   border:none;
@@ -14,10 +14,8 @@
     height: 200px;
     overflow: hidden;
 }
-
-//photo 
 .profile-card-3 .background-block .background {
-  width: 50%;
+  width:100%;
   vertical-align: top;
   opacity: 0.9;
   -webkit-filter: blur(0.5px);
@@ -46,13 +44,13 @@
     position: absolute;
     z-index: -1;
     transform: rotate(-13deg);
-}
+} 
 .profile-card-3 .profile {
   border-radius: 20%;
   position: absolute;
   bottom: 50%;
   left: 50%;
-  max-width: 100px;
+  max-width: 300px;
   opacity: 1;
   box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.5);
   border: 2px solid rgba(255, 255, 255, 1);
@@ -95,4 +93,3 @@
   color:#fff;
   text-decoration:none;
 }
-
