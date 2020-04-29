@@ -18,7 +18,6 @@ const updatePersonnel = (e) => {
   e.preventDefault();
   const { uid } = firebase.auth().currentUser;
   const userId = uid;
-  // const radio = $('input[name=optradio]:checked').val();
   const personnelId = $('.edit-personnel-form-tag').data('id');
   const editedPersonnel = {
     uid: userId,
