@@ -15,7 +15,6 @@
     overflow: hidden;
 }
 
-//photo 
 .profile-card-3 .background-block .background {
   width: 50%;
   vertical-align: top;
@@ -96,12 +95,60 @@
   text-decoration:none;
 }
 
-
-.delete-btn {
-  display: none;
+.personnel-profile-thumb-block img {
+  width: 140px;
+  height: 100px;
 }
 
-img:hover + .delete-btn, .delete-btn:hover {
-  display: inline-block;
+.personnel-background-block img {
+  width: 275px !important;
+  height: 200px !important;
 }
+
+.delete-personnel-btn {
+  display: none !important;
+}
+
+.edit-personnel {
+  display: none !important;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: grey;
+  z-index: 999999;
+}
+
+.overlay .delete-personnel-btn {
+  display: inline-block !important;
+  position: absolute;
+  margin-top: 300px;
+}
+
+.overlay .edit-personnel {
+  display: inline-block !important;
+}
+
+.user-card:hover .overlay {
+  opacity: 1;
+}
+.text {
+  color: white;
+  font-size: 15px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
 
