@@ -22,15 +22,38 @@ const showEditSectorForm = (sectorId) => {
       domString += `<input type="text" class="form-control" id="user-edited-sector-image" value=${sector.imageUrl}>`;
       domString += '</div>';
 
-      domString += '<div class="form-group">';
-      domString += '<label for="user-entered-explored-info">Has this Sector been explored?</label>';
-      domString += `<input type="text" class="form-control" id="user-edited-explored-info" value=${sector.explored}>`;
+
+      domString += '<label for="user-edited-explored-info">Has this Sector been Explored?</label><br>'; // label for Explored radio
+
+      domString += '<div>';
+      domString += '<label for="user-edited-explored-info">True</label>';
+      domString += '<input type="radio" id="user-edited-explored-info" name="explored-radio-buttons" value="true">';
+
+      domString += '<label for="user-edited-explored-info">False</label>';
+      domString += '<input type="radio" id="user-edited-explored-info" name="explored-radio-buttons" value="false">';
       domString += '</div>';
 
-      domString += '<div class="form-group">';
-      domString += '<label for="user-entered-occupied-info">Is this Sector occupied?</label>';
-      domString += `<input type="text" class="form-control" id="user-edited-occupied-info" value=${sector.occupied}>`;
+      domString += '<label for="occupied">Is this Sector Occupied?</label><br>'; // label for Occupied radio
+
+      domString += '<div>';
+      domString += '<label for="user-edited-occupied-info">True</label>';
+      domString += '<input type="radio" id="user-edited-occupied-info" name="occupied-radio-buttons" value="true">';
+
+      domString += '<label for="user-edited-occupied-info">False</label>';
+      domString += '<input type="radio" id="user-edited-occupied-info" name="occupied-radio-buttons" value="false">';
       domString += '</div>';
+
+      // old form fields
+
+      // domString += '<div class="form-group">';
+      // domString += '<label for="user-entered-explored-info">Has this Sector been explored?</label>';
+      // domString += `<input type="text" class="form-control" id="user-edited-explored-info" value=${sector.explored}>`;
+      // domString += '</div>';
+
+      // domString += '<div class="form-group">';
+      // domString += '<label for="user-entered-occupied-info">Is this Sector occupied?</label>';
+      // domString += `<input type="text" class="form-control" id="user-edited-occupied-info" value=${sector.occupied}>`;
+      // domString += '</div>';
 
       domString += '<button type="submit" class="btn btn-dark" id="submit-user-edited-sector-infomation-button">Submit Your Edits</button>';
 
