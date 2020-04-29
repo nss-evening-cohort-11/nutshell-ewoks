@@ -10,9 +10,7 @@ import './enemies.scss';
 
 const editEnemyEvent = (e) => {
   e.preventDefault();
-  console.log('inside the event');
   const enemiesId = e.target.closest('.card').id;
-  console.log('enemy', enemiesId);
   $('#enemyEditModal').modal('show');
   editEnemy.showForm(enemiesId);
 };
@@ -29,7 +27,7 @@ const updateEnemies = (e) => {
     weakness: $('#edit-enemy-weakness').val(),
     imageUrl: $('#edit-enemy-image').val(),
   };
-  console.log('name me', editedEnemies);
+
   enemyData.updateEnemy(enemiesId, editedEnemies).then(() => {
     $('#enemyEditModal').modal('hide');
     // eslint-disable-next-line no-use-before-define
