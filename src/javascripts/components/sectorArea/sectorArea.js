@@ -1,5 +1,5 @@
-// import firebase from 'firebase/app';
-// import 'firebase/auth';
+import firebase from 'firebase/app';
+import 'firebase/auth';
 
 import sectorData from '../../helpers/data/sectorData';
 import utils from '../../helpers/utils';
@@ -37,6 +37,7 @@ const makeNewSector = (e) => {
     name: $('#user-entered-sector-name').val(),
     explored: exploredRadio,
     occupied: occupiedRadio,
+    uid: firebase.auth().currentUser.uid,
   };
   // 2. save to firebase with axios post
   sectorData.addSector(newSector)
