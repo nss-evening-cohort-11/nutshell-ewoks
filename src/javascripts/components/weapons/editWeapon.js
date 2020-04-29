@@ -19,8 +19,8 @@ const showForm = (weaponId) => {
       domString += '<label for="edit-weapon-imageUrl">Add Image</label>';
       domString += `<input type="text" class="form-control" id="edit-weapon-imageUrl" placeholder="ImageUrl" value=${weapons.imageUrl}>`;
       domString += '<div class="form-group">';
-      domString += '<label for="edit-weapon-imageUrl">Type</label>';
-      domString += `<input type="text" class="form-control" id="edit-weapon-type_id" placeholder="ImageUrl" value=${weapons.type_id}>`;
+      domString += '<label for="edit-weapon-imageUrl"></label>';
+      domString += `<input type="hidden" class="form-control" id="edit-weapon-type_id" placeholder="ImageUrl" value=${weapons.type_id}>`;
       domString += '</div>';
       domString += '<div class="modal-footer">';
       domString += '<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>';
