@@ -62,6 +62,7 @@ const submitUserSectorEdits = (e) => {
     imageUrl: $('#user-edited-sector-image').val(),
     name: $('#user-edited-sector-name').val(),
     occupied: occupiedRadio,
+    uid: firebase.auth().currentUser.uid,
   };
   // 2. send updates to firebase with axios put
   sectorData.updateSector(sectorId, editedSector)
