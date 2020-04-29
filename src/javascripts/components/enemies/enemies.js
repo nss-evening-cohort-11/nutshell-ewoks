@@ -3,22 +3,25 @@ import 'firebase/auth';
 
 import enemyData from '../../helpers/data/enemyData';
 import enemyComponent from './enemiesComponent';
+
 import utils from '../../helpers/utils';
-import editEnemyComponent from '../editEnemy/editEnemy';
+import editEnemy from '../editEnemy/editEnemy';
 import './enemies.scss';
 
 const editEnemyEvent = (e) => {
   e.preventDefault();
-  const enemiesId = $(e.target).closest('.user-card').id;
+  console.log('inside the event');
+  const enemiesId = e.target.closest('.card').id;
+  console.log('enemy', enemiesId);
   $('#enemyEditModal').modal('show');
-  editEnemyComponent.showForm(enemiesId);
+  editEnemy.showForm(enemiesId);
 };
 
 const updateEnemies = (e) => {
   e.preventDefault();
   const { uid } = firebase.auth().currentUser;
   const userId = uid;
-  const enemiesId = $('.edit-enemy-form-tag').data('id');
+  const enemiesId = e.target.closest('.edit-enemy-form-tag').id;
   const editedEnemies = {
     uid: userId,
     name: $('#edit-enemy-name').val(),
@@ -26,7 +29,8 @@ const updateEnemies = (e) => {
     weakness: $('#edit-enemy-weakness').val(),
     imageUrl: $('#edit-enemy-image').val(),
   };
-  enemyData.updateEnemies(enemiesId, editedEnemies).then(() => {
+  console.log('name me', editedEnemies);
+  enemyData.updateEnemy(enemiesId, editedEnemies).then(() => {
     $('#enemyEditModal').modal('hide');
     // eslint-disable-next-line no-use-before-define
     printEnemy();
@@ -43,7 +47,7 @@ const createEnemy = (e) => {
   const newEnemy = {
     name: $('#name').val(),
     special_skills: $('#skills').val(),
-    imageUrl: $('#image').val(),
+    imageUrl: $('#imageUrl').val(),
     weakness: $('#weakness').val(),
     uid: userId,
   };
@@ -58,8 +62,9 @@ const createEnemy = (e) => {
 // ---------------------------------------------------------------- deletes enemy--//
 
 const deleteEnemy = (e) => {
-  const selectedPersonnelId = e.target.closest('.user-card').id;
-  enemyData.deleteEnemy(selectedPersonnelId)
+  const selectedEnemiesId = e.target.closest('.user-card').id;
+  console.log('test me', selectedEnemiesId);
+  enemyData.deleteEnemy(selectedEnemiesId)
     .then(() => {
     // eslint-disable-next-line no-use-before-define
       printEnemy();
@@ -68,16 +73,20 @@ const deleteEnemy = (e) => {
     .catch((err) => console.err('cannot remove enemy', err));
 };
 
+// -----------------------------------------------------------------create enemy model
+
+
 // ---------------------------------------------------------------- prints enemy
 
 const printEnemy = () => {
+  const userAdd = firebase.auth().currentUser === null ? '' : '<div class="icon-block"><i class="iconblue fas fa-2x fa-plus-circle"></i></div>';
   enemyData.getAllEnemies()
     .then((enemies) => {
       let domString = '';
       domString += '<div class="accordion" id="accordionExample">';
       domString += '<h2>';
       domString += '<button class="btn" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">';
-      domString += '<i class="iconblue fas fa-2x fa-plus-circle"></i></button>';
+      domString += `${userAdd}`;
       domString += '</h2>';
       domString += '</div>';
       domString += '<div id="collapseOne" class="collapse m-2" aria-labelledby="headingOne" data-parent="#accordionExample">';
@@ -98,8 +107,8 @@ const printEnemy = () => {
       domString += '</div>';
       domString += '</div>';
       domString += '<div class="row-md-5 mb-3 space-around ml-5 pl-4 form-check">';
-      domString += '<label for="country">imageUrl:Type:</label>';
-      domString += '<input type="text" class="form-control" id="image">';
+      domString += '<label for="country">ImageUrl:</label>';
+      domString += '<input type="text" class="form-control" id="imageUrl">';
       domString += '</div>';
       domString += '</div>';
       domString += '<div class="row justify-content-center">';

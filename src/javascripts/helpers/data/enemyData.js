@@ -23,23 +23,15 @@ const deleteEnemy = (enemiesId) => axios.delete(`${baseUrl}/enemies/${enemiesId}
 
 const addEnemy = (newEnemies) => axios.post(`${baseUrl}/enemies.json`, newEnemies);
 
-const updateEnemies = (enemiesId, editedEnemies) => axios.put(`${baseUrl}/enemies/${enemiesId}.json`, editedEnemies);
+const getSingleEnemy = (enemiesId) => axios.get(`${baseUrl}/enemies/${enemiesId}.json`);
 
-const getSingleEnemies = (enemiesId) => axios.get(`${baseUrl}/enemies/${enemiesId}.json`);
-
-// const getSingleEnemies = (enemiesId) => new Promise((resolve, reject) => {
-//   axios.get(`${baseUrl}/enemies/${enemiesId}.json`)
-//     .then((response) => {
-//       resolve(response.data);
-//     })
-//     .catch((err) => reject(err));
-// });
+const updateEnemy = (enemiesId, updateEnemies) => axios.put(`${baseUrl}/enemies/${enemiesId}.json`, updateEnemies);
 
 
 export default {
   getAllEnemies,
   deleteEnemy,
   addEnemy,
-  updateEnemies,
-  getSingleEnemies,
+  updateEnemy,
+  getSingleEnemy,
 };

@@ -1,5 +1,5 @@
-// import firebase from 'firebase/app';
-// import 'firebase/auth';
+import firebase from 'firebase/app';
+import 'firebase/auth';
 
 import sectorData from '../../helpers/data/sectorData';
 import utils from '../../helpers/utils';
@@ -11,10 +11,13 @@ import editSectorComponent from '../editSector/editSector';
 const buildSectors = () => {
   sectorData.getSectors()
     .then((sectors) => {
+      const createNewSectorButtonIfLoggedIn = firebase.auth().currentUser === null ? '' : '<button id="create-new-sector-button" class="btn btn-dark text-center">Create New Sector</button>';
+
       let domString = '';
       domString += '<div class="d-flex justify-content-around">';
       domString += '<h2 class="text-center ml-3" id="sector-area-header">Imperial Planetary Sector Database</h2>';
-      domString += '<button id="create-new-sector-button" class="btn btn-dark text-center">Create New Sector</button>';
+      domString += `${createNewSectorButtonIfLoggedIn}`;
+      // domString += '<button id="create-new-sector-button" class="btn btn-dark text-center">Create New Sector</button>';
       domString += '</div>';
       domString += '<div class="d-flex flex-wrap">';
       sectors.forEach((sector) => {
@@ -37,6 +40,7 @@ const makeNewSector = (e) => {
     name: $('#user-entered-sector-name').val(),
     explored: exploredRadio,
     occupied: occupiedRadio,
+    uid: firebase.auth().currentUser.uid,
   };
   // 2. save to firebase with axios post
   sectorData.addSector(newSector)
@@ -61,6 +65,7 @@ const submitUserSectorEdits = (e) => {
     imageUrl: $('#user-edited-sector-image').val(),
     name: $('#user-edited-sector-name').val(),
     occupied: occupiedRadio,
+    uid: firebase.auth().currentUser.uid,
   };
   // 2. send updates to firebase with axios put
   sectorData.updateSector(sectorId, editedSector)

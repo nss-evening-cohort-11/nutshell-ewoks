@@ -1,9 +1,9 @@
 import firebase from 'firebase/app';
 import 'firebase/auth';
 
-import personnelBuilder from '../warRoom/warRoom';
 import sectorBuilder from '../sectorArea/sectorArea';
 import buildWeapons from '../weaponsType/weaponTypes';
+import personnelBuilder from '../warRoom/warRoom';
 import buildEnemies from '../enemies/enemies';
 
 const weaponTypeDiv = $('#weapontype');
@@ -23,6 +23,7 @@ const sectorsNavbarClickEvent = () => {
     sectorDiv.removeClass('hide');
     personnelDiv.addClass('hide');
     mainDiv.addClass('hide');
+    enemyView.addClass('hide');
   });
 };
 
@@ -61,6 +62,7 @@ const weaponsNavbarClickEvent = () => {
     personnelDiv.addClass('hide');
     sectorDiv.addClass('hide');
     mainDiv.addClass('hide');
+    enemyView.addClass('hide');
   });
 };
 
@@ -79,6 +81,7 @@ const logoutEvent = () => {
     viewWeaponDiv.addClass('hide');
     personnelDiv.addClass('hide');
     sectorDiv.addClass('hide');
+    enemyView.addClass('hide');
     mainDiv.removeClass('hide');
   });
 };
