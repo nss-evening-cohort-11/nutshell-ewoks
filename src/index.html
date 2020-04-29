@@ -23,7 +23,7 @@
           <a class="nav-link" id="weapons-navbar-button" href="">Weapons</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="">Enemies</a>
+          <a class="nav-link" id="enemies-navbar-button"href="">Enemies</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" id="sectors-navbar-button" href="">Sectors</a>
@@ -39,12 +39,40 @@
     </div>
   </nav>
 
+
+   <div id="auth"></div>
+
+     <div class="row"></div> 
+
   <div id="auth"></div>
 
     <div class="row">
-
   <!--personnel stuff below-->
   <div class="hide" id="the-war-room"></div>
+
+  <!--------------------------------------------- enemy stuff -->
+  <div class="hide" id="enemy-area"></div>
+
+  <div class="modal fade" id="enemyEditModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel"></h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div id="edit-enemy"></div>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button id="button-save-edit-enemy" type="button" class="btn btn-primary edit-enemy-btn">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
 
 <!--sector stuff below-->
@@ -54,13 +82,29 @@
 
       <div class="col-md-3">
         <div id="update-create-sector-cards-here">
+          
         </div>
       </div>
       
  <!--weapons stuff above-->
 <div id="weapontype" class="hide"></div>
-<div id ="view-weapon" class="hide" class="text-center"></div> 
-<div id="edit-weapon"></div>
+<div id ="view-weapon" class="text-center"></div> 
+
+<div class="modal" id="weaponseditmodal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+         <div id="edit-weapon"></div>
+      </div>
+    </div>
+  </div>
 </div>
-</body>
-</html>
+</div>	</div>
+</body>	</body>
+</html>	</html>
