@@ -19,7 +19,22 @@ const getAllPersonnel = () => new Promise((resolve, reject) => {
     .catch((err) => reject(err));
 });
 
+const getPersonnelOccupationType = (personnelId, occupationTypeId) => axios.get(`${baseUrl}/personnel/${personnelId}/${occupationTypeId}.json`);
+
 const deletePersonnel = (personnelId) => axios.delete(`${baseUrl}/personnel/${personnelId}.json`);
 
+const addPersonnel = (newPersonnel) => axios.post(`${baseUrl}/personnel.json`, newPersonnel);
 
-export default { getAllPersonnel, deletePersonnel };
+const updatePersonnel = (personnelId, editedPersonnel) => axios.put(`${baseUrl}/personnel/${personnelId}.json`, editedPersonnel);
+
+const getSinglePersonnel = (personnelId) => axios.get(`${baseUrl}/personnel/${personnelId}.json`);
+
+
+export default {
+  getAllPersonnel,
+  deletePersonnel,
+  addPersonnel,
+  updatePersonnel,
+  getSinglePersonnel,
+  getPersonnelOccupationType,
+};
