@@ -24,7 +24,7 @@ const updatePersonnel = (e) => {
     uid: userId,
     name: $('#edit-personnel-name').val(),
     description: $('#edit-personnel-description').val(),
-    imageUrl: $('#edit-personnel-image').val(),
+    personnelImageUrl: $('#edit-personnel-image').val(),
     occupationTypeId: $('#occupation-btn').val(),
     occupationName: $('#occupation-btn').val(),
   };
@@ -44,7 +44,7 @@ const createPersonnel = (e) => {
   const newPersonnel = {
     name: $('#name').val(),
     description: $('#decription').val(),
-    imageUrl: $('#image').val(),
+    personnelImageUrl: $('#image').val(),
     occupationTypeId: $('#occupation-btn').val(),
     occupationName: $('#occupation-btn').val(),
     uid: userId,
