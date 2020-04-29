@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import firebase from 'firebase/app';
 import 'firebase/auth';
 import weaponsData from '../../helpers/data/weaponsData';
@@ -55,7 +56,7 @@ const modifyWeapon = (e) => {
     description: $('#edit-weapon-description').val(),
     imageUrl: $('#edit-weapon-imageUrl').val(),
     uid: firebase.auth().currentUser.uid,
-    type_id: $('#edit-weapon-type_id').val(), // this field is coming up undefined notes for greg
+    type_id: $('#edit-weapon-type_id').val(),
   };
   weaponsData.updateWeapon(weaponId, modifiedWeapon)
     .then(() => {
@@ -67,6 +68,7 @@ const modifyWeapon = (e) => {
     .catch((err) => console.error('could not modify weapon', err));
 };
 
+
 const buildWeaponsByType = (e) => {
   let weapontypeId = '';
   if (e.target) {
@@ -76,10 +78,12 @@ const buildWeaponsByType = (e) => {
   }
   weaponsData.getWeapons()
     .then((weapon) => {
+      const weaponDisableAddButton = firebase.auth().currentUser === null ? '' : `<button class="btn btn-dark m-3" type="button" id="create-new-weapontype-form" data-weapontype="${weapontypeId}" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Add Weapon</button>`;
+      const weaponDisableAllButton = firebase.auth().currentUser === null ? '' : '<div class="weapon-block"><i class="delete-weapons fas fa-trash-alt"></i><i class="edit-weapons fas fa-pencil-alt"></i></div>';
       let domString = '';
       domString += '<div class="center">';
       // eslint-disable-next-line max-len
-      domString += `<button class="btn btn-dark m-3" type="button" id="create-new-weapontype-form" data-weapontype="${weapontypeId}" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Add Weapon</button>`;
+      domString += `${weaponDisableAddButton}`;
       domString += '</div>';
       domString += '<div class="collapse" id="collapseExample">';
       domString += '<div class="container">';
@@ -117,17 +121,13 @@ const buildWeaponsByType = (e) => {
           domString += '<div class="mb-auto card-content m-0 p-2">';
           domString += `<h2 class="p-0">${weapons.name}</h2>`;
           domString += `<p class="card-text">${weapons.description}</p>`;
-          domString += '<div>';
-          domString += '<i class="delete-weapons fas fa-trash-alt"></i>';
-          domString += '<i class="edit-weapons fas fa-pencil-alt"></i>';
-          domString += '</div>';
+          domString += `${weaponDisableAllButton}`;
           domString += '</div>';
           domString += '</div>';
           domString += '</div>';
           weapontypeDiv.addClass('hide');
           viewweaponDiv.removeClass('hide');
           utils.printToDom('view-weapon', domString);
-          // button on buildWeaponType will build form
         }
       });
     })
