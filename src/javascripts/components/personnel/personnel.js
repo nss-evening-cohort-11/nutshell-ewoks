@@ -3,10 +3,10 @@ const buildPersonnel = (personnel) => {
   domString += `<div class="user-card" id=${personnel.id}>`;
   domString += '<div class="card profile-card-3 mb-3 mt-3 ml-3 mr-3">';
   domString += '<div class="background-block">';
-  domString += '<img src="https://images.pexels.com/photos/459225/pexels-photo-459225.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="profile-sample1" class="background"/>';
+  domString += `<img width="200px" src=${personnel.occupationImageUrl} alt="profile-sample1" class="background"/>`;
   domString += '</div>';
   domString += '<div class="profile-thumb-block">';
-  domString += `<img src="${personnel.imageUrl}" alt="profile-image" class="profile"/>`;
+  domString += `<img src="${personnel.personnelImageUrl}" alt="profile-image" class="profile"/>`;
   domString += '</div>';
   domString += '<div class="card-content">';
   domString += `<div><h2>${personnel.name}<small>${personnel.occupationName}</small></h3></div>`;
