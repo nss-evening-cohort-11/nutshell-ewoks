@@ -12,7 +12,6 @@ const viewweaponDiv = $('#view-weapon');
 
 
 const removeWeapon = (e) => {
-  console.error('delete button clicked');
   const weaponId = e.target.closest('.card').id;
   weaponsData.deleteWeapons(weaponId)
     // eslint-disable-next-line no-use-before-define
@@ -44,13 +43,11 @@ const editWeaponEvent = (e) => {
   e.preventDefault();
   const weaponId = e.target.closest('.card').id;
   $('#weaponseditmodal').modal('show');
-  console.log('weaponId', weaponId);
   editWeapon.showForm(weaponId);
 };
 
 const modifyWeapon = (e) => {
   const weaponId = e.target.closest('.edit-weapon-form-tag').id;
-  console.log('modify weaponId', weaponId);
   const weapontypeId = $('#edit-weapon-type_id').val();
   e.preventDefault();
   const modifiedWeapon = {
@@ -135,7 +132,9 @@ const buildWeaponsByType = (e) => {
       });
     })
     .catch((err) => console.error('problem with weapons', err));
+  // eslint-disable-next-line no-use-before-define
 };
+
 
 const weaponsClickEvent = () => {
   $('body').on('click', '.delete-weapons', removeWeapon);

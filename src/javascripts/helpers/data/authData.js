@@ -2,6 +2,7 @@ import firebase from 'firebase/app';
 import 'firebase/auth';
 import warRoom from '../../components/warRoom/warRoom';
 import sectorEvents from '../../components/sectorArea/sectorArea';
+import weapons from '../../components/weapons/weapons';
 
 const authDiv = $('#auth');
 const logoutButton = $('#navbar-logout-button');
@@ -14,6 +15,7 @@ const checkLoginStatus = () => {
       logoutButton.removeClass('hide');
       warRoom.printPersonnel();
       sectorEvents.sectorClickEvents();
+      weapons.weaponsClickEvent();
     } else {
       authDiv.removeClass('hide');
       logoutButton.addClass('hide');
