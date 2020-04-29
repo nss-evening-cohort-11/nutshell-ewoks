@@ -11,10 +11,13 @@ import editSectorComponent from '../editSector/editSector';
 const buildSectors = () => {
   sectorData.getSectors()
     .then((sectors) => {
+      const createNewSectorButtonIfLoggedIn = firebase.auth().currentUser === null ? '' : '<button id="create-new-sector-button" class="btn btn-dark text-center">Create New Sector</button>';
+
       let domString = '';
       domString += '<div class="d-flex justify-content-around">';
       domString += '<h2 class="text-center ml-3" id="sector-area-header">Imperial Planetary Sector Database</h2>';
-      domString += '<button id="create-new-sector-button" class="btn btn-dark text-center">Create New Sector</button>';
+      domString += `${createNewSectorButtonIfLoggedIn}`;
+      // domString += '<button id="create-new-sector-button" class="btn btn-dark text-center">Create New Sector</button>';
       domString += '</div>';
       domString += '<div class="d-flex flex-wrap">';
       sectors.forEach((sector) => {
