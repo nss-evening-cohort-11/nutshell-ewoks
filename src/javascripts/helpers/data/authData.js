@@ -1,8 +1,9 @@
 import firebase from 'firebase/app';
 import 'firebase/auth';
 import warRoom from '../../components/warRoom/warRoom';
-import sectorEvents from '../../components/sectorArea/sectorArea';
+
 import weapons from '../../components/weapons/weapons';
+import sectorEvents from '../../components/sectorArea/sectorArea';
 
 const authDiv = $('#auth');
 const logoutButton = $('#navbar-logout-button');
