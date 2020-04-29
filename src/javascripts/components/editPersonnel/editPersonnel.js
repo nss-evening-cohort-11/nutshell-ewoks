@@ -11,11 +11,11 @@ const showForm = (personnelId) => {
       domString += `<form class="col-10 offset-1 edit-personnel-form-tag" data-id="${personnelId}">`;
       domString += '<div class="form-group text-center">';
       domString += '<label for="personnel-name">Name</label>';
-      domString += `<input type="text" class="form-control" id="edit-personnel-name" placeholder="Boeing" value="${personnel.name}">`;
+      domString += `<input type="text" class="form-control" id="edit-personnel-name" placeholder="Personnel Name" value="${personnel.name}">`;
       domString += '</div>';
       domString += '<div class="form-group text-center">';
       domString += '<label for="personnel-description">Description</label>';
-      domString += `<input type="text" class="form-control" id="edit-personnel-description" placeholder="747" value="${personnel.description}">`;
+      domString += `<input type="text" class="form-control" id="edit-personnel-description" placeholder="Personnel Description" value="${personnel.description}">`;
       domString += '</div>';
       domString += '<div class="form-group text-center">';
       domString += '<label for="personnel-image">Personnel Image</label>';
@@ -27,7 +27,7 @@ const showForm = (personnelId) => {
       domString += '</div>';
       domString += '<div class="form-group text-center">';
       domString += '<label class="pr-3" for="occupation">Occupation Type:</label>';
-      domString += '<select id="occupation-btn">';
+      domString += '<select id="occupation-update-btn">';
       occupationDataComponent.getOccupationTypes()
         .then((types) => {
           types.forEach((type) => {
