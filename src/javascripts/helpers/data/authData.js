@@ -19,8 +19,8 @@ const checkLoginStatus = () => {
     } else {
       authDiv.removeClass('hide');
       logoutButton.addClass('hide');
+      enemies.enemies.clickEvents();
     }
-    enemies.clickEvents();
     warRoom.clickEvents();
   });
 };

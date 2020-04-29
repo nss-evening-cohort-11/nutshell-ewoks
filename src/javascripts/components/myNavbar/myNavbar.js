@@ -79,6 +79,7 @@ const logoutEvent = () => {
     viewWeaponDiv.addClass('hide');
     personnelDiv.addClass('hide');
     sectorDiv.addClass('hide');
+    enemyView.addClass('hide');
     mainDiv.removeClass('hide');
   });
 };
