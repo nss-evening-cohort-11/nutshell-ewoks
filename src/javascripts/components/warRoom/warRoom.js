@@ -24,7 +24,8 @@ const updatePersonnel = (e) => {
     uid: userId,
     name: $('#edit-personnel-name').val(),
     description: $('#edit-personnel-description').val(),
-    imageUrl: $('#edit-personnel-image').val(),
+    personnelImageUrl: $('#edit-personnel-image').val(),
+    occupationImageUrl: $('#edit-occupation-image').val(),
     occupationTypeId: $('#occupation-btn').val(),
     occupationName: $('#occupation-btn').val(),
   };
@@ -43,10 +44,12 @@ const createPersonnel = (e) => {
   const userId = uid;
   const newPersonnel = {
     name: $('#name').val(),
-    description: $('#decription').val(),
+    description: $('#create-description').val(),
     imageUrl: $('#image').val(),
     occupationTypeId: $('#occupation-btn').val(),
     occupationName: $('#occupation-btn').val(),
+    personnelImageUrl: $('#personnel-image').val(),
+    occupationImageUrl: $('#occupation-image').val(),
     uid: userId,
   };
   personnelData.addPersonnel(newPersonnel)
@@ -86,11 +89,15 @@ const printPersonnel = () => {
       domString += '</div>';
       domString += '<div class="col-md-3 mb-3">';
       domString += '<label for="state">Description:</label>';
-      domString += '<input type="text" class="form-control" id="description">';
+      domString += '<input type="text" class="form-control" id="create-description">';
       domString += '</div>';
       domString += '<div class="col-md-2 mb-3">';
-      domString += '<label for="country">imageUrl:</label>';
-      domString += '<input type="text" class="form-control" id="image">';
+      domString += '<label for="country">Personnel Image:</label>';
+      domString += '<input type="text" class="form-control" id="personnel-image">';
+      domString += '</div>';
+      domString += '<div class="col-md-2 mb-3">';
+      domString += '<label for="country">Occupation Image:</label>';
+      domString += '<input type="text" class="form-control" id="occupation-image">';
       domString += '</div>';
       domString += '<div class="col-md-7 form-check">';
       domString += '<label class="pr-3" for="occupation">Occupation Type:</label>';

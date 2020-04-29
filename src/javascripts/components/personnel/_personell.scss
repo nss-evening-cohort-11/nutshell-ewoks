@@ -15,7 +15,6 @@
     overflow: hidden;
 }
 
-//photo 
 .profile-card-3 .background-block .background {
   width: 50%;
   vertical-align: top;
@@ -96,15 +95,6 @@
   text-decoration:none;
 }
 
-
-.delete-btn {
-  display: none;
-}
-
-img:hover + .delete-btn, .delete-btn:hover {
-  display: inline-block;
-}
-
 .personnel-profile-thumb-block img {
   width: 140px;
   height: 100px;
@@ -115,21 +105,13 @@ img:hover + .delete-btn, .delete-btn:hover {
   height: 200px !important;
 }
 
-// .delete-personnel-btn {
-//   display: none !important;
-// }
-// .user-card:hover .delete-personnel-btn {
-//   display: inline-block !important;
-//   transition: 0.3s;
-//   z-index: 999999999;
-// }
+.delete-personnel-btn {
+  display: none !important;
+}
 
-// .edit-personnel {
-//   display: none !important;
-// }
-// .user-card:hover .edit-personnel {
-//   display: inline-block !important;
-// }
+.edit-personnel {
+  display: none !important;
+}
 
 .overlay {
   position: absolute;
@@ -143,7 +125,16 @@ img:hover + .delete-btn, .delete-btn:hover {
   transition: .5s ease;
   background-color: grey;
   z-index: 999999;
-  backdrop-filter: blur(5px);
+}
+
+.overlay .delete-personnel-btn {
+  display: inline-block !important;
+  position: absolute;
+  margin-top: 300px;
+}
+
+.overlay .edit-personnel {
+  display: inline-block !important;
 }
 
 .user-card:hover .overlay {
@@ -159,7 +150,5 @@ img:hover + .delete-btn, .delete-btn:hover {
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
-.delete-personnel-btn:hover {
-  display: none;
-}
+
 

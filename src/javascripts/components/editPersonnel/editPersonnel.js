@@ -18,8 +18,12 @@ const showForm = (personnelId) => {
       domString += `<input type="text" class="form-control" id="edit-personnel-description" placeholder="747" value="${personnel.description}">`;
       domString += '</div>';
       domString += '<div class="form-group text-center">';
-      domString += '<label for="personnel-image">Image</label>';
-      domString += `<input type="text" class="form-control" id="edit-personnel-image" placeholder="Jumbo-Passenger" value="${personnel.imageUrl}">`;
+      domString += '<label for="personnel-image">Personnel Image</label>';
+      domString += `<input type="text" class="form-control" id="edit-personnel-image" placeholder="Jumbo-Passenger" value="${personnel.personnelImageUrl}">`;
+      domString += '</div>';
+      domString += '<div class="form-group text-center">';
+      domString += '<label for="personnel-image">Occupation Image</label>';
+      domString += `<input type="text" class="form-control" id="edit-occupation-image" placeholder="Jumbo-Passenger" value="${personnel.occupationImageUrl}">`;
       domString += '</div>';
       domString += '<div class="form-group text-center">';
       domString += '<label class="pr-3" for="occupation">Occupation Type:</label>';
