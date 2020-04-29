@@ -3,8 +3,12 @@ import 'firebase/auth';
 import warRoom from '../../components/warRoom/warRoom';
 import enemies from '../../components/enemies/enemies';
 
+import weapons from '../../components/weapons/weapons';
+import sectorEvents from '../../components/sectorArea/sectorArea';
+
 const authDiv = $('#auth');
 const logoutButton = $('#navbar-logout-button');
+
 
 const checkLoginStatus = () => {
   firebase.auth().onAuthStateChanged((user) => {
@@ -13,11 +17,14 @@ const checkLoginStatus = () => {
       logoutButton.removeClass('hide');
       warRoom.printPersonnel();
       enemies.printEnemy();
+      sectorEvents.sectorClickEvents();
+      weapons.weaponsClickEvent();
+      enemies.clickEvents();
     } else {
       authDiv.removeClass('hide');
       logoutButton.addClass('hide');
     }
-    enemies.clickEvents();
+    warRoom.clickEvents();
   });
 };
 

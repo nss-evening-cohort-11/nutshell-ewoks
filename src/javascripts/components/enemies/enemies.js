@@ -38,6 +38,9 @@ const deleteEnemy = (e) => {
     .catch((err) => console.err('cannot remove enemy', err));
 };
 
+// -----------------------------------------------------------------create enemy model
+
+
 // ---------------------------------------------------------------- prints enemy
 
 const printEnemy = () => {
