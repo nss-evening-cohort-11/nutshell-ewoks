@@ -23,9 +23,9 @@ const updatePersonnel = (e) => {
     uid: userId,
     name: $('#edit-personnel-name').val(),
     description: $('#edit-personnel-description').val(),
-    imageUrl: $('#edit-personnel-image').val(),
-    occupationTypeId: $('#occupation-update-btn').val(),
-    occupationName: $('#occupation-update-btn').val(),
+    personnelImageUrl: $('#edit-personnel-image').val(),
+    occupationTypeId: $('#occupation-btn').val(),
+    occupationName: $('#occupation-btn').val(),
   };
   personnelData.updatePersonnel(personnelId, editedPersonnel).then(() => {
     $('#personnelEditModal').modal('hide');
@@ -42,8 +42,8 @@ const createPersonnel = (e) => {
   const userId = uid;
   const newPersonnel = {
     name: $('#name').val(),
-    description: $('#description').val(),
-    imageUrl: $('#image').val(),
+    description: $('#decription').val(),
+    personnelImageUrl: $('#image').val(),
     occupationTypeId: $('#occupation-btn').val(),
     occupationName: $('#occupation-btn').val(),
     uid: userId,
