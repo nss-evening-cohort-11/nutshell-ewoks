@@ -17,8 +17,6 @@ const checkLoginStatus = () => {
     if (user) {
       authDiv.addClass('hide');
       logoutButton.removeClass('hide');
-      warRoomComponent.printPersonnel();
-      enemies.printEnemy();
       sectorEvents.sectorClickEvents();
       weapons.weaponsClickEvent();
       enemies.clickEvents();
