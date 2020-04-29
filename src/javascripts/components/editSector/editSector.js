@@ -59,7 +59,8 @@ const showEditSectorForm = (sectorId) => {
 
       domString += '</form>';
 
-      utils.printToDom('update-create-sector-cards-here', domString);
+      // utils.printToDom('update-create-sector-cards-here', domString);
+      utils.printToDom('editSectorModal', domString);
     })
     .catch((err) => console.error('could not get single sector to update info', err));
 };
