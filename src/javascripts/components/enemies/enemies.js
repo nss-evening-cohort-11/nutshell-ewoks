@@ -3,8 +3,39 @@ import 'firebase/auth';
 
 import enemyData from '../../helpers/data/enemyData';
 import enemyComponent from './enemiesComponent';
+
 import utils from '../../helpers/utils';
+import editEnemy from '../editEnemy/editEnemy';
 import './enemies.scss';
+
+const editEnemyEvent = (e) => {
+  e.preventDefault();
+  const enemiesId = e.target.closest('.card').id;
+  $('#enemyEditModal').modal('show');
+  editEnemy.showForm(enemiesId);
+};
+
+const updateEnemies = (e) => {
+  e.preventDefault();
+  const { uid } = firebase.auth().currentUser;
+  const userId = uid;
+  const enemiesId = e.target.closest('.edit-enemy-form-tag').id;
+  const editedEnemies = {
+    uid: userId,
+    name: $('#edit-enemy-name').val(),
+    special_skills: $('#edit-enemy-skills').val(),
+    weakness: $('#edit-enemy-weakness').val(),
+    imageUrl: $('#edit-enemy-image').val(),
+  };
+
+  enemyData.updateEnemy(enemiesId, editedEnemies).then(() => {
+    $('#enemyEditModal').modal('hide');
+    // eslint-disable-next-line no-use-before-define
+    printEnemy();
+  })
+    .catch((err) => console.error('could not update the enemies', err));
+};
+
 
 // ------------------------------------------------------------add enemy
 const createEnemy = (e) => {
@@ -23,13 +54,15 @@ const createEnemy = (e) => {
       // eslint-disable-next-line no-use-before-define
       printEnemy();
     })
-    .catch((err) => console.err('could not add personnel', err));
+    // eslint-disable-next-line no-console
+    .catch((err) => console.err('could not add enemy', err));
 };
 // ---------------------------------------------------------------- deletes enemy--//
 
 const deleteEnemy = (e) => {
-  const selectedPersonnelId = e.target.closest('.user-card').id;
-  enemyData.deleteEnemy(selectedPersonnelId)
+  const selectedEnemiesId = e.target.closest('.user-card').id;
+  console.log('test me', selectedEnemiesId);
+  enemyData.deleteEnemy(selectedEnemiesId)
     .then(() => {
     // eslint-disable-next-line no-use-before-define
       printEnemy();
@@ -95,6 +128,8 @@ const printEnemy = () => {
 const clickEvents = () => {
   $('body').on('click', '.delete-enemy-btn', deleteEnemy);
   $('body').on('click', '.add-enemy-btn', createEnemy);
+  $('body').on('click', '#button-save-edit-enemy', updateEnemies);
+  $('body').on('click', '.edit-enemies', editEnemyEvent);
 };
 
 export default { printEnemy, clickEvents };
