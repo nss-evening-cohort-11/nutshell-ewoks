@@ -71,9 +71,8 @@ const submitUserSectorEdits = (e) => {
   sectorData.updateSector(sectorId, editedSector)
     .then(() => {
     // 3. reprint sectors and hide form
-      // $('#personnelEditModal').modal('hide'); moving this down
       buildSectors();
-      utils.printToDom('update-create-sector-cards-here', ''); // just hide this
+      // utils.printToDom('update-create-sector-cards-here', '');
       $('#editSectorModal').modal('hide');
     })
     .catch((err) => console.error('submitUserSectorEdits broke', err));
