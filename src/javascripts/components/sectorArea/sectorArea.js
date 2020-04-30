@@ -55,7 +55,7 @@ const makeNewSector = (e) => {
 
 const submitUserSectorEdits = (e) => {
   e.preventDefault();
-  const sectorId = e.target.closest('.edit-sector-form').id;
+  const sectorId = e.target.closest('.edit-sector-form').id; // change this class to see modal
   const exploredRadio = $('input[name=explored-radio-buttons]:checked').val();
   const occupiedRadio = $('input[name=occupied-radio-buttons]:checked').val();
 
@@ -72,7 +72,8 @@ const submitUserSectorEdits = (e) => {
     .then(() => {
     // 3. reprint sectors and hide form
       buildSectors();
-      utils.printToDom('update-create-sector-cards-here', '');
+      // utils.printToDom('update-create-sector-cards-here', '');
+      $('#editSectorModal').modal('hide');
     })
     .catch((err) => console.error('submitUserSectorEdits broke', err));
 };
@@ -81,6 +82,7 @@ const submitUserSectorEdits = (e) => {
 const editSector = (e) => {
   e.preventDefault();
   const sectorId = e.target.closest('.card').id;
+  $('#editSectorModal').modal('show');
   editSectorComponent.showEditSectorForm(sectorId);
 };
 

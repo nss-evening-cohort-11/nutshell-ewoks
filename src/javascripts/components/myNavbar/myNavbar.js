@@ -10,6 +10,7 @@ const weaponTypeDiv = $('#weapontype');
 const personnelDiv = $('#the-war-room');
 const viewWeaponDiv = $('#view-weapon');
 const sectorDiv = $('#print-sector-cards-here');
+const sectorFormDiv = $('#update-create-sector-cards-here'); // new
 const mainDiv = $('#main-view');
 const enemyView = $('#enemy-area');
 
@@ -17,10 +18,11 @@ const sectorsNavbarClickEvent = () => {
   $('#sectors-navbar-button').click((e) => {
     e.preventDefault();
     sectorBuilder.buildSectors();
-    $('#create-new-sector-button').removeClass('hide');
+    // $('#create-new-sector-button').removeClass('hide'); // form shows on first sectors page load with this commented out
     weaponTypeDiv.addClass('hide');
     viewWeaponDiv.addClass('hide');
     sectorDiv.removeClass('hide');
+    sectorFormDiv.addClass('hide'); // form shows first sectors page load with this commented out
     personnelDiv.addClass('hide');
     mainDiv.addClass('hide');
     enemyView.addClass('hide');
@@ -34,6 +36,7 @@ const personnelNavbarClickEvent = () => {
     weaponTypeDiv.addClass('hide');
     viewWeaponDiv.addClass('hide');
     sectorDiv.addClass('hide');
+    sectorFormDiv.addClass('hide');
     personnelDiv.removeClass('hide');
     mainDiv.addClass('hide');
     enemyView.addClass('hide');
@@ -47,6 +50,7 @@ const enemiesNavbarClickEvent = () => {
     weaponTypeDiv.addClass('hide');
     viewWeaponDiv.addClass('hide');
     sectorDiv.addClass('hide');
+    sectorFormDiv.addClass('hide');
     personnelDiv.addClass('hide');
     mainDiv.addClass('hide');
     enemyView.removeClass('hide');
@@ -61,6 +65,7 @@ const weaponsNavbarClickEvent = () => {
     viewWeaponDiv.addClass('hide');
     personnelDiv.addClass('hide');
     sectorDiv.addClass('hide');
+    sectorFormDiv.addClass('hide');
     mainDiv.addClass('hide');
     enemyView.addClass('hide');
   });
