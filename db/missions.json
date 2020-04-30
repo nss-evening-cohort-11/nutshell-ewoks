@@ -1,0 +1,29 @@
+{
+	"Mission1": {
+			"name": "Breakthrough",
+			"planetarySectorId": "sector1",
+			"enemyId": "enemies1",
+			"uid": ""
+		},
+
+		"Mission2": {
+			"name": "Intercept-Transmissions",
+      "planetarySectorId": "sector2",
+			"enemyId": "enemies2",
+			"uid": "" 		 
+		},
+
+		"Mission3": {
+			"name": "Recover-Supplies",
+			"planetarySectorId": "sector3",
+			"enemyId": "enemies3",
+			"uid": ""
+		},
+
+		"Mission4": {
+			"name": "Evacuate-Base",
+			"planetarySectorId": "sector1",
+			"enemyId": "enemies4",
+			"uid": ""
+    }
+  }
