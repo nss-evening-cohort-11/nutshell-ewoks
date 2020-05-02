@@ -142,6 +142,7 @@ const weaponsClickEvent = () => {
   $('body').on('click', '#form-edit-weapon-creator', modifyWeapon);// changed back to regular form button
   $('body').on('click', '#form-weapontype-creator', makeNewWeapon);
   $('body').on('click', '#create-new-weapontype-form', createNewWeaponType.buildNewWeapon);
+  // $('body').on('click', '.mission-checkbox', missionPersonnelController);
 };
 
 export default { buildWeaponsByType, weaponsClickEvent };
