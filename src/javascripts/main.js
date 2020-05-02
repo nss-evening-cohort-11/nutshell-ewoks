@@ -5,7 +5,7 @@ import auth from './components/auth/auth';
 import '../styles/main.scss';
 import myNavbar from './components/myNavbar/myNavbar';
 import 'bootstrap';
-import missions from './components/Missions/missions';
+// import missions from './components/Missions/missions';
 
 const init = () => {
   firebase.initializeApp(apiKeys.firebaseKeys);
@@ -13,7 +13,7 @@ const init = () => {
   auth.loginButton();
   myNavbar.logoutEvent();
   myNavbar.navbarClickEvents();
-  missions.buildMissions();
+  // missions.buildMissions();
 };
 
 init();

@@ -7,52 +7,24 @@ import enemyData from './enemyData';
 import sectorData from './sectorData';
 
 
-// const getMissionsEverything = () => new Promise((resolve, reject) => {
-//   missionData.getMissions()
-//     .then((missionResponse) => {
-//       personnelData.getAllPersonnel().then((personnelResponse) => {
-//         weaponsData.getWeapons().then((weaponsResponse) => {
-//           missionPersonnelData.getMissionPersonnel().then((missionPersonnelResponse) => {
-//             missionWeaponsData.getMissionWeapons().then((missionWeaponsResponse) => {
-//               console.log('mission', missionResponse);
-//               console.log('personnel only', personnelResponse);
-//               console.log('weapons only', weaponsResponse);
-//               console.log('personnel', missionPersonnelResponse);
-//               console.log('weapons', missionWeaponsResponse);
-//               const missionAvailPersonnel = [];
-//               missionResponse.forEach((oneMission) => {
-//                 const mission = { personnels: [], ...oneMission };
-//                 const missionPeople = missionPersonnelResponse.filter((x) => x.missionId === mission.id); // when the personnel matches mission
-//                 personnelResponse.forEach((onePersonnel) => {
-//                   const personnel = { ...onePersonnel };
-//                   const isPersonnel = missionPeople.find((x) => x.personnelId === personnel.id); // find all personnel attached to a  mission
-//                   personnel.ischecked = isPersonnel !== undefined; // if personnel attached to mission check the box
-//                   mission.personnels.push(personnel);
-//                 });
-//                 missionAvailPersonnel.push(mission);
-//               });
-//               console.log('missionAvailPersonnel', missionAvailPersonnel);
-//               resolve(missionAvailPersonnel); // this shows missions with all avail personnel
-//             }); // closes inner mission weapon
-//           });// closes mission personnel
-//         }) // closes mission
-//           .catch((err) => reject(err));
-//       }); // closes first line
-//     });
-// });
-
-// getMissions() - missionData.js < smash.js - getMissionsEverything() < missions.js - buildMissions()
-
 const findMissionPersonnel = (missionId, missionPersonnel, personnelResponse) => {
   const daMissionPersonnel = [];
   const thisMissionPersonnel = missionPersonnel.filter((p) => p.missionId === missionId);
-  // thisMissionPersonnel.forEach((missionPerson) => {
-  for (let i = 0; i < thisMissionPersonnel.length; i += 1) {
-    daMissionPersonnel.push(personnelResponse.find((x) => x.id === thisMissionPersonnel[i].personnelId));
-  }
-  // return(array);
-  console.log('da mission cuz', daMissionPersonnel);
+  thisMissionPersonnel.forEach((missionPerson) => {
+    daMissionPersonnel.push(personnelResponse.find((x) => x.id === missionPerson.personnelId));
+  });
+  return daMissionPersonnel;
 };
+const findMissionWeapons = (missionId, missionWeapons, weaponsResponse) => {
+  const daMissionWeapons = [];
+  const thisMissionWeapon = missionWeapons.filter((w) => w.missionId === missionId);
+  thisMissionWeapon.forEach((missionWeapon) => {
+    daMissionWeapons.push(weaponsResponse.find((x) => x.id === missionWeapon.weaponId));
+  });
+  return daMissionWeapons;
+};
+
+
 const getMissionsEverything = () => new Promise((resolve, reject) => {
   missionData.getMissions()
     .then((missionResponse) => {
@@ -62,13 +34,6 @@ const getMissionsEverything = () => new Promise((resolve, reject) => {
             missionWeaponsData.getMissionWeapons().then((missionWeaponsResponse) => {
               enemyData.getAllEnemies().then((enemyResponse) => {
                 sectorData.getSectors().then((sectorResponse) => {
-                  console.log('mission', missionResponse);
-                  console.log('personnel only', personnelResponse);
-                  console.log('weapons only', weaponsResponse);
-                  console.log('personnel', missionPersonnelResponse);
-                  console.log('weapons', missionWeaponsResponse);
-                  console.log('enemy', enemyResponse);
-                  console.log('sector', sectorResponse);
                   const missions = [];
                   missionResponse.forEach((mission) => {
                     const daMission = {
@@ -77,11 +42,12 @@ const getMissionsEverything = () => new Promise((resolve, reject) => {
                       name: mission.name,
                       sector: sectorResponse.filter((x) => x.id === mission.planetarySectorId)[0],
                       enemy: enemyResponse.filter((x) => x.id === mission.enemyId)[0],
+                      weapons: findMissionWeapons(mission.id, missionWeaponsResponse, weaponsResponse),
                       personnel: findMissionPersonnel(mission.id, missionPersonnelResponse, personnelResponse),
                     };
                     missions.push(daMission);
                   });
-                  console.log('final mission', missions);
+                  resolve(missions);
                 });
               });
             });
@@ -92,19 +58,4 @@ const getMissionsEverything = () => new Promise((resolve, reject) => {
     .catch((err) => reject(err));
 });
 
-
-// personnel: personnel.map(personnelResponse.filter((x) => x.id === mission.enemyId))
-//
-// create an object
-// eslint-disable-next-line max-len
-// missionPersonnel - build empty array pass in object (missionPersonnelResonse.name, .imageUrl, .occupationTypeId, .description, .uid)
-// missionWeapons - build empty array pass in object (missionWeaponsRespone.name, .description, .imagUrl, .weaponTypeId)
-
-
 export default { getMissionsEverything };
-
-// 1. get all mission personnel whos mission Id = mission Id passed in
-
-// 2. get all personnel whos personnel id = personnel id passed in from missionPersonnel
-
-// 3.
