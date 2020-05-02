@@ -68,23 +68,6 @@ const modifyWeapon = (e) => {
     .catch((err) => console.error('could not modify weapon', err));
 };
 
-const missionPersonnelController = (e) => {
-  e.preventDefault();
-  console.log(e.target.checked);
-  // if (e.target.checked) {
-  // create a new personnel
-  // const newMissionPersonnel = {
-  // personnelId: ' ',
-  // missionId: ' ',
-  // missionName: ' ',
-  // weaponId: ' ',
-  // uid: '',
-  // };
-  // } else {
-  // delete a personnel
-  // }
-};
-
 
 const buildWeaponsByType = (e) => {
   let weapontypeId = '';
@@ -159,7 +142,7 @@ const weaponsClickEvent = () => {
   $('body').on('click', '#form-edit-weapon-creator', modifyWeapon);// changed back to regular form button
   $('body').on('click', '#form-weapontype-creator', makeNewWeapon);
   $('body').on('click', '#create-new-weapontype-form', createNewWeaponType.buildNewWeapon);
-  $('body').on('click', '.mission-checkbox', missionPersonnelController);
+  // $('body').on('click', '.mission-checkbox', missionPersonnelController);
 };
 
 export default { buildWeaponsByType, weaponsClickEvent };

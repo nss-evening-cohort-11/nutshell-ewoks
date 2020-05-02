@@ -3,7 +3,7 @@ import './missionCards.scss';
 const missionMaker = (mission) => {
   let domString = '';
   domString += '<div class="text-center card-group">';
-  domString += `<div class="card profile-card-3 m-3 .mission-card" id="${mission.id}">`;
+  domString += `<div class="card mission-card-3 m-3 mission-card" id="${mission.id}">`;
   domString += '<div class="background-block">';
   domString += '</div>';
   domString += '<div class="mb-auto card-content">';
@@ -15,7 +15,7 @@ const missionMaker = (mission) => {
   mission.personnels.forEach((person) => {
     domString += '<div class="form-check text-left">';
     domString += `<input type="checkbox" class="form-check-input" ${person.ischecked ? 'checked' : ''}>`;
-    domString += `<label class="form-check-label" for="exampleCheck1">${person.name}</label>`;
+    domString += `<label class="form-check-label" for="exampleCheck1" id="${person.id}">${person.name}</label>`;
     domString += '</div>';
   });
   domString += '</form>';

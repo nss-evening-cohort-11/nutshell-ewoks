@@ -19,4 +19,23 @@ const buildMissions = () => {
     .catch((err) => console.error('get mission broke', err));
 };
 
+
+// const missionPersonnelController = (e) => {
+//   e.preventDefault();
+//   console.log(e.target.checked);
+//   if (e.target.checked) {
+//   // create a new personnel
+//     const newMissionPersonnel = {
+//       personnelId: e.target.closest('.form-check-label').id
+//       missionId: e.target.closest('.card').id,
+//       missionName: ' ',
+//       weaponId: ' ',
+//       uid: firebase.auth().currentUser.uid,
+//     };
+//   } else {
+//     // delete a personnel
+//   }
+// };
+
+
 export default { buildMissions };
