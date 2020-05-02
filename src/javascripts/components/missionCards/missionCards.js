@@ -8,9 +8,18 @@ const missionMaker = (mission) => {
   domString += '</div>';
   domString += '<div class="mb-auto card-content">';
   domString += `<h2>${mission.name}</h2>`;
-  domString += `<div class="card-body p-0">${mission.planetarySectorId}</div>`;
-  domString += `<div class="card-body p-0">${mission.enemyId}</div>`;
+  domString += '<div class="card-body p-0">';
   domString += '<div class="icon-block"><i class="fas fa-eye"></i></div>';
+  domString += '<p class="text-left"> Personnel</p>';
+  domString += '<form>';
+  mission.personnels.forEach((person) => {
+    domString += '<div class="form-check text-left">';
+    domString += `<input type="checkbox" class="form-check-input" ${person.ischecked ? 'checked' : ''}>`;
+    domString += `<label class="form-check-label" for="exampleCheck1">${person.name}</label>`;
+    domString += '</div>';
+  });
+  domString += '</form>';
+  domString += '</div>';
   domString += '</div>';
   domString += '</div>';
   domString += '</div>';

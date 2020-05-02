@@ -1,13 +1,13 @@
-import missionData from '../../helpers/data/missionData';
+import smash from '../../helpers/data/smash';
 import missionCards from '../missionCards/missionCards';
 import utils from '../../helpers/utils';
 
 const buildMissions = () => {
-  missionData.getMissions()
+  smash.getMissionsEverything()
     .then((missions) => {
       let domString = '';
       domString += '<div>';
-      domString += '<div class= "d-flex flex-wrap m-5 justify-content-center">';
+      domString += '<div class= "d-flex flex-wrap  justify-content-center">';
       missions.forEach((mission) => {
         domString += missionCards.missionMaker(mission);
       });
