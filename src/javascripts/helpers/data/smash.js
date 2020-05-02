@@ -46,13 +46,12 @@ import sectorData from './sectorData';
 const findMissionPersonnel = (missionId, missionPersonnel, personnelResponse) => {
   const daMissionPersonnel = [];
   const thisMissionPersonnel = missionPersonnel.filter((p) => p.missionId === missionId);
-  thisMissionPersonnel.forEach((missionPerson) => {
-    console.log('yurp', personnelResponse.filter((x) => x.id === missionPerson.personnelId)[0]);
-    const deObject = {};
-    daMissionPersonnel.push(deObject);
-    console.log('da mission cuz', daMissionPersonnel);
-  });
+  // thisMissionPersonnel.forEach((missionPerson) => {
+  for (let i = 0; i < thisMissionPersonnel.length; i += 1) {
+    daMissionPersonnel.push(personnelResponse.find((x) => x.id === thisMissionPersonnel[i].personnelId));
+  }
   // return(array);
+  console.log('da mission cuz', daMissionPersonnel);
 };
 const getMissionsEverything = () => new Promise((resolve, reject) => {
   missionData.getMissions()
