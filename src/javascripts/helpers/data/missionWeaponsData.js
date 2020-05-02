@@ -17,4 +17,6 @@ const getMissionWeapons = () => new Promise((resolve, reject) => {
     .catch((err) => reject(err));
 });
 
-export default { getMissionWeapons };
+const getMissionWeaponsbyId = (weaponId) => axios.get(`${baseUrl}/missionWeapons/${weaponId}.json`);
+
+export default { getMissionWeapons, getMissionWeaponsbyId };

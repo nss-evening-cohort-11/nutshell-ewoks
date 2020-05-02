@@ -17,4 +17,6 @@ const getMissionPersonnel = () => new Promise((resolve, reject) => {
     .catch((err) => reject(err));
 });
 
-export default { getMissionPersonnel };
+const getMissionPersonnelbyId = (personnelId) => axios.get(`${baseUrl}/missionPersonnel/${personnelId}.json`);
+
+export default { getMissionPersonnel, getMissionPersonnelbyId };
