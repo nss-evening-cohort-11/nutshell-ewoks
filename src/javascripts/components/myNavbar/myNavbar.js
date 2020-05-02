@@ -5,6 +5,8 @@ import sectorBuilder from '../sectorArea/sectorArea';
 import buildWeapons from '../weaponsType/weaponTypes';
 import personnelBuilder from '../warRoom/warRoom';
 import buildEnemies from '../enemies/enemies';
+import missionBuilder from '../Missions/missions';
+
 
 const weaponTypeDiv = $('#weapontype');
 const personnelDiv = $('#the-war-room');
@@ -74,7 +76,8 @@ const weaponsNavbarClickEvent = () => {
 const missionNavbarClickEvent = () => {
   $('#mission-navbar-button').click((e) => {
     e.preventDefault();
-    buildWeapons.buildWeaponTypes();
+    missionBuilder.buildMissions();
+    // buildWeapons.buildWeaponTypes();
     weaponTypeDiv.addClass('hide');
     viewWeaponDiv.addClass('hide');
     personnelDiv.addClass('hide');
