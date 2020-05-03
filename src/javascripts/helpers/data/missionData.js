@@ -19,4 +19,6 @@ const getMissions = () => new Promise((resolve, reject) => {
 
 const getMissionbyId = (missionId) => axios.get(`${baseUrl}/missions/${missionId}.json`);
 
-export default { getMissions, getMissionbyId };
+const addMission = (newMission) => axios.post(`${baseUrl}/missions.json`, newMission);
+
+export default { getMissions, getMissionbyId, addMission };

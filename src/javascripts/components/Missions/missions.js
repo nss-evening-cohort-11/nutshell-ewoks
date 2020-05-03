@@ -5,6 +5,7 @@ import smash from '../../helpers/data/smash';
 import missionCards from '../missionCards/missionCards';
 import createMissionComponent from './createMission';
 import utils from '../../helpers/utils';
+import missionData from '../../helpers/data/missionData';
 
 const createNewMissionFormDiv = $('#create-new-mission-form-goes-here');
 const openNewMissionFormButton = $('#show-make-new-mission-form-button');
@@ -34,13 +35,20 @@ const createNewMission = () => {
   console.error('your createNewMission function just ran!');
   createNewMissionFormDiv.addClass('hide');
   openNewMissionFormButton.removeClass('hide');
+  // make new mission object
   const newMission = {
+    enemyId: '',
     name: $('#user-entered-mission-name').val(),
+    planetarySectorId: '',
     uid: firebase.auth().currentUser.uid,
   };
-
-  console.error(newMission);
-  buildMissions();
+  console.error('your newMission object', newMission);
+  // save to firebase
+  missionData.addMission(newMission)
+    .then(() => {
+      buildMissions();
+    })
+    .catch((err) => console.error('make new mission broke', err));
 };
 
 const missionClickEvents = () => {
