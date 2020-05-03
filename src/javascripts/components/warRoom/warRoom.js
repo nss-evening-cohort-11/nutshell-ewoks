@@ -56,7 +56,7 @@ const createPersonnel = (e) => {
       // eslint-disable-next-line no-use-before-define
       printPersonnel();
     })
-    .catch((err) => console.err('could not add personnel', err));
+    .catch((err) => console.error('could not add personnel', err));
 };
 const removePersonnel = (e) => {
   const selectedPersonnelId = e.target.closest('.user-card').id;
@@ -65,7 +65,7 @@ const removePersonnel = (e) => {
       // eslint-disable-next-line no-use-before-define
       printPersonnel();
     })
-    .catch((err) => console.err('cannot remove personnel', err));
+    .catch((err) => console.error('cannot remove personnel', err));
 };
 
 const printPersonnel = () => {

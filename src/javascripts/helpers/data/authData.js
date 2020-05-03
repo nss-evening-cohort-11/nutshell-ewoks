@@ -7,6 +7,7 @@ import enemies from '../../components/enemies/enemies';
 
 import weapons from '../../components/weapons/weapons';
 import sectorEvents from '../../components/sectorArea/sectorArea';
+import missionComponents from '../../components/Missions/missions';
 
 const authDiv = $('#auth');
 const logoutButton = $('#navbar-logout-button');
@@ -20,6 +21,7 @@ const checkLoginStatus = () => {
       weapons.weaponsClickEvent();
       enemies.clickEvents();
       warRoomComponent.clickEvents();
+      missionComponents.missionClickEvents();
     } else {
       authDiv.removeClass('hide');
       logoutButton.addClass('hide');

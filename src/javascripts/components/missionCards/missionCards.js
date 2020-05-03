@@ -1,7 +1,7 @@
 import './missionCards.scss';
 
 const missionMaker = (mission) => {
-  console.log(mission);
+  // console.log(mission);
   let domString = '';
   domString += '<div class="text-center card-group">';
   domString += `<div class="card mission-card-3 m-3 mission-card" id="${mission.id}">`;

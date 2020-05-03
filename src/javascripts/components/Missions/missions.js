@@ -1,5 +1,6 @@
 import smash from '../../helpers/data/smash';
 import missionCards from '../missionCards/missionCards';
+import createMissionComponent from './createMission';
 import utils from '../../helpers/utils';
 
 const buildMissions = () => {
@@ -7,7 +8,9 @@ const buildMissions = () => {
     .then((missions) => {
       let domString = '';
       domString += '<div>';
+      domString += '<button id="show-make-new-mission-form-button"><i class="fas fa-2x fa-plus-circle"></i></button>';
       domString += '<div class= "d-flex flex-wrap  justify-content-center">';
+
       missions.forEach((mission) => {
         domString += missionCards.missionMaker(mission);
       });
@@ -19,7 +22,9 @@ const buildMissions = () => {
     .catch((err) => console.error('get mission broke', err));
 };
 
-
+const missionClickEvents = () => {
+  $('body').on('click', '#show-make-new-mission-form-button', createMissionComponent.showFormToCreateMission);
+};
 // const missionPersonnelController = (e) => {
 //   e.preventDefault();
 //   console.log(e.target.checked);
@@ -38,4 +43,4 @@ const buildMissions = () => {
 // };
 
 
-export default { buildMissions };
+export default { buildMissions, missionClickEvents };

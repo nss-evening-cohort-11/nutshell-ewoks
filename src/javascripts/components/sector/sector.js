@@ -2,6 +2,7 @@ import firebase from 'firebase/app';
 import 'firebase/auth';
 
 const sectorMaker = (sector) => {
+  // eslint-disable-next-line max-len
   const userIconBlock = firebase.auth().currentUser === null ? '' : '<div class="icon-block" id="delete-edit-button-div"><i class="fas fa-times delete-btn" id="delete-sector-button"></i><i class="fas fa-pencil-alt edit-btn" id="edit-sector-button"></i></div>';
 
   let domString = '';
