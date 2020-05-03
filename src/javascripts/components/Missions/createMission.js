@@ -33,7 +33,7 @@ const showFormToCreateMission = () => {
   sectorDataComponent.getSectors()
     .then((sectors) => {
       sectors.forEach((sector) => {
-        domString += `<option value=${sector.name}>${sector.name}</option>`;
+        domString += `<option value=${sector.name}>${sector.name}</option>`; // inside drop down
       });
       domString += '</select>';
 
@@ -42,16 +42,18 @@ const showFormToCreateMission = () => {
       enemyDataComponent.getAllEnemies()
         .then((enemies) => {
           enemies.forEach((enemy) => {
-            domString += `<option value=${enemy.name}>${enemy.name}</option>`;
-            domString += '</div>';
-            domString += '<button type="button" class="btn btn-primary" id="submit-new-mission-form-button">Create New Mission</button>';
-            domString += '</form>';
-
-            utils.printToDom('create-new-mission-form-goes-here', domString);
+            domString += `<option value=${enemy.name}>${enemy.name}</option>`; // inside drop down
           });
           domString += '</select>';
-        })
-        .catch((err) => console.error('problen with the getAllEnemies drop down menu', err));
+          domString += '</div>';
+          domString += '<button type="button" class="btn btn-primary" id="submit-new-mission-form-button">Create New Mission</button>';
+          domString += '</form>';
+
+          utils.printToDom('create-new-mission-form-goes-here', domString);
+        });
+      // domString += '</select>';
+    // })
+      // .catch((err) => console.error('problen with the getAllEnemies drop down menu', err));
     })
     .catch((err) => console.error('something went wrong inside your getSectors function inside the sectors dropdown menu', err));
 };

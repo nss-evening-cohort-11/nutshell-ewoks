@@ -36,9 +36,9 @@ const createNewMission = () => {
   openNewMissionFormButton.removeClass('hide');
   // make new mission object
   const newMission = {
-    enemyId: '',
+    enemyId: $('#mission-enemy-drop-down').val(),
     name: $('#user-entered-mission-name').val(),
-    planetarySectorId: '',
+    planetarySectorId: $('#mission-sector-drop-down').val(),
     uid: firebase.auth().currentUser.uid,
   };
   console.error('your newMission object', newMission);
