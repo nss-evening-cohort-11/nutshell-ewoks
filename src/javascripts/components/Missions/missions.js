@@ -1,3 +1,6 @@
+import firebase from 'firebase/app';
+import 'firebase/auth';
+
 import smash from '../../helpers/data/smash';
 import missionCards from '../missionCards/missionCards';
 import createMissionComponent from './createMission';
@@ -31,6 +34,12 @@ const createNewMission = () => {
   console.error('your createNewMission function just ran!');
   createNewMissionFormDiv.addClass('hide');
   openNewMissionFormButton.removeClass('hide');
+  const newMission = {
+    name: $('#user-entered-mission-name').val(),
+    uid: firebase.auth().currentUser.uid,
+  };
+
+  console.error(newMission);
   buildMissions();
 };
 
