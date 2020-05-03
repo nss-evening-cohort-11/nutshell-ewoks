@@ -29,5 +29,34 @@
       "missionName": "Name4",
       "weaponId": "Weapon4",
       "uid": ""		
-    }
+    },
+    "missionPersonnel5": {
+      "personnelId": "Personnel5",
+        "missionId": "Mission1",
+        "missionName": "Name1",
+        "weaponId": "Weapon5",
+        "uid": ""		
+      },
+      "missionPersonnel6": {
+        "personnelId": "Personnel6",
+          "missionId": "Mission1",
+          "missionName": "Name1",
+          "weaponId": "Weapon6",
+          "uid": ""		
+        },
+        "missionPersonnel7": {
+          "personnelId": "Personnel7",
+          "missionId": "Mission2",
+          "missionName": "Name2",
+          "weaponId": "Weapon7",
+          "uid": ""		 		 
+        },
+        "missionPersonnel8": {
+          "personnelId": "Personnel8",
+          "missionId": "Mission2",
+          "missionName": "Name2",
+          "weaponId": "Weapon8",
+          "uid": ""		 		 
+        }
+                 
   }

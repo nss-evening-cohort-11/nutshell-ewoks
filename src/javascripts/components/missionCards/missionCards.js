@@ -11,14 +11,14 @@ const missionMaker = (mission) => {
   domString += `<h2>${mission.name}</h2>`;
   domString += '<div class="card-body p-0">';
   domString += '<div class="icon-block"><i class="fas fa-eye"></i></div>';
+  domString += '<button class="btn btn-dark m-3 text-left" type="button" id="create-new-personnel-form">Add Personnel</button>';
   domString += '<form>';
   mission.personnel.forEach((person) => {
     domString += '<div>';
     domString += '<div class="form-check text-left">';
-    domString += '<button class="btn btn-dark m-3 text-left" type="button" id="create-new-personnel-form">Add Personnel</button>';
     domString += '<div>';
     domString += `<input type="checkbox" class="form-check-input" ${person.ischecked ? 'checked' : ''}>`;
-    domString += `<label class="form-check-label" for="exampleCheck1" id="${person.id}">${person.name}</label>`;
+    domString += `<label class="form-check-label" for="exampleCheck1" id="${person.id}">Personnel: ${person.name}</label>`;
     domString += '</div>';
     domString += '</div>';
     domString += '</div>';
@@ -26,9 +26,8 @@ const missionMaker = (mission) => {
   mission.weapons.forEach((weapon) => {
     domString += '<section>';
     domString += '<div class="form-check text-left">';
-    domString += '<h3>Weapons</h3>';
-    domString += `<input type="checkbox" class="form-check-input" ${weapon.ischecked ? 'checked' : ''}>`;
-    domString += `<label class="form-check-label" for="exampleCheck1" id="${weapon.id}">${weapon.name}</label>`;
+    domString += `<input type="checkbox" class="form-check-input"${weapon.ischecked ? 'checked' : ''}>`;
+    domString += `<label class="form-check-label" for="exampleCheck1" id="${weapon.id}">Weapon: ${weapon.name}</label>`;
     domString += '</div>';
     domString += '</section>';
   });
