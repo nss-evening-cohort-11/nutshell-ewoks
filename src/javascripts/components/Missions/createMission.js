@@ -33,7 +33,7 @@ const showFormToCreateMission = () => {
   sectorDataComponent.getSectors()
     .then((sectors) => {
       sectors.forEach((sector) => {
-        domString += `<option value=${sector.name}>${sector.name}</option>`; // inside drop down
+        domString += `<option value="${sector.name}">${sector.name}</option>`; // inside drop down
       });
       domString += '</select>';
 
@@ -42,7 +42,7 @@ const showFormToCreateMission = () => {
       enemyDataComponent.getAllEnemies()
         .then((enemies) => {
           enemies.forEach((enemy) => {
-            domString += `<option value=${enemy.name}>${enemy.name}</option>`; // inside drop down
+            domString += `<option value="${enemy.name}">${enemy.name}</option>`; // inside drop down
           });
           domString += '</select>';
           domString += '</div>';
