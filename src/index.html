@@ -47,6 +47,8 @@
   <!--personnel stuff below-->
   
   <div id="the-war-room" class="text-center"></div>
+  <!--mission below-->
+  <div id="the-mission" class="hide col-12"></div>
 
     <!--personnel modal below-->
 
@@ -98,13 +100,39 @@
 
 
 <!--sector stuff below-->
+
+<div class="col-md-9"> <!--stopped here-->
+  <div id="update-create-sector-cards-here">
+    
+  </div>
+</div>
+
       <div class="col-md-9">
         <div id="print-sector-cards-here"></div>
       </div>
 
-      <div class="col-md-3">
-        <div id="update-create-sector-cards-here">
-          
+    
+
+      <!--new sector modal code below-->
+
+      <div class="modal fade" id="editSectorModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel"></h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div id="update-create-sector-cards-here"></div> <!--where it goes-->
+            </div>
+    
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button id="submit-user-edited-sector-infomation-button" type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
         </div>
       </div>
       

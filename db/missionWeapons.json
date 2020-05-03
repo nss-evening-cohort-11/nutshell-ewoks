@@ -1,0 +1,21 @@
+{
+	"missionWeapon1": {
+			"missionId": "Mission1",
+			"weaponId": "weapon1"		
+		},
+
+		"missionWeapon2": {
+			"missionId": "Mission2",
+			"weaponId": "weapon2"	 		 
+		},
+
+		"missionWeapon3": {
+			"missionId": "Mission3",
+			"weaponId": "weapon3"	
+		},
+
+		"missionWeapon4": {
+			"missionId": "Mission4",
+			"weaponId": "weapon4"	
+    }
+  }

@@ -1,6 +1,8 @@
 import utils from '../../helpers/utils';
 
 const showFormToCreateSector = () => {
+  const sectorFormDiv = $('#update-create-sector-cards-here');
+  sectorFormDiv.removeClass('hide');
   let domString = '';
 
   domString += '<h3 class="create-new-sector-title">Create New Sector Below</h3>';
