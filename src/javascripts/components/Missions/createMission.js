@@ -33,43 +33,46 @@ const showFormToCreateMission = () => {
   sectorDataComponent.getSectors()
     .then((sectors) => {
       sectors.forEach((sector) => {
-        console.error(sector.name);
         domString += `<option value=${sector.name}>${sector.name}</option>`;
       });
       domString += '</select>';
-      domString += '<h6>After your dropdown menu domstring</h6>';
       domString += '</div>';
+      domString += '<button type="button" class="btn btn-primary" id="submit-new-mission-form-button">Create New Mission</button>';
+      domString += '</form>';
+
+      utils.printToDom('create-new-mission-form-goes-here', domString);
     })
     .catch((err) => console.error('something went wrong inside your getSectors function inside the sectors dropdown menu', err));
-
-  // domString += '<div class="row">';
-  // domString += '<div class="form-group col-4">';
-  // domString += '<label for="exampleFormControlSelect2">Select Your Mission Weapons</label>';
-  // domString += '<select multiple class="form-control" id="exampleFormControlSelect2">';
-  // domString += '<option>1</option>';
-  // domString += '<option>2</option>';
-  // domString += '<option>3</option>';
-  // domString += '<option>4</option>';
-  // domString += '<option>5</option>';
-  // domString += '</select>';
-  // domString += '</div>';
-
-  // domString += '<div class="form-group col-4">';
-  // domString += '<label for="exampleFormControlSelect2">Select Your Mission Personnel</label>';
-  // domString += '<select multiple class="form-control" id="exampleFormControlSelect2">';
-  // domString += '<option>1</option>';
-  // domString += '<option>2</option>';
-  // domString += '<option>3</option>';
-  // domString += '<option>4</option>';
-  // domString += '<option>5</option>';
-  // domString += '</select>';
-  // domString += '</div>';
-  // domString += '</div>';
-
-  domString += '<button type="button" class="btn btn-primary" id="submit-new-mission-form-button">Create New Mission</button>';
-  domString += '</form>';
-
-  utils.printToDom('create-new-mission-form-goes-here', domString);
 };
+
+// domString += '<div class="row">';
+// domString += '<div class="form-group col-4">';
+// domString += '<label for="exampleFormControlSelect2">Select Your Mission Weapons</label>';
+// domString += '<select multiple class="form-control" id="exampleFormControlSelect2">';
+// domString += '<option>1</option>';
+// domString += '<option>2</option>';
+// domString += '<option>3</option>';
+// domString += '<option>4</option>';
+// domString += '<option>5</option>';
+// domString += '</select>';
+// domString += '</div>';
+
+// domString += '<div class="form-group col-4">';
+// domString += '<label for="exampleFormControlSelect2">Select Your Mission Personnel</label>';
+// domString += '<select multiple class="form-control" id="exampleFormControlSelect2">';
+// domString += '<option>1</option>';
+// domString += '<option>2</option>';
+// domString += '<option>3</option>';
+// domString += '<option>4</option>';
+// domString += '<option>5</option>';
+// domString += '</select>';
+// domString += '</div>';
+// domString += '</div>';
+
+// domString += '<button type="button" class="btn btn-primary" id="submit-new-mission-form-button">Create New Mission</button>';
+// domString += '</form>';
+
+// utils.printToDom('create-new-mission-form-goes-here', domString);
+// };
 
 export default { showFormToCreateMission };
