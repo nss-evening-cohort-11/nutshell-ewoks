@@ -5,7 +5,7 @@ const showForm = (enemiesId) => {
   enemyData.getSingleEnemy(enemiesId)
     .then((response) => {
       const enemies = response.data;
-      console.log('test', enemies);
+      // console.log('test', enemies);
       let domString = '';
       domString += '<h2 class="text-center">Edit Enemy</h2>';
       domString += `<form class="col-10 offset-1 edit-enemy-form-tag"id=${enemiesId}>`;

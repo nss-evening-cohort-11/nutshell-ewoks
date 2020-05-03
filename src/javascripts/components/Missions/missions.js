@@ -3,6 +3,9 @@ import missionCards from '../missionCards/missionCards';
 import createMissionComponent from './createMission';
 import utils from '../../helpers/utils';
 
+const createNewMissionFormDiv = $('#create-new-mission-form-goes-here');
+
+
 const buildMissions = () => {
   smash.getMissionsEverything()
     .then((missions) => {
@@ -22,8 +25,15 @@ const buildMissions = () => {
     .catch((err) => console.error('get mission broke', err));
 };
 
+
+const createNewMission = () => {
+  console.error('your createNewMission function just ran!');
+  createNewMissionFormDiv.addClass('hide');
+};
+
 const missionClickEvents = () => {
   $('body').on('click', '#show-make-new-mission-form-button', createMissionComponent.showFormToCreateMission);
+  $('body').on('click', '#submit-new-mission-form-button', createNewMission);
 };
 // const missionPersonnelController = (e) => {
 //   e.preventDefault();

@@ -16,6 +16,8 @@ const sectorFormDiv = $('#update-create-sector-cards-here'); // new
 const mainDiv = $('#main-view');
 const enemyView = $('#enemy-area');
 const missionView = $('#the-mission');
+const createNewMissionFormDiv = $('#create-new-mission-form-goes-here');
+
 
 const sectorsNavbarClickEvent = () => {
   $('#sectors-navbar-button').click((e) => {
@@ -30,6 +32,7 @@ const sectorsNavbarClickEvent = () => {
     mainDiv.addClass('hide');
     enemyView.addClass('hide');
     missionView.addClass('hide');
+    createNewMissionFormDiv.addClass('hide');
   });
 };
 
@@ -45,6 +48,7 @@ const personnelNavbarClickEvent = () => {
     mainDiv.addClass('hide');
     enemyView.addClass('hide');
     missionView.addClass('hide');
+    createNewMissionFormDiv.addClass('hide');
   });
 };
 
@@ -60,6 +64,7 @@ const enemiesNavbarClickEvent = () => {
     mainDiv.addClass('hide');
     enemyView.removeClass('hide');
     missionView.addClass('hide');
+    createNewMissionFormDiv.addClass('hide');
   });
 };
 
@@ -75,6 +80,7 @@ const weaponsNavbarClickEvent = () => {
     mainDiv.addClass('hide');
     enemyView.addClass('hide');
     missionView.addClass('hide');
+    createNewMissionFormDiv.addClass('hide');
   });
 };
 
@@ -90,6 +96,7 @@ const missionNavbarClickEvent = () => {
     mainDiv.addClass('hide');
     enemyView.addClass('hide');
     missionView.removeClass('hide');
+    createNewMissionFormDiv.addClass('hide');
   });
 };
 

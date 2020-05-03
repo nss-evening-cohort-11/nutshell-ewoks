@@ -61,7 +61,7 @@ const createEnemy = (e) => {
 
 const deleteEnemy = (e) => {
   const selectedEnemiesId = e.target.closest('.user-card').id;
-  console.log('test me', selectedEnemiesId);
+  // console.log('test me', selectedEnemiesId);
   enemyData.deleteEnemy(selectedEnemiesId)
     .then(() => {
     // eslint-disable-next-line no-use-before-define
