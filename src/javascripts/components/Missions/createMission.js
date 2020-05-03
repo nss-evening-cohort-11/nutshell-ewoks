@@ -1,6 +1,7 @@
 import utils from '../../helpers/utils';
 import sectorDataComponent from '../../helpers/data/sectorData';
 import enemyDataComponent from '../../helpers/data/enemyData';
+import weaponDataComponent from '../../helpers/data/weaponsData';
 // import smash from '../../helpers/data/smash';
 
 const showFormToCreateMission = () => {
@@ -20,7 +21,7 @@ const showFormToCreateMission = () => {
   domString += '</div>';
   // domString += '</div>';
 
-  // console.error(smash.getMissionsEverything());
+  // console.error(smash.getMissionsEverything().weapons);
 
   domString += '<div class="form-group">';
   domString += '<label for="">Pick a Mission Image</label>';
@@ -33,7 +34,7 @@ const showFormToCreateMission = () => {
   sectorDataComponent.getSectors()
     .then((sectors) => {
       sectors.forEach((sector) => {
-        domString += `<option value="${sector.name}">${sector.name}</option>`; // inside drop down
+        domString += `<option value="${sector.name}">${sector.name}</option>`; // inside sector drop down
       });
       domString += '</select>';
 
@@ -42,11 +43,23 @@ const showFormToCreateMission = () => {
       enemyDataComponent.getAllEnemies()
         .then((enemies) => {
           enemies.forEach((enemy) => {
-            domString += `<option value="${enemy.name}">${enemy.name}</option>`; // inside drop down
+            domString += `<option value="${enemy.name}">${enemy.name}</option>`; // inside enemy drop down
           });
           domString += '</select>';
+
+          domString += '<label for="">Pick Mission Weapons</label>';
+          domString += '<select id="mission-weapons-drop-down">';
+          weaponDataComponent.getWeapons()
+            .then((weapons) => {
+              weapons.forEach((weapon) => {
+                domString += `<option value="${weapon.name}">${weapon.name}</option>`; // inside weapon drop down
+              });
+              domString += '</select>';
+            });
           domString += '</div>';
+          domString += '<div>';
           domString += '<button type="button" class="btn btn-primary" id="submit-new-mission-form-button">Create New Mission</button>';
+          domString += '</div>';
           domString += '</form>';
 
           utils.printToDom('create-new-mission-form-goes-here', domString);
@@ -55,7 +68,7 @@ const showFormToCreateMission = () => {
     // })
       // .catch((err) => console.error('problen with the getAllEnemies drop down menu', err));
     })
-    .catch((err) => console.error('something went wrong inside your getSectors function inside the sectors dropdown menu', err));
+    .catch((err) => console.error('something went wrong inside your showFormToCreateMission', err));
 };
 
 // domString += '<div class="row">';
