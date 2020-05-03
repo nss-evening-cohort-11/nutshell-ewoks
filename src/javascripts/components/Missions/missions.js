@@ -32,7 +32,6 @@ const buildMissions = () => {
 
 
 const createNewMission = () => {
-  console.error('your createNewMission function just ran!');
   createNewMissionFormDiv.addClass('hide');
   openNewMissionFormButton.removeClass('hide');
   // make new mission object
