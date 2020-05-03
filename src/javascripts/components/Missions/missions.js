@@ -1,6 +1,26 @@
 import smash from '../../helpers/data/smash';
 import missionCards from '../missionCards/missionCards';
+import addPersonnelForm from './addPersonnel/addPersonnelForm';
 import utils from '../../helpers/utils';
+
+// const addNewMissionPersonnel = (e) => {
+// e.preventDefault();
+// const newPersonnel= {
+// personnelId: '',
+// missionId: '',
+// missionName: $('#weaponType-imageUrl').val(),
+// weaponId: '',
+// uid: firebase.auth().currentUser.uid,
+// };
+// missionPersonnelData.addMissionPersonnel(newPersonnel)
+// .then(() => {
+// eslint-disable-next-line no-use-before-define
+// buildMissions(newPersonnel);
+// utils.printToDom('???', '');
+// })
+// .catch((err) => console.error('could not add weapon', err));
+// };
+
 
 const buildMissions = () => {
   smash.getMissionsEverything()
@@ -14,28 +34,12 @@ const buildMissions = () => {
       domString += '</div>';
       domString += '</div>';
       utils.printToDom('the-mission', domString);
-      // $('body').on('click', '.mission-card', buildMissions);
     })
     .catch((err) => console.error('get mission broke', err));
 };
 
+const missionClickEvents = () => {
+  $('body').on('click', '#create-new-personnel-form', addPersonnelForm.showPersonnelForm);
+};
 
-// const missionPersonnelController = (e) => {
-//   e.preventDefault();
-//   console.log(e.target.checked);
-//   if (e.target.checked) {
-//   // create a new personnel
-//     const newMissionPersonnel = {
-//       personnelId: e.target.closest('.form-check-label').id
-//       missionId: e.target.closest('.card').id,
-//       missionName: ' ',
-//       weaponId: ' ',
-//       uid: firebase.auth().currentUser.uid,
-//     };
-//   } else {
-//     // delete a personnel
-//   }
-// };
-
-
-export default { buildMissions };
+export default { buildMissions, missionClickEvents };
