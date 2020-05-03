@@ -2,7 +2,11 @@ import utils from '../../helpers/utils';
 
 const showFormToCreateMission = () => {
   const createNewMissionFormDiv = $('#create-new-mission-form-goes-here');
+  const openNewMissionFormButton = $('#show-make-new-mission-form-button');
+
   createNewMissionFormDiv.removeClass('hide');
+  openNewMissionFormButton.addClass('hide');
+
   console.error('your showFormToCreateMission function just ran!');
 
   let domString = '';
@@ -21,29 +25,29 @@ const showFormToCreateMission = () => {
   domString += '</div>';
   domString += '</div>';
 
-  domString += '<div class="row">';
-  domString += '<div class="form-group col-4">';
-  domString += '<label for="exampleFormControlSelect2">Select Your Mission Weapons</label>';
-  domString += '<select multiple class="form-control" id="exampleFormControlSelect2">';
-  domString += '<option>1</option>';
-  domString += '<option>2</option>';
-  domString += '<option>3</option>';
-  domString += '<option>4</option>';
-  domString += '<option>5</option>';
-  domString += '</select>';
-  domString += '</div>';
+  // domString += '<div class="row">';
+  // domString += '<div class="form-group col-4">';
+  // domString += '<label for="exampleFormControlSelect2">Select Your Mission Weapons</label>';
+  // domString += '<select multiple class="form-control" id="exampleFormControlSelect2">';
+  // domString += '<option>1</option>';
+  // domString += '<option>2</option>';
+  // domString += '<option>3</option>';
+  // domString += '<option>4</option>';
+  // domString += '<option>5</option>';
+  // domString += '</select>';
+  // domString += '</div>';
 
-  domString += '<div class="form-group col-4">';
-  domString += '<label for="exampleFormControlSelect2">Select Your Mission Personnel</label>';
-  domString += '<select multiple class="form-control" id="exampleFormControlSelect2">';
-  domString += '<option>1</option>';
-  domString += '<option>2</option>';
-  domString += '<option>3</option>';
-  domString += '<option>4</option>';
-  domString += '<option>5</option>';
-  domString += '</select>';
-  domString += '</div>';
-  domString += '</div>';
+  // domString += '<div class="form-group col-4">';
+  // domString += '<label for="exampleFormControlSelect2">Select Your Mission Personnel</label>';
+  // domString += '<select multiple class="form-control" id="exampleFormControlSelect2">';
+  // domString += '<option>1</option>';
+  // domString += '<option>2</option>';
+  // domString += '<option>3</option>';
+  // domString += '<option>4</option>';
+  // domString += '<option>5</option>';
+  // domString += '</select>';
+  // domString += '</div>';
+  // domString += '</div>';
 
   domString += '<button type="button" class="btn btn-primary" id="submit-new-mission-form-button">Create New Mission</button>';
   domString += '</form>';

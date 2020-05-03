@@ -4,6 +4,7 @@ import createMissionComponent from './createMission';
 import utils from '../../helpers/utils';
 
 const createNewMissionFormDiv = $('#create-new-mission-form-goes-here');
+const openNewMissionFormButton = $('#show-make-new-mission-form-button');
 
 
 const buildMissions = () => {
@@ -29,6 +30,8 @@ const buildMissions = () => {
 const createNewMission = () => {
   console.error('your createNewMission function just ran!');
   createNewMissionFormDiv.addClass('hide');
+  openNewMissionFormButton.removeClass('hide');
+  buildMissions();
 };
 
 const missionClickEvents = () => {
