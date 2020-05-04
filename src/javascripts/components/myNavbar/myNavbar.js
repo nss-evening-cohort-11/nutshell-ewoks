@@ -5,8 +5,8 @@ import sectorBuilder from '../sectorArea/sectorArea';
 import buildWeapons from '../weaponsType/weaponTypes';
 import personnelBuilder from '../warRoom/warRoom';
 import buildEnemies from '../enemies/enemies';
-import missionBuilder from '../Missions/missions';
-
+// import missionBuilder from '../Missions/missions';
+import galaxyComponent from '../galaxy/galaxy';
 
 const weaponTypeDiv = $('#weapontype');
 const personnelDiv = $('#the-war-room');
@@ -16,6 +16,7 @@ const sectorFormDiv = $('#update-create-sector-cards-here'); // new
 const mainDiv = $('#main-view');
 const enemyView = $('#enemy-area');
 const missionView = $('#the-mission');
+const galaxyView = $('#the-galaxy');
 
 const sectorsNavbarClickEvent = () => {
   $('#sectors-navbar-button').click((e) => {
@@ -45,6 +46,7 @@ const personnelNavbarClickEvent = () => {
     mainDiv.addClass('hide');
     enemyView.addClass('hide');
     missionView.addClass('hide');
+    galaxyView.addClass('hide');
   });
 };
 
@@ -60,6 +62,7 @@ const enemiesNavbarClickEvent = () => {
     mainDiv.addClass('hide');
     enemyView.removeClass('hide');
     missionView.addClass('hide');
+    galaxyView.addClass('hide');
   });
 };
 
@@ -75,13 +78,15 @@ const weaponsNavbarClickEvent = () => {
     mainDiv.addClass('hide');
     enemyView.addClass('hide');
     missionView.addClass('hide');
+    galaxyView.addClass('hide');
   });
 };
 
 const missionNavbarClickEvent = () => {
   $('#mission-navbar-button').click((e) => {
     e.preventDefault();
-    missionBuilder.buildMissions();
+    // missionBuilder.buildMissions();
+    galaxyComponent.buildDashboard();
     // buildWeapons.buildWeaponTypes();
     weaponTypeDiv.addClass('hide');
     viewWeaponDiv.addClass('hide');
@@ -89,7 +94,8 @@ const missionNavbarClickEvent = () => {
     sectorDiv.addClass('hide');
     mainDiv.addClass('hide');
     enemyView.addClass('hide');
-    missionView.removeClass('hide');
+    // missionView.removeClass('hide');
+    galaxyView.removeClass('hide');
   });
 };
 
