@@ -17,5 +17,17 @@
 		"missionWeapon4": {
 			"missionId": "Mission4",
 			"weaponId": "weapon4"	
-    }
+		},
+		"missionWeapon5": {
+			"missionId": "Mission1",
+			"weaponId": "weapon5"		
+		},
+		"missionWeapon6": {
+			"missionId": "Mission1",
+			"weaponId": "weapon6"		
+		},
+		"missionWeapon7": {
+			"missionId": "Mission2",
+			"weaponId": "weapon3"	 		 
+		}
   }
