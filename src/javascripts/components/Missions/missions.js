@@ -39,6 +39,7 @@ const createNewMission = () => {
     enemyId: $('#mission-enemy-drop-down').val(),
     name: $('#user-entered-mission-name').val(),
     planetarySectorId: $('#mission-sector-drop-down').val(),
+    missionWeapon: $('#mission-weapons-drop-down').val(), // this will need to go to the missionWeapons part of firebase?
     uid: firebase.auth().currentUser.uid,
   };
   console.error('your newMission object', newMission);

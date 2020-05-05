@@ -51,10 +51,8 @@ const showFormToCreateMission = () => {
           domString += '<select id="mission-weapons-drop-down">';
           weaponDataComponent.getWeapons()
             .then((weapons) => {
-              console.error('this is inside your mission weapon .then');
               weapons.forEach((weapon) => {
                 domString += `<option value="${weapon.name}">${weapon.name}</option>`; // inside weapon drop down and name="" so save to db
-                console.error('weapon.name', weapon.name);
               });
               domString += '</select>';
               // });
