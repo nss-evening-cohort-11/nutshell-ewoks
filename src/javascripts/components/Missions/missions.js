@@ -3,7 +3,6 @@ import missionCards from '../missionCards/missionCards';
 import addPersonnelForm from './addPersonnel/addPersonnelForm';
 import utils from '../../helpers/utils';
 
-
 const buildMissions = () => {
   smash.getMissionsEverything()
     .then((missions) => {
