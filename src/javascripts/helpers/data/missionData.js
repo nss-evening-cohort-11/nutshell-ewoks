@@ -19,4 +19,13 @@ const getMissions = () => new Promise((resolve, reject) => {
 
 const getMissionbyId = (missionId) => axios.get(`${baseUrl}/missions/${missionId}.json`);
 
-export default { getMissions, getMissionbyId };
+const updateEnemy = (missionId, updatedEnemy) => axios.patch(`${baseUrl}/missions/${missionId}.json`, updatedEnemy);
+
+const updateSector = (missionId, updatedSector) => axios.patch(`${baseUrl}/missions/${missionId}.json`, updatedSector);
+
+export default {
+  getMissions,
+  getMissionbyId,
+  updateEnemy,
+  updateSector,
+};
