@@ -6,7 +6,7 @@ import enemyComponent from './enemiesComponent';
 
 import utils from '../../helpers/utils';
 import editEnemy from '../editEnemy/editEnemy';
-import './enemies.scss';
+// import './enemies.scss';
 
 const editEnemyEvent = (e) => {
   e.preventDefault();
