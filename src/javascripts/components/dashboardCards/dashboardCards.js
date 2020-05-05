@@ -2,9 +2,7 @@
 // import smash from '../../helpers/data/smash';
 
 const printDashboard = (mission) => {
-  console.log(mission);
   let domString = '';
-  console.log(mission);
   domString += '<div class="col-md-5 mt-5 justify-content-center">';
   domString += '<div class="card profile-card-5">';
   domString += '<div class="dashboard-card-img-block">';
