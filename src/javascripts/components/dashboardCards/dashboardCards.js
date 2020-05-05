@@ -1,4 +1,5 @@
 const printDashboard = (mission) => {
+  console.log(mission);
   let domString = '';
   domString += '<div class="col-md-5 mt-5 justify-content-center">';
   domString += '<div class="card profile-card-5">';
@@ -32,7 +33,7 @@ const printDashboard = (mission) => {
   domString += '<span id="enemy-edit-btn-text">Click to edit enemy target</span>';
   domString += '</div>';
   domString += '<div id="da-planetary-btn">';
-  domString += '<i class="fas fa-globe edit-planetary-sector-btn"></i>';
+  domString += `<i class="fas fa-globe edit-planetary-sector-btn" data-sectorId="${mission.sector.id}" data-missionId="${mission.id}"></i>`;
   domString += '<span id="planetary-edit-btn-text">Click to edit planetary sector</span>';
   domString += '</div>';
   domString += '</div>';

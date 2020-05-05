@@ -6,6 +6,7 @@ import addMissionPersonnel from '../addMissionPersonnel/addMissionPersonnelCompo
 import editMission from '../editMission/editMissionForm';
 import missionData from '../../helpers/data/missionData';
 
+
 const addMissionPersonnelEvent = (e) => {
   e.preventDefault();
   $('#addMissionPersonnelModal').modal('show');
@@ -21,9 +22,22 @@ const editEnemyTargetEvent = (e) => {
 const editSectorEvent = (e) => {
   e.preventDefault();
   $('#editDashboardSectorModal').modal('show');
-  editMission.showForm(e.target.dataset.missionid);
+  editMission.showSectorForm(e.target.dataset.missionid);
 };
 
+const updateSectorTarget = (e) => {
+  e.preventDefault();
+  const { missionid } = e.target.dataset;
+  const updatedSector = {
+    planetarySectorId: $('#mission-sector-edit-drop-down-btn').val(),
+  };
+  missionData.updateSector(missionid, updatedSector).then(() => {
+    $('#editDashboardSectorModal').modal('hide');
+    // eslint-disable-next-line no-use-before-define
+    buildDashboard();
+  })
+    .catch((err) => console.error('could not update the sector', err));
+};
 const updateEnemyTarget = (e) => {
   e.preventDefault();
   const { missionid } = e.target.dataset;
@@ -56,6 +70,8 @@ const galaxyClickEvents = () => {
   $('body').on('click', '.edit-mission-personnel', addMissionPersonnelEvent);
   $('body').on('click', '.edit-mission-enemy-btn', editEnemyTargetEvent);
   $('body').on('click', '.edit-enemy-btn-target', updateEnemyTarget);
+  $('body').on('click', '.edit-planetary-sector-btn', editSectorEvent);
+  $('body').on('click', '.edit-dashboard-btn-sector', updateSectorTarget);
 };
 
 
