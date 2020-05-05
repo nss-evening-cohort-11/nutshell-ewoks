@@ -2,6 +2,7 @@
 // import smash from '../../helpers/data/smash';
 
 const printDashboard = (mission) => {
+  // console.log(mission);
   let domString = '';
   domString += '<div class="col-md-5 mt-5 justify-content-center">';
   domString += '<div class="card profile-card-5">';
@@ -31,7 +32,7 @@ const printDashboard = (mission) => {
   domString += '<span id="personnel-add-btn-text">Click to add mission personnel</span>';
   domString += '</div>';
   domString += '<div id="da-enemy-btn">';
-  domString += '<i class="fas fa-crosshairs edit-mission-enemy-btn"></i>';
+  domString += `<i class="fas fa-crosshairs edit-mission-enemy-btn" data-enemyId="${mission.enemy.id}" data-missionId="${mission.id}"></i>`;
   domString += '<span id="enemy-edit-btn-text">Click to edit enemy target</span>';
   domString += '</div>';
   domString += '<div id="da-planetary-btn">';

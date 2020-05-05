@@ -1,12 +1,10 @@
-import firebase from 'firebase';
-
 import utils from '../../helpers/utils';
 
 import smash from '../../helpers/data/smash';
 import dashboardCards from '../dashboardCards/dashboardCards';
 import addMissionPersonnel from '../addMissionPersonnel/addMissionPersonnelComponent';
 import editMission from '../editMission/editMissionForm';
-import enemyData from '../../helpers/data/enemyData';
+import missionData from '../../helpers/data/missionData';
 
 const addMissionPersonnelEvent = (e) => {
   e.preventDefault();
@@ -17,28 +15,33 @@ const addMissionPersonnelEvent = (e) => {
 
 const editEnemyTargetEvent = (e) => {
   e.preventDefault();
-  console.log('enemy target button clizzy');
+  // console.log('enemy target button clizzy');
   $('#editEnemyTargetModal').modal('show');
-  editMission.showForm(e.id);
+  editMission.showForm(e.target.dataset.missionid);
+  // console.log(e);
 };
 
+// update missionEnemy
 const updateEnemyTarget = (e) => {
   e.preventDefault();
-  console.log('yuppers');
-  const { uid } = firebase.auth().currentUser;
-  const userId = uid;
-  const enemiesId = $('.edit-enemy-target-form-tag').data('id');
-  const updateEnemies = {
-    uid: userId,
-    name: $('#mission-enemy-edit-drop-down-btn').val(),
-    strength: $('#edit-enemy-strength').val(),
-    special_skills: $('#edit-enemy-special-skill').val(),
-    weakness: $('#edit-enemy-weakness').val(),
-    faction_id: $('#edit-enemy-faction-id').val(),
-    sector_id: $('#edit-enemy-sector-id').val(),
-    imageUrl: $('#edit-enemy-image-url').val(),
+  console.log('yuppers', e);
+  // const { uid } = firebase.auth().currentUser;
+  // const userId = uid;
+  const { missionId } = e.target.dataset;
+  const updatedEnemy = {
+    // uid: userId,
+    // name: $('#mission-enemy-edit-drop-down-btn').val(),
+    // strength: $('#edit-enemy-strength').val(),
+    // special_skills: $('#edit-enemy-special-skill').val(),
+    // weakness: $('#edit-enemy-weakness').val(),
+    // faction_id: $('#edit-enemy-faction-id').val(),
+    // sector_id: $('#edit-enemy-sector-id').val(),
+    // imageUrl: $('#edit-enemy-image-url').val(),
+    enemyId: $('#mission-enemy-edit-drop-down-btn').val(),
   };
-  enemyData.updateEnemy(enemiesId, updateEnemies).then(() => {
+  console.log(updatedEnemy, missionId);
+  // enemyData.updateEnemy(enemiesId, updateEnemies).then(() => {
+  missionData.updateEnemies(missionId, updatedEnemy).then(() => {
     $('#editEnemyTargetModal').modal('hide');
     // eslint-disable-next-line no-use-before-define
     buildDashboard();
