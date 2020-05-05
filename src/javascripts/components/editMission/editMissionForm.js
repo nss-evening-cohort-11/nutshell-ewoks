@@ -17,7 +17,9 @@ const showForm = (missionId) => {
         enemyDataComponent.getAllEnemies()
           .then((targetEnemies) => {
             targetEnemies.forEach((targetEnemy) => {
-              domString += `<option value=${targetEnemy.id}>${targetEnemy.name}</option>`;
+              // console.log(targetEnemy.id);
+              console.log(enemy.id);
+              domString += `<option value=${targetEnemy.id} ${targetEnemy.id === enemy.id ? 'selected' : ''}>${targetEnemy.name}</option> `;
             });
             domString += '</select>';
             domString += '</div>';
