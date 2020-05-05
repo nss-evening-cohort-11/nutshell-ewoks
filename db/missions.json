@@ -3,6 +3,7 @@
 			"name": "Breakthrough",
 			"planetarySectorId": "sector1",
 			"enemyId": "enemies1",
+			"imageUrl": "https://i.imgur.com/R75TY3N.png",
 			"uid": ""
 		},
 
@@ -10,6 +11,7 @@
 			"name": "Intercept-Transmissions",
       "planetarySectorId": "sector2",
 			"enemyId": "enemies2",
+			"imageUrl": "https://i.imgur.com/8mu9fDG.png",
 			"uid": "" 		 
 		},
 
@@ -17,6 +19,7 @@
 			"name": "Recover-Supplies",
 			"planetarySectorId": "sector3",
 			"enemyId": "enemies3",
+			"imageUrl": "https://i.imgur.com/Gfalp5v.png",
 			"uid": ""
 		},
 
@@ -24,6 +27,7 @@
 			"name": "Evacuate-Base",
 			"planetarySectorId": "sector1",
 			"enemyId": "enemies4",
+			"imageUrl": "https://i.imgur.com/AgJW3MD.png",
 			"uid": ""
     }
   }

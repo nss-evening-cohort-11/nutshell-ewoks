@@ -40,6 +40,7 @@ const getMissionsEverything = () => new Promise((resolve, reject) => {
                       id: mission.id,
                       uid: mission.uid,
                       name: mission.name,
+                      imageUrl: mission.imageUrl,
                       sector: sectorResponse.filter((x) => x.id === mission.planetarySectorId)[0],
                       enemy: enemyResponse.filter((x) => x.id === mission.enemyId)[0],
                       weapons: findMissionWeapons(mission.id, missionWeaponsResponse, weaponsResponse),

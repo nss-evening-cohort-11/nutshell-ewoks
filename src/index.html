@@ -7,6 +7,9 @@
 </head>
 <body>
    <!-- -------------------------------------------------------------------------------NAVBAR -->
+  
+   
+
    <nav class="navbar navbar-expand-sm navbar-light bg-light">
     <a class="navbar-brand d-flex flex-nowrap" href="./index.html">
       <img class="logo" src="https://toppng.com/uploads/preview/star-wars-the-force-awakens-logo-vector-constructibles-poes-x-wing-mini-model-lego-parts-11563023618y86hz0qchf.png" width="70" alt="">
@@ -39,10 +42,16 @@
     </div>
   </nav>
 
+
+  
+
     <!-- <div class="row"> -->
 <div id="auth"></div>
   <!--personnel stuff below-->
+  <div class="hide" id="the-galaxy" class=""></div>
+
   
+
   <div id="the-war-room" class="text-center"></div>
   <!--mission below-->
    <div id="the-mission" class="hide col-12"></div>
@@ -59,8 +68,9 @@
                  </div>
                </div>
            </div>
-   
-
+    
+           
+  
     <!--personnel modal below-->
   <div class="modal fade" id="personnelEditModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
@@ -82,6 +92,63 @@
       </div>
     </div>
   </div>
+
+    <!--------------------------------------------- dasboard add personnel modal -->
+    <div class="modal fade" id="addMissionPersonnelModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel"></h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div id="add-mission-personnel"></div>
+          </div>
+  
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button id="add-mission-personnel-modal-btn" type="button" class="btn btn-primary miss-personnel-btn-add">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+      <!--------------------------------------------- dashboard edit enemy target -->
+      <div class="modal fade" id="editEnemyTargetModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel"></h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div id="edit-enemy-target"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+            <!--------------------------------------------- dashboard edit sector  -->
+            <div class="modal fade" id="editDashboardSectorModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel"></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <div id="edit-dashboard-sector"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
 
   <!--------------------------------------------- enemy stuff -->
   <div class="hide" id="enemy-area" class="text-center"></div>
