@@ -19,7 +19,7 @@ const editEnemyTargetEvent = (e) => {
   e.preventDefault();
   console.log('enemy target button clizzy');
   $('#editEnemyTargetModal').modal('show');
-  editMission.showForm();
+  editMission.showForm(e.id);
 };
 
 const updateEnemyTarget = (e) => {
