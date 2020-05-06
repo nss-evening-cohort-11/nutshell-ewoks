@@ -78,7 +78,7 @@ const buildWeaponsByType = (e) => {
   }
   weaponsData.getWeapons()
     .then((weapon) => {
-      const weaponDisableAddButton = firebase.auth().currentUser === null ? '' : `<button class="btn btn-dark m-3" type="button" id="create-new-weapontype-form" data-weapontype="${weapontypeId}" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Add Weapon</button>`;
+      const weaponDisableAddButton = firebase.auth().currentUser === null ? '' : `<div id="create-new-weapontype-form" data-weapontype="${weapontypeId}" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"><i class="iconblue fas fa-2x fa-plus-circle"></i></div></div>`;
       const weaponDisableAllButton = firebase.auth().currentUser === null ? '' : '<div class="weapon-block"><i class="delete-weapons fas fa-trash-alt"></i><i class="edit-weapons fas fa-pencil-alt"></i></div>';
       let domString = '';
       domString += '<div class="center">';
