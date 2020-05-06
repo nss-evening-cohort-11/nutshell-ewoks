@@ -124,7 +124,7 @@
   opacity: 0;
   transition: .5s ease;
   background-color: grey;
-  z-index: 999999;
+  z-index: 9999999999 !important;
 }
 
 .overlay .delete-personnel-btn {

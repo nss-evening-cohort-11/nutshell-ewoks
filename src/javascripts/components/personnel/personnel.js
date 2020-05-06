@@ -1,4 +1,9 @@
+import firebase from 'firebase/app';
+import 'firebase/auth';
+
 const buildPersonnel = (personnel) => {
+  // eslint-disable-next-line max-len
+  const personnelBut = firebase.auth().currentUser === null ? '' : '<div class="personnel-button icon-block"><i class="fas fa-times delete-personnel-btn"></i><i class="fas fa-pencil-alt edit-personnel"></i></div>';
   let domString = '';
   domString += `<div class="user-card" id=${personnel.id}>`;
   domString += '<div class="card profile-card-3 mb-3 mt-3 ml-3 mr-3">';
@@ -8,12 +13,11 @@ const buildPersonnel = (personnel) => {
   domString += '<div class="personnel-profile-thumb-block">';
   domString += `<img src="${personnel.personnelImageUrl}" alt="profile-image" class="profile"/>`;
   domString += '<div class="overlay">';
-  domString += '<div class="personnel-button icon-block"><i class="fas fa-times delete-personnel-btn"></i><i class="fas fa-pencil-alt edit-personnel"></i></div>';
+  domString += `${personnelBut}`;
   domString += `<div class="text"><span>${personnel.description}</span></div></div>`;
   domString += '</div>';
   domString += '<div class="card-content">';
   domString += `<div><h2>${personnel.name}<small>${personnel.occupationName}</small></h3></div>`;
-  domString += '<div class="personnel-button icon-block"><i class="fas fa-times delete-personnel-btn"></i><i class="fas fa-pencil-alt edit-personnel"></i></div>';
   domString += '</div>';
   domString += '</div>';
   domString += '</div>';

@@ -49,9 +49,9 @@
 .profile-card-3 .profile {
   border-radius: 20%;
   position: absolute;
-  bottom: 50%;
+  bottom: 60% !important;
   left: 50%;
-  max-width: 100px;
+  max-width: 200px !important;
   opacity: 1;
   box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.5);
   border: 2px solid rgba(255, 255, 255, 1);
@@ -95,12 +95,12 @@
   text-decoration:none;
 }
 
-.personnel-profile-thumb-block img {
-  width: 140px;
-  height: 100px;
+img .profile {
+  width: 300px !important;
+  height: 300px !important;
 }
 
-.personnel-background-block img {
+.background-block img {
   width: 275px !important;
   height: 200px !important;
 }
@@ -112,6 +112,22 @@
 .edit-personnel {
   display: none !important;
 }
+
+
+.user-card:hover .overlay {
+  opacity: 1;
+}
+.text {
+  color: white;
+  font-size: 15px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
 
 .overlay {
   position: absolute;
@@ -127,26 +143,12 @@
   z-index: 999999;
 }
 
-.overlay .delete-personnel-btn {
+.overlay .delete-enemy-btn {
   display: inline-block !important;
   position: absolute;
   margin-top: 300px;
 }
 
-.overlay .edit-personnel {
+.overlay .edit-enemies {
   display: inline-block !important;
-}
-
-.user-card:hover .overlay {
-  opacity: 1;
-}
-.text {
-  color: white;
-  font-size: 15px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
 }
