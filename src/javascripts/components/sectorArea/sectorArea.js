@@ -11,7 +11,7 @@ import editSectorComponent from '../editSector/editSector';
 const buildSectors = () => {
   sectorData.getSectors()
     .then((sectors) => {
-      const createNewSectorButtonIfLoggedIn = firebase.auth().currentUser === null ? '' : '<button id="create-new-sector-button" class="btn btn-dark text-center">Create New Sector</button>';
+      const createNewSectorButtonIfLoggedIn = firebase.auth().currentUser === null ? '' : '<div id="create-new-sector-button" class="text-center"><i class="iconblue fas fa-2x fa-plus-circle"></i></div>';
 
       let domString = '';
       domString += '<div class="d-flex justify-content-around">';
@@ -19,7 +19,7 @@ const buildSectors = () => {
       domString += `${createNewSectorButtonIfLoggedIn}`;
       // domString += '<button id="create-new-sector-button" class="btn btn-dark text-center">Create New Sector</button>';
       domString += '</div>';
-      domString += '<div class="d-flex flex-wrap">';
+      domString += '<div class="d-flex flex-wrap justify-content-center">';
       sectors.forEach((sector) => {
         domString += sectorComponent.sectorMaker(sector);
       });
