@@ -5,6 +5,7 @@ import dashboardCards from '../dashboardCards/dashboardCards';
 import addMissionPersonnel from '../addMissionPersonnel/addMissionPersonnelComponent';
 import editMission from '../editMission/editMissionForm';
 import missionData from '../../helpers/data/missionData';
+import newMissionComponent from '../Missions/createNewMission';
 
 
 const missionDeleteEvent = (e) => {
@@ -35,6 +36,13 @@ const editSectorEvent = (e) => {
   e.preventDefault();
   $('#editDashboardSectorModal').modal('show');
   editMission.showSectorForm(e.target.dataset.missionid);
+};
+
+const createNewMissionEvent = (e) => {
+  e.preventDefault();
+  $('#newMissionModal').modal('show');
+  console.error('inside your createNewMissionEvent function');
+  newMissionComponent.createNewMissionForm();
 };
 
 const updateSectorTarget = (e) => {
@@ -69,6 +77,7 @@ const buildDashboard = () => {
     .then((missions) => {
       let domString = '';
       domString += '<div class="d-flex flex-wrap">';
+      domString += '<div><button class="open-create-new-mission-form">Create New Mission</button></div>';
       missions.forEach((mission) => {
         domString += dashboardCards.printDashboard(mission);
       });
@@ -85,6 +94,7 @@ const galaxyClickEvents = () => {
   $('body').on('click', '.edit-planetary-sector-btn', editSectorEvent);
   $('body').on('click', '.edit-dashboard-btn-sector', updateSectorTarget);
   $('body').on('click', '.mission-delete-btn', missionDeleteEvent);
+  $('body').on('click', '.open-create-new-mission-form', createNewMissionEvent);
 };
 
 
