@@ -1,3 +1,6 @@
+import firebase from 'firebase/app';
+import 'firebase/auth';
+
 import utils from '../../helpers/utils';
 
 import smash from '../../helpers/data/smash';
@@ -87,6 +90,24 @@ const buildDashboard = () => {
     .catch((err) => console.error('get galaxy broke', err));
 };
 
+const submitNewMissionForm = (e) => {
+  // console.log('e', e);
+  e.preventDefault();
+  const mission = {
+    name: $('#user-entered-mission-name').val(),
+    planetarySectorId: $('#sector-drop-down').find(':selected').val(),
+    enemyId: $('#enemy-drop-down').find(':selected').val(),
+    imageUrl: $('#user-entered-mission-image').val(),
+    uid: firebase.auth().currentUser.uid,
+  };
+  missionData.createMission(mission)
+    .then(() => {
+      $('#newMissionModal').modal('hide');
+      buildDashboard();
+    })
+    .catch((err) => console.error('submit new mission form broke', err));
+};
+
 const galaxyClickEvents = () => {
   $('body').on('click', '.edit-mission-personnel', addMissionPersonnelEvent);
   $('body').on('click', '.edit-mission-enemy-btn', editEnemyTargetEvent);
@@ -95,6 +116,7 @@ const galaxyClickEvents = () => {
   $('body').on('click', '.edit-dashboard-btn-sector', updateSectorTarget);
   $('body').on('click', '.mission-delete-btn', missionDeleteEvent);
   $('body').on('click', '.open-create-new-mission-form', createNewMissionEvent);
+  $('body').on('click', '.submit-new-mission-button', submitNewMissionForm);
 };
 
 

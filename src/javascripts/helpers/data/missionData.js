@@ -25,10 +25,19 @@ const updateSector = (missionId, updatedSector) => axios.patch(`${baseUrl}/missi
 
 const missionDelete = (missionId) => axios.delete(`${baseUrl}/missions/${missionId}.json`);
 
+const createMission = (mission) => new Promise((resolve, reject) => {
+  axios.post(`${baseUrl}/missions.json`, mission)
+    .then(() => {
+      resolve();
+    })
+    .catch((err) => reject(err));
+});
+
 export default {
   getMissions,
   getMissionbyId,
   updateEnemy,
   updateSector,
   missionDelete,
+  createMission,
 };

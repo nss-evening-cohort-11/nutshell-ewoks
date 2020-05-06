@@ -17,21 +17,20 @@ const createNewMissionForm = () => {
   // reach out to firebase and getAllSectors, take each sector and grab .name
   sectorDataComponent.getSectors()
     .then((sectors) => {
-      domString += '<select class="custom-select">';
+      domString += '<select id="sector-drop-down" class="custom-select">';
       sectors.forEach((sector) => {
-        console.error('sector.name', sector.name);
         domString += `<option value=${sector.id}>${sector.name}</option>`;
       });
       domString += '</select>';
     });
   enemyDataComponent.getAllEnemies()
     .then((enemies) => {
-      domString += '<select class="custom-select">';
+      domString += '<select id="enemy-drop-down" class="custom-select">';
       enemies.forEach((enemy) => {
-        console.error('enemy.name', enemy.name);
         domString += `<option value=${enemy.id}>${enemy.name}</option>`;
       });
       domString += '</select>';
+      domString += '<button class="submit-new-mission-button">Create New Mission</button>';
       utils.printToDom('new-mission-modal', domString);
     })
     .catch((err) => console.error('createNewMissionForm', err));
