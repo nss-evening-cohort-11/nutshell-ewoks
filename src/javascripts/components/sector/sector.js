@@ -7,7 +7,7 @@ const sectorMaker = (sector) => {
   let domString = '';
 
   domString += '<div class="text-center card-group">';
-  domString += `<div class="card profile-card-3 m-3 weapontype-card" id="${sector.id}">`;
+  domString += `<div class="card profile-card-3 mb-3 mt-3 ml-3 mr-3 weapontype-card" id="${sector.id}">`;
   domString += '<div class="background-block">';
   domString += `<img width="300px" src="${sector.imageUrl}" alt="image of "${sector.name}>`;
   domString += '</div>';
