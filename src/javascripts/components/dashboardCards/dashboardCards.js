@@ -1,5 +1,5 @@
 const printDashboard = (mission) => {
-  console.log(mission);
+  // console.log(mission);
   let domString = '';
   domString += '<div class="col-md-5 mt-5 justify-content-center">';
   domString += `<div class="card profile-card-5" id="${mission.id}">`;

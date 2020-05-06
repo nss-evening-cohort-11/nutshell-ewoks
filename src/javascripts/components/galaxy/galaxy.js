@@ -1,3 +1,6 @@
+import firebase from 'firebase/app';
+import 'firebase/auth';
+
 import utils from '../../helpers/utils';
 
 import smash from '../../helpers/data/smash';
@@ -5,6 +8,7 @@ import dashboardCards from '../dashboardCards/dashboardCards';
 import addMissionPersonnel from '../addMissionPersonnel/addMissionPersonnelComponent';
 import editMission from '../editMission/editMissionForm';
 import missionData from '../../helpers/data/missionData';
+import newMissionComponent from '../Missions/createNewMission';
 
 
 const missionDeleteEvent = (e) => {
@@ -35,6 +39,13 @@ const editSectorEvent = (e) => {
   e.preventDefault();
   $('#editDashboardSectorModal').modal('show');
   editMission.showSectorForm(e.target.dataset.missionid);
+};
+
+const createNewMissionEvent = (e) => {
+  e.preventDefault();
+  $('#newMissionModal').modal('show');
+  console.error('inside your createNewMissionEvent function');
+  newMissionComponent.createNewMissionForm();
 };
 
 const updateSectorTarget = (e) => {
@@ -69,6 +80,7 @@ const buildDashboard = () => {
     .then((missions) => {
       let domString = '';
       domString += '<div class="d-flex flex-wrap">';
+      domString += '<div><button class="open-create-new-mission-form">Create New Mission</button></div>';
       missions.forEach((mission) => {
         domString += dashboardCards.printDashboard(mission);
       });
@@ -78,6 +90,24 @@ const buildDashboard = () => {
     .catch((err) => console.error('get galaxy broke', err));
 };
 
+const submitNewMissionForm = (e) => {
+  // console.log('e', e);
+  e.preventDefault();
+  const mission = {
+    name: $('#user-entered-mission-name').val(),
+    planetarySectorId: $('#sector-drop-down').find(':selected').val(),
+    enemyId: $('#enemy-drop-down').find(':selected').val(),
+    imageUrl: $('#user-entered-mission-image').val(),
+    uid: firebase.auth().currentUser.uid,
+  };
+  missionData.createMission(mission)
+    .then(() => {
+      $('#newMissionModal').modal('hide');
+      buildDashboard();
+    })
+    .catch((err) => console.error('submit new mission form broke', err));
+};
+
 const galaxyClickEvents = () => {
   $('body').on('click', '.edit-mission-personnel', addMissionPersonnelEvent);
   $('body').on('click', '.edit-mission-enemy-btn', editEnemyTargetEvent);
@@ -85,6 +115,8 @@ const galaxyClickEvents = () => {
   $('body').on('click', '.edit-planetary-sector-btn', editSectorEvent);
   $('body').on('click', '.edit-dashboard-btn-sector', updateSectorTarget);
   $('body').on('click', '.mission-delete-btn', missionDeleteEvent);
+  $('body').on('click', '.open-create-new-mission-form', createNewMissionEvent);
+  $('body').on('click', '.submit-new-mission-button', submitNewMissionForm);
 };
 
 
