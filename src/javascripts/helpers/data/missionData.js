@@ -23,9 +23,12 @@ const updateEnemy = (missionId, updatedEnemy) => axios.patch(`${baseUrl}/mission
 
 const updateSector = (missionId, updatedSector) => axios.patch(`${baseUrl}/missions/${missionId}.json`, updatedSector);
 
+const missionDelete = (missionId) => axios.delete(`${baseUrl}/missions/${missionId}.json`);
+
 export default {
   getMissions,
   getMissionbyId,
   updateEnemy,
   updateSector,
+  missionDelete,
 };

@@ -2,7 +2,7 @@ const printDashboard = (mission) => {
   console.log(mission);
   let domString = '';
   domString += '<div class="col-md-5 mt-5 justify-content-center">';
-  domString += '<div class="card profile-card-5">';
+  domString += `<div class="card profile-card-5" id="${mission.id}">`;
   domString += '<div class="dashboard-card-img-block">';
   domString += `<img class="card-img-top" src="${mission.imageUrl}" alt="Card image cap">`;
   domString += '</div>';
@@ -21,8 +21,8 @@ const printDashboard = (mission) => {
   });
   domString += '<div class="personnel-button icon-block">';
   domString += '<div id="da-weapon-btn">';
-  domString += '<i class="fas fa-fighter-jet delete-mission-personnel-btn"></i>';
-  domString += '<span id="weapon-add-btn-text">Click to add mission weapon</span>';
+  domString += '<i class="fas fas fa-times-circle mission-delete-btn"></i>';
+  domString += '<span id="weapon-add-btn-text">Click to delete mission</span>';
   domString += '</div>';
   domString += '<div id="da-personnel-btn">';
   domString += '<i class="fas fa-jedi edit-mission-personnel"></i>';

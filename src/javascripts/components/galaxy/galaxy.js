@@ -7,6 +7,18 @@ import editMission from '../editMission/editMissionForm';
 import missionData from '../../helpers/data/missionData';
 
 
+const missionDeleteEvent = (e) => {
+  const selectedMissionId = e.target.closest('.card').id;
+  console.log('mission', selectedMissionId);
+  missionData.missionDelete(selectedMissionId)
+    .then(() => {
+    // eslint-disable-next-line no-use-before-define
+      buildDashboard();
+    })
+    // eslint-disable-next-line no-console
+    .catch((err) => console.err('cannot remove mission', err));
+};
+
 const addMissionPersonnelEvent = (e) => {
   e.preventDefault();
   $('#addMissionPersonnelModal').modal('show');
@@ -72,6 +84,7 @@ const galaxyClickEvents = () => {
   $('body').on('click', '.edit-enemy-btn-target', updateEnemyTarget);
   $('body').on('click', '.edit-planetary-sector-btn', editSectorEvent);
   $('body').on('click', '.edit-dashboard-btn-sector', updateSectorTarget);
+  $('body').on('click', '.mission-delete-btn', missionDeleteEvent);
 };
 
 

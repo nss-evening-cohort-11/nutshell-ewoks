@@ -1,6 +1,5 @@
 import firebase from 'firebase/app';
 import 'firebase/auth';
-import './enemies.scss';
 
 const buildEnemies = (enemies) => {
   const userDelete = firebase.auth().currentUser === null ? '' : '<div class="icon-block"><i class="fas fa-times delete-enemy-btn"></i></div>';
