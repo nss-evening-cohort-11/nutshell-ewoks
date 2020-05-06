@@ -25,8 +25,8 @@ const updatePersonnel = (e) => {
     description: $('#edit-personnel-description').val(),
     personnelImageUrl: $('#edit-personnel-image').val(),
     occupationImageUrl: $('#edit-occupation-image').val(),
-    occupationTypeId: $('#occupation-btn').val(),
-    occupationName: $('#occupation-btn').val(),
+    occupationTypeId: $('#occupation-update-btn').find(':selected').val(),
+    occupationName: $('#occupation-update-btn').find(':selected').text(),
   };
   personnelData.updatePersonnel(personnelId, editedPersonnel).then(() => {
     $('#personnelEditModal').modal('hide');
