@@ -1,7 +1,7 @@
 const printDashboard = (mission) => {
-  // console.log(mission);
+  console.log(mission);
   let domString = '';
-  domString += '<div class="col-md-5 mt-5 justify-content-center">';
+  domString += '<div class="col-md-5 pt-5 justify-content-center">';
   domString += `<div class="card profile-card-5" id="${mission.id}">`;
   domString += '<div class="dashboard-card-img-block">';
   domString += `<img class="card-img-top" src="${mission.imageUrl}" alt="Card image cap">`;
@@ -20,13 +20,17 @@ const printDashboard = (mission) => {
     domString += `<div><p>${weapon.name}</p></div>`;
   });
   domString += '<div class="personnel-button icon-block">';
-  domString += '<div id="da-weapon-btn">';
+  domString += '<div id="da-delete-btn">';
   domString += '<i class="fas fas fa-times-circle mission-delete-btn"></i>';
-  domString += '<span id="weapon-add-btn-text">Click to delete mission</span>';
+  domString += '<span id="delete-mission-btn-text">Click to delete mission</span>';
   domString += '</div>';
   domString += '<div id="da-personnel-btn">';
   domString += '<i class="fas fa-jedi edit-mission-personnel"></i>';
   domString += '<span id="personnel-add-btn-text">Click to add mission personnel</span>';
+  domString += '</div>';
+  domString += '<div id="da-weapons-btn">';
+  domString += '<i class="fas fa-space-shuttle edit-mission-weapons"></i>';
+  domString += '<span id="weapon-mission-btn-text">Click to add mission weapon</span>';
   domString += '</div>';
   domString += '<div id="da-enemy-btn">';
   domString += `<i class="fas fa-crosshairs edit-mission-enemy-btn" data-enemyId="${mission.enemy.id}" data-missionId="${mission.id}"></i>`;

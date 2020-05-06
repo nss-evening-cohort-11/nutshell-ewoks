@@ -79,8 +79,10 @@ const buildDashboard = () => {
   smash.getMissionsEverything()
     .then((missions) => {
       let domString = '';
-      domString += '<div class="d-flex flex-wrap">';
-      domString += '<div><button class="open-create-new-mission-form">Create New Mission</button></div>';
+      domString += '<div class="text-center">';
+      domString += '<button class="btn"><i class="iconblue open-create-new-mission-form fas fa-2x fa-plus-circle"></i></button>';
+      domString += '</div>';
+      domString += '<div class="d-flex flex-wrap justify-content-center">';
       missions.forEach((mission) => {
         domString += dashboardCards.printDashboard(mission);
       });

@@ -83,6 +83,7 @@ const printEnemy = () => {
       let domString = '';
       domString += '<div class="accordion" id="accordionExample">';
       domString += '<h2>';
+      domString += '<div class="text-center">';
       domString += '<button class="btn" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">';
       domString += `${userAdd}`;
       domString += '</h2>';

@@ -31,7 +31,12 @@ const showForm = (personnelId) => {
       occupationDataComponent.getOccupationTypes()
         .then((types) => {
           types.forEach((type) => {
-            domString += `<option value=${type.name}>${type.name}</option>`;
+            // if type.id === personnel.occupationTypeId option value = selected
+            if (type.id === personnel.occupationTypeId) {
+              domString += `<option value=${type.id} selected>${type.name}</option>`;
+            } else {
+              domString += `<option value=${type.id}>${type.name}</option>`;
+            }
           });
           domString += '</select>';
           domString += '</div>';
