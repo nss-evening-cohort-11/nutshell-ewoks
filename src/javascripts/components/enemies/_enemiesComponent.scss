@@ -46,10 +46,10 @@
     z-index: -1;
     transform: rotate(-13deg);
 }
-.profile-card-3 .profile {
+.profile-card-3 .profile-enemy {
   border-radius: 20%;
   position: absolute;
-  bottom: 60% !important;
+  bottom: 50% !important;
   left: 50%;
   max-width: 200px !important;
   opacity: 1;
@@ -141,13 +141,14 @@ img .profile {
   transition: .5s ease;
   background-color: grey;
   z-index: 999999;
+
 }
 
-.overlay .delete-enemy-btn {
-  display: inline-block !important;
-  position: absolute;
-  margin-top: 300px;
-}
+// .overlay .delete-enemy-btn {
+//   display: inline-block !important;
+//   position: absolute;
+//   margin-top: 300px;
+// }
 
 .overlay .edit-enemies {
   display: inline-block !important;

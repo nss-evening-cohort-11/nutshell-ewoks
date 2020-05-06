@@ -11,12 +11,13 @@ const buildEnemies = (enemies) => {
   domString += '<img src="https://images.wallpaperscraft.com/image/fractal_shape_heart_patterns_neon_116698_2048x1152.jpg" class="background"/>';
   domString += '</div>';
   domString += '<div class="profile-thumb-block">';
-  domString += `<img src="${enemies.imageUrl}" alt="profile-image" class="profile"/>`;
+  domString += `<img src="${enemies.imageUrl}" alt="profile-image" class="profile-enemy"/>`;
   domString += '</div>';
   domString += '<div class="card-content">';
   domString += `<h2>${enemies.name}</h2>`;
   domString += '</div>';
   domString += '<div class="overlay">';
+  domString += '<h1 class="mt-3"></h1>';
   domString += '<h3>Skills</h3>';
   domString += `<p>${enemies.special_skills}</p>`;
   domString += '<h3>Weakness</h3>';
