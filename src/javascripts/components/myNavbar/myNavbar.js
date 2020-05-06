@@ -5,6 +5,8 @@ import sectorBuilder from '../sectorArea/sectorArea';
 import buildWeapons from '../weaponsType/weaponTypes';
 import personnelBuilder from '../warRoom/warRoom';
 import buildEnemies from '../enemies/enemies';
+// import missionBuilder from '../Missions/missions';
+import galaxyComponent from '../galaxy/galaxy';
 
 const weaponTypeDiv = $('#weapontype');
 const personnelDiv = $('#the-war-room');
@@ -13,6 +15,8 @@ const sectorDiv = $('#print-sector-cards-here');
 const sectorFormDiv = $('#update-create-sector-cards-here'); // new
 const mainDiv = $('#main-view');
 const enemyView = $('#enemy-area');
+const missionView = $('#the-mission');
+const galaxyView = $('#the-galaxy');
 
 const sectorsNavbarClickEvent = () => {
   $('#sectors-navbar-button').click((e) => {
@@ -26,6 +30,7 @@ const sectorsNavbarClickEvent = () => {
     personnelDiv.addClass('hide');
     mainDiv.addClass('hide');
     enemyView.addClass('hide');
+    missionView.addClass('hide');
   });
 };
 
@@ -40,6 +45,8 @@ const personnelNavbarClickEvent = () => {
     personnelDiv.removeClass('hide');
     mainDiv.addClass('hide');
     enemyView.addClass('hide');
+    missionView.addClass('hide');
+    galaxyView.addClass('hide');
   });
 };
 
@@ -54,6 +61,8 @@ const enemiesNavbarClickEvent = () => {
     personnelDiv.addClass('hide');
     mainDiv.addClass('hide');
     enemyView.removeClass('hide');
+    missionView.addClass('hide');
+    galaxyView.addClass('hide');
   });
 };
 
@@ -68,6 +77,25 @@ const weaponsNavbarClickEvent = () => {
     sectorFormDiv.addClass('hide');
     mainDiv.addClass('hide');
     enemyView.addClass('hide');
+    missionView.addClass('hide');
+    galaxyView.addClass('hide');
+  });
+};
+
+const missionNavbarClickEvent = () => {
+  $('#mission-navbar-button').click((e) => {
+    e.preventDefault();
+    // missionBuilder.buildMissions();
+    galaxyComponent.buildDashboard();
+    // buildWeapons.buildWeaponTypes();
+    weaponTypeDiv.addClass('hide');
+    viewWeaponDiv.addClass('hide');
+    personnelDiv.addClass('hide');
+    sectorDiv.addClass('hide');
+    mainDiv.addClass('hide');
+    enemyView.addClass('hide');
+    // missionView.removeClass('hide');
+    galaxyView.removeClass('hide');
   });
 };
 
@@ -76,6 +104,7 @@ const navbarClickEvents = () => {
   weaponsNavbarClickEvent();
   personnelNavbarClickEvent();
   enemiesNavbarClickEvent();
+  missionNavbarClickEvent();
 };
 
 
@@ -88,6 +117,7 @@ const logoutEvent = () => {
     sectorDiv.addClass('hide');
     enemyView.addClass('hide');
     mainDiv.removeClass('hide');
+    missionView.addClass('hide');
   });
 };
 

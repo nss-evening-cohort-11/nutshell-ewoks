@@ -4,5 +4,8 @@
   "weapons": "sarah",
   "personnel": "steve",
   "planetarySector": "kenny",
-  "enemies": "kenny"
+  "enemies": "kenny",
+  "missions": "monique",
+  "missionPersonnel": "monique",
+  "missionWeapons": "monique"
 }

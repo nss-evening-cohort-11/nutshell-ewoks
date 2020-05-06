@@ -1,0 +1,173 @@
+.delete-mission-personnel-btn {
+  display: none !important;
+  font-size: 30px;
+}
+
+.mission-delete-btn {
+  display: none !important;
+  font-size: 30px;
+}
+
+
+.edit-mission-personnel {
+  display: none !important;
+  font-size: 30px;
+}
+
+.edit-planetary-sector-btn {
+  display: none !important;
+  font-size: 30px;
+}
+
+.edit-mission-enemy-btn {
+  display: none !important;
+  font-size: 30px;
+}
+
+.dashboard-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 110%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: black;
+  color: white;
+  z-index: 999999;
+  text-align: center;
+  margin-top: -20px;
+}
+
+.dashboard-overlay .delete-mission-personnel-btn {
+  display: inline-block !important;
+  position: absolute;
+  left: 30%;
+  bottom: 30px;
+}
+.dashboard-overlay .mission-delete-btn {
+  display: inline-block !important;
+  position: absolute;
+  left: 20%;
+  bottom: 30px;
+}
+
+.dashboard-overlay .edit-mission-personnel {
+  display: inline-block !important;
+  position: absolute;
+  left: 10%;
+  bottom: 30px;
+}
+
+.dashboard-overlay .edit-planetary-sector-btn {
+  display: inline-block !important;
+  position: absolute;
+  left: 30%;
+  bottom: 30px;
+}
+
+.dashboard-overlay .edit-mission-enemy-btn {
+  display: inline-block !important;
+  position: absolute;
+  left: 40%;
+  bottom: 30px;
+}
+
+.profile-card-5:hover .dashboard-overlay {
+  opacity: 1;
+  backdrop-filter: blur(5px);
+}
+
+.edit-mission-personnel:hover {
+  color: red;
+}
+
+.delete-mission-personnel-btn:hover{
+  color: red;
+}
+
+.edit-mission-enemy-btn:hover{
+  color: red;
+}
+
+.edit-planetary-sector-btn:hover{
+  color: red;
+}
+.mission-delete-btn:hover{
+  color: red;
+}
+
+#weapon-add-btn-text {
+  border: 1px solid yellow;
+  display: none;
+  font-size: 10px;
+  margin-top: 10px;
+  padding: 5px;
+  text-transform: uppercase;
+  bottom: 20%;
+  width: 100%;
+  position: absolute;
+}
+
+#personnel-add-btn-text {
+  border: 1px solid yellow;
+  display: none;
+  font-size: 10px;
+  margin-top: 10px;
+  padding: 5px;
+  bottom: 20%;
+  width: 100%;
+  position: absolute;
+  text-transform: uppercase;
+}
+#enemy-edit-btn-text {
+  border: 1px solid yellow;
+  display: none;
+  font-size: 10px;
+  margin-top: 10px;
+  padding: 5px;
+  bottom: 20%;
+  width: 100%;
+  position: absolute;
+  text-transform: uppercase;
+}
+
+#planetary-edit-btn-text {
+  border: 1px solid yellow;
+  display: none;
+  font-size: 10px;
+  margin-top: 10px;
+  padding: 5px;
+  bottom: 20%;
+  width: 100%;
+  position: absolute;
+  text-transform: uppercase;
+}
+.mission-delete-btn {
+  border: 1px solid yellow;
+  display: none;
+  font-size: 10px;
+  margin-top: 10px;
+  padding: 5px;
+  bottom: 20%;
+  width: 100%;
+  position: absolute;
+  text-transform: uppercase;
+}
+#da-weapon-btn:hover #weapon-add-btn-text {
+  display: block;
+}
+
+#da-personnel-btn:hover #personnel-add-btn-text {
+  display: block;
+}
+
+#da-enemy-btn:hover #enemy-edit-btn-text {
+  display: block;
+}
+
+#da-planetary-btn:hover #planetary-edit-btn-text {
+  display: block;
+}
