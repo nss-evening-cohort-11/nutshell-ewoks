@@ -25,8 +25,8 @@ const updatePersonnel = (e) => {
     description: $('#edit-personnel-description').val(),
     personnelImageUrl: $('#edit-personnel-image').val(),
     occupationImageUrl: $('#edit-occupation-image').val(),
-    occupationTypeId: $('#occupation-btn').val(),
-    occupationName: $('#occupation-btn').val(),
+    occupationTypeId: $('#occupation-update-btn').find(':selected').val(),
+    occupationName: $('#occupation-update-btn').find(':selected').text(),
   };
   personnelData.updatePersonnel(personnelId, editedPersonnel).then(() => {
     $('#personnelEditModal').modal('hide');
@@ -72,10 +72,11 @@ const printPersonnel = () => {
   personnelData.getAllPersonnel()
     .then((personells) => {
       let domString = '';
+      const addPersonnelBut = firebase.auth().currentUser === null ? '' : '<i class="iconblue fas fa-2x fa-plus-circle"></i></button>';
       domString += '<div class="accordion" id="accordionExample">';
       domString += '<h2>';
       domString += '<button class="btn" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">';
-      domString += '<i class="iconblue fas fa-2x fa-plus-circle"></i></button>';
+      domString += `${addPersonnelBut}`;
       domString += '</h2>';
       domString += '</div>';
       domString += '<div id="collapseOne" class="collapse m-2" aria-labelledby="headingOne" data-parent="#accordionExample">';

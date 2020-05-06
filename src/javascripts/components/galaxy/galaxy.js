@@ -5,7 +5,6 @@ import utils from '../../helpers/utils';
 
 import smash from '../../helpers/data/smash';
 import dashboardCards from '../dashboardCards/dashboardCards';
-import addMissionPersonnel from '../addMissionPersonnel/addMissionPersonnelComponent';
 import editMission from '../editMission/editMissionForm';
 import missionData from '../../helpers/data/missionData';
 import newMissionComponent from '../Missions/createNewMission';
@@ -21,12 +20,6 @@ const missionDeleteEvent = (e) => {
     })
     // eslint-disable-next-line no-console
     .catch((err) => console.err('cannot remove mission', err));
-};
-
-const addMissionPersonnelEvent = (e) => {
-  e.preventDefault();
-  $('#addMissionPersonnelModal').modal('show');
-  addMissionPersonnel.showForm();
 };
 
 const editEnemyTargetEvent = (e) => {
@@ -79,8 +72,11 @@ const buildDashboard = () => {
   smash.getMissionsEverything()
     .then((missions) => {
       let domString = '';
-      domString += '<div class="d-flex flex-wrap">';
-      domString += '<div><button class="open-create-new-mission-form">Create New Mission</button></div>';
+      const addMissionBut = firebase.auth().currentUser === null ? '' : '<button class="btn"><i class="iconblue open-create-new-mission-form fas fa-2x fa-plus-circle"></i></button>';
+      domString += '<div class="text-center">';
+      domString += `${addMissionBut}`;
+      domString += '</div>';
+      domString += '<div class="d-flex flex-wrap justify-content-center">';
       missions.forEach((mission) => {
         domString += dashboardCards.printDashboard(mission);
       });
@@ -109,7 +105,6 @@ const submitNewMissionForm = (e) => {
 };
 
 const galaxyClickEvents = () => {
-  $('body').on('click', '.edit-mission-personnel', addMissionPersonnelEvent);
   $('body').on('click', '.edit-mission-enemy-btn', editEnemyTargetEvent);
   $('body').on('click', '.edit-enemy-btn-target', updateEnemyTarget);
   $('body').on('click', '.edit-planetary-sector-btn', editSectorEvent);

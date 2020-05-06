@@ -16,15 +16,22 @@
 @import '../javascripts/components/dashboardCards/dashboardCard';
 
 //enemy scss import below
-// @import '../javascripts/components/enemies/enemiesComponent';
-// @import '../javascripts/components/enemies/enemies';
-
 
 body {
   background-image: url(https://wallpapercave.com/wp/bV3WiYh.jpg);
   font-family: 'Pathway Gothic One', sans-serif;
 }
 
+#main-div {
+  background-image: url('https://i.imgur.com/DQl0eYt.jpg');
+  position: absolute;
+  opacity: 0.8;
+  height: 100%;
+  width: 100%;
+  background-position: contain;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 .hide {
   display: none;
