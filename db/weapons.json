@@ -3,133 +3,133 @@
 		"name": "AT-ST vehicles",
     "description": "These vehicles are used for planetary ground assaults.",
     "imageUrl":"https://i.ytimg.com/vi/d3jIn3po1bs/maxresdefault.jpg",
-    "uid": "m0DHTvlqUlT678jMxwk2MOFL4wM2",
+    "uid": "",
     "type_id":"weaponType1"
 	},
 	"weapon2": {
 		"name": "TIE Line Starfighters",
 		"description": "These vehicles are used in space and atmospheric combat.",
     "imageUrl":"http://4.bp.blogspot.com/-w1Ghbw4Mb5U/Ti8r33oVYBI/AAAAAAAAAGs/pCYfnaJWeVs/s320/x3dx_tie_render01.png",
-    "uid": "m0DHTvlqUlT678jMxwk2MOFL4wM2",
+    "uid": "",
     "type_id":"weaponType2"
 	},
 	"weapon3": {
 		"name": "Turbolaser",
 		"description": "Laser turrets that can be used for ship to ship combat or planetary bombardments.",
 		"imageUrl":"http://img1.wikia.nocookie.net/__cb20080722200705/starwars/images/e/e3/W-165_NEGWT.jpg",
-    "uid": "m0DHTvlqUlT678jMxwk2MOFL4wM2",
+    "uid": "",
     "type_id":"weaponType3"
 	},
 	"weapon4": {
 		"name": "Ion Cannon",
 		"description": "Ion cannons fire ionized particles capable of disrupting electronic systems",
     "imageUrl":"https://qph.fs.quoracdn.net/main-qimg-7bab2e570cce8515305900171e5ff309",
-    "uid": "m0DHTvlqUlT678jMxwk2MOFL4wM2",
+    "uid": "",
     "type_id":"weaponType4"
 	},
 	"weapon5": {
 		"name": "AT-AT CAT",
     "description": "These vehicles are used for planetary ground assaults.",
     "imageUrl":"https://i.pinimg.com/736x/ac/3b/b5/ac3bb5c34e4798dade0732849859367c--at-at-walker-boba-fett.jpg",
-    "uid": "m0DHTvlqUlT678jMxwk2MOFL4wM2",
+    "uid": "",
     "type_id":"weaponType1"
 	},
 	"weapon6": {
 		"name": "AT-ST BANDIA",
     "description": "These vehicles are used for planetary ground assaults.",
     "imageUrl":"https://www.gunjap.net/site/wp-content/uploads/2015/03/5Xs6aHf.jpg",
-    "uid": "m0DHTvlqUlT678jMxwk2MOFL4wM2",
+    "uid": "",
     "type_id":"weaponType1"
 	},
 	"weapon7": {
 		"name": "Tie-X",
 		"description": "These vehicles are used in space and atmospheric combat.",
     "imageUrl":"https://i.kinja-img.com/gawker-media/image/upload/t_original/xvatxdozgeeopqtmpghs.jpg",
-    "uid": "m0DHTvlqUlT678jMxwk2MOFL4wM2",
+    "uid": "",
     "type_id":"weaponType2"
 	},
 	"weapon8": {
 		"name": "TIE Line Varsity Superior",
 		"description": "These vehicles are used in space and atmospheric combat.",
     "imageUrl":"https://i.ytimg.com/vi/rlUEdVskwck/maxresdefault.jpg",
-    "uid": "m0DHTvlqUlT678jMxwk2MOFL4wM2",
+    "uid": "",
     "type_id":"weaponType2"
 	},
 	"weapon9": {
 		"name": "TIE Line Inferno Squad",
 		"description": "These vehicles are used in space and atmospheric combat.",
     "imageUrl":"http://fractalsponge.net/gallery/Starfighters/TIE%20Avenger/25.jpg",
-    "uid": "m0DHTvlqUlT678jMxwk2MOFL4wM2",
+    "uid": "",
     "type_id":"weaponType2"
 	},
 	"weapon10": {
 		"name": "Imperial Autonomous Turbolaser",
 		"description": "Laser turrets that can be used for ship to ship combat or planetary bombardments.",
 		"imageUrl":"https://farm2.staticflickr.com/1591/25486902240_b8da70914f_z.jpg",
-    "uid": "m0DHTvlqUlT678jMxwk2MOFL4wM2",
+    "uid": "",
     "type_id":"weaponType3"
 	},
 	"weapon11": {
 		"name": "3D Turbolaser",
 		"description": "Laser turrets that can be used for ship to ship combat or planetary bombardments.",
 		"imageUrl":"https://img2.cgtrader.com/items/780228/003bfce7b1/large/turbolaser-canon-3-3d-model-max-3ds.jpg",
-    "uid": "m0DHTvlqUlT678jMxwk2MOFL4wM2",
+    "uid": "",
     "type_id":"weaponType3"
 	},
 	"weapon12": {
 		"name": "X17 Turbolaser",
 		"description": "Laser turrets that can be used for ship to ship combat or planetary bombardments.",
 		"imageUrl":"http://www.stardestroyer.net/Empire/Tech/Beam/Turbolaser.jpg",
-    "uid": "m0DHTvlqUlT678jMxwk2MOFL4wM2",
+    "uid": "",
     "type_id":"weaponType3"
 	},
 	"weapon13": {
 		"name": "Zero Days Ion Cannon",
 		"description": "Ion cannons fire ionized particles capable of disrupting electronic systems",
     "imageUrl":"https://playzeroday.com/wp-content/uploads/2019/04/Ion-Model-second-01.png",
-    "uid": "m0DHTvlqUlT678jMxwk2MOFL4wM2",
+    "uid": "",
     "type_id":"weaponType4"
 	},
 	"weapon14": {
 		"name": "Merlin Personal Ion Cannon",
 		"description": "Ion cannons fire ionized particles capable of disrupting electronic systems",
     "imageUrl":"http://img1.wikia.nocookie.net/__cb20100418162400/cnc/images/c/c0/CNCR_Ion_Cannon_Render.png",
-    "uid": "m0DHTvlqUlT678jMxwk2MOFL4wM2",
+    "uid": "",
     "type_id":"weaponType4"
 	},
 	"weapon15": {
 		"name": "4Ever Icon Ion Cannon",
 		"description": "Ion cannons fire ionized particles capable of disrupting electronic systems",
     "imageUrl":"http://www.thechosenprime.com/assets/images/3rd%20party/4ever/ion%20cannon/4e-ion-cannon-05.jpg",
-    "uid": "m0DHTvlqUlT678jMxwk2MOFL4wM2",
+    "uid": "",
     "type_id":"weaponType4"
 	},
 	"weapon16": {
 		"name": "Front View Tractor Beam",
 		"description": "These projectors capture and/or divert space ships.",
 		"imageUrl":"https://cnet1.cbsistatic.com/img/wnMXpaDJZ5zb5xOCqxw_IScWtAI=/756x425/2016/09/23/d9f1798c-2bab-4e3c-8f56-c73be774d785/tractor1.jpg",
-    "uid": "m0DHTvlqUlT678jMxwk2MOFL4wM2",
+    "uid": "",
     "type_id":"weaponType5"
 	},
 	"weapon17": {
 		"name": "Damage view Tractor Beam",
 		"description": "These projectors capture and/or divert space ships.",
 		"imageUrl":"https://i.ytimg.com/vi/qmUeqRvW8kM/maxresdefault.jpg",
-    "uid": "m0DHTvlqUlT678jMxwk2MOFL4wM2",
+    "uid": "PShzVoAcz3b3FgSGIbQmOTJLCds1",
     "type_id":"weaponType5"
 	},
 	"weapon18": {
 		"name": "No Escape",
 		"description": "These projectors capture and/or divert space ships.",
 		"imageUrl":"https://i.ytimg.com/vi/gR7VIFmMv24/maxresdefault.jpg",
-    "uid": "m0DHTvlqUlT678jMxwk2MOFL4wM2",
+    "uid": "",
     "type_id":"weaponType5"
 	},
 	"weapon19": {
 		"name": "Tractor Beam",
 		"description": "These projectors capture and/or divert space ships.",
 		"imageUrl":"http://forcefields.net/wp-content/uploads/2016/02/Tractor_Beam.jpg",
-    "uid": "m0DHTvlqUlT678jMxwk2MOFL4wM2",
+    "uid": "",
     "type_id":"weaponType5"
 	}
 }
