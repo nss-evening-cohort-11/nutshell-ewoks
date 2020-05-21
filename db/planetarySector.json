@@ -4,20 +4,20 @@
 		"occupied": true,
 		"explored": true,
 		"imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSrH6vPYTZuBPKmfNv_eFV1IcNM0C7IiyLs6yKlvwj3sG31e9t5&usqp=CAU",
-		"uid": "uI3mh4ppBiYkppaaq8v04g4yGnH2"
+		"uid": "PShzVoAcz3b3FgSGIbQmOTJLCds1"
 	},
 	"sector2": {
 		"name": "Sector 8377.14.678",
 		"occupied": false,
 		"explored": true,
 		"imageUrl": "https://vignette.wikia.nocookie.net/starwars/images/6/66/The_Galaxy_-_TROS_Visual_Dictionary.png/revision/latest?cb=20200102070639",
-		"uid": "uI3mh4ppBiYkppaaq8v04g4yGnH2"
+		"uid": ""
 	},
 	"sector3": {
 		"name": "Sector 3628.56.625",
 		"occupied": false,
 		"explored": false,
 		"imageUrl": "https://vignette.wikia.nocookie.net/starwars/images/2/20/Starmap2.jpg/revision/latest/top-crop/width/360/height/450?cb=20080206211312",
-		"uid": "uI3mh4ppBiYkppaaq8v04g4yGnH2"
+		"uid": ""
 	}
 }
