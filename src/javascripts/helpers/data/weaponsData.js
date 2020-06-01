@@ -8,10 +8,12 @@ const getWeapons = () => new Promise((resolve, reject) => {
     .then((response) => {
       const myAttack = response.data;
       const weapon = [];
-      Object.keys(myAttack).forEach((weaponId) => {
-        myAttack[weaponId].id = weaponId;
-        weapon.push(myAttack[weaponId]);
-      });
+      if (myAttack !== null) {
+        Object.keys(myAttack).forEach((weaponId) => {
+          myAttack[weaponId].id = weaponId;
+          weapon.push(myAttack[weaponId]);
+        });
+      }
       resolve(weapon);
     })
     .catch((err) => reject(err));

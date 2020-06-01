@@ -8,10 +8,12 @@ const getMissionWeapons = () => new Promise((resolve, reject) => {
     .then((response) => {
       const myMissionWeapons = response.data;
       const missionWeapons = [];
-      Object.keys(myMissionWeapons).forEach((missionWeaponsId) => {
-        myMissionWeapons[missionWeaponsId].id = missionWeaponsId;
-        missionWeapons.push(myMissionWeapons[missionWeaponsId]);
-      });
+      if (myMissionWeapons !== null) {
+        Object.keys(myMissionWeapons).forEach((missionWeaponsId) => {
+          myMissionWeapons[missionWeaponsId].id = missionWeaponsId;
+          missionWeapons.push(myMissionWeapons[missionWeaponsId]);
+        });
+      }
       resolve(missionWeapons);
     })
     .catch((err) => reject(err));

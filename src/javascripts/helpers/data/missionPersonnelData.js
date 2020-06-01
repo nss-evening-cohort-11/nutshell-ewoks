@@ -8,10 +8,12 @@ const getMissionPersonnel = () => new Promise((resolve, reject) => {
     .then((response) => {
       const myMissionPersonnel = response.data;
       const missionPersonnel = [];
-      Object.keys(myMissionPersonnel).forEach((missionPersonnelId) => {
-        myMissionPersonnel[missionPersonnelId].id = missionPersonnelId;
-        missionPersonnel.push(myMissionPersonnel[missionPersonnelId]);
-      });
+      if (myMissionPersonnel !== null) {
+        Object.keys(myMissionPersonnel).forEach((missionPersonnelId) => {
+          myMissionPersonnel[missionPersonnelId].id = missionPersonnelId;
+          missionPersonnel.push(myMissionPersonnel[missionPersonnelId]);
+        });
+      }
       resolve(missionPersonnel);
     })
     .catch((err) => reject(err));
