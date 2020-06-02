@@ -9,11 +9,12 @@ const getSectors = () => new Promise((resolve, reject) => {
     .then((response) => {
       const theSectors = response.data;
       const sectors = [];
-
-      Object.keys(theSectors).forEach((sectorId) => {
-        theSectors[sectorId].id = sectorId;
-        sectors.push(theSectors[sectorId]);
-      });
+      if (theSectors !== null) {
+        Object.keys(theSectors).forEach((sectorId) => {
+          theSectors[sectorId].id = sectorId;
+          sectors.push(theSectors[sectorId]);
+        });
+      }
       resolve(sectors);
     })
     .catch((err) => reject(err));

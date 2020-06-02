@@ -35,7 +35,7 @@ const showForm = (personnelId) => {
             if (type.id === personnel.occupationTypeId) {
               domString += `<option value=${type.id} selected>${type.name}</option>`;
             } else {
-              domString += `<option value=${type.id}>${type.name}</option>`;
+              domString += `<option value=${type.id} selected>${type.name}</option>`;
             }
           });
           domString += '</select>';

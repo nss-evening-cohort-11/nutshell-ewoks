@@ -8,7 +8,7 @@ const getAllEnemies = () => new Promise((resolve, reject) => {
     .then((response) => {
       const demEnemies = response.data;
       const enemies = [];
-      if (demEnemies) {
+      if (demEnemies !== null) {
         Object.keys(demEnemies).forEach((enemiesId) => {
           demEnemies[enemiesId].id = enemiesId;
           enemies.push(demEnemies[enemiesId]);
@@ -26,7 +26,6 @@ const addEnemy = (newEnemies) => axios.post(`${baseUrl}/enemies.json`, newEnemie
 const getSingleEnemy = (enemiesId) => axios.get(`${baseUrl}/enemies/${enemiesId}.json`);
 
 const updateEnemy = (enemiesId, updateEnemies) => axios.put(`${baseUrl}/enemies/${enemiesId}.json`, updateEnemies);
-
 
 export default {
   getAllEnemies,

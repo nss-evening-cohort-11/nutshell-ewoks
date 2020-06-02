@@ -8,7 +8,7 @@ const getAllPersonnel = () => new Promise((resolve, reject) => {
     .then((response) => {
       const thePersonnel = response.data;
       const personnel = [];
-      if (thePersonnel) {
+      if (thePersonnel !== null) {
         Object.keys(thePersonnel).forEach((personnelId) => {
           thePersonnel[personnelId].id = personnelId;
           personnel.push(thePersonnel[personnelId]);

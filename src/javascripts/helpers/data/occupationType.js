@@ -9,7 +9,7 @@ const getOccupationTypes = () => new Promise((resolve, reject) => {
     .then((response) => {
       const theOccupation = response.data;
       const occupation = [];
-      if (theOccupation) {
+      if (theOccupation !== null) {
         Object.keys(theOccupation).forEach((occupationTypeId) => {
           theOccupation[occupationTypeId].id = occupationTypeId;
           occupation.push(theOccupation[occupationTypeId]);
