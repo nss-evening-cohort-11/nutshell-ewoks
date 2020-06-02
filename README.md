@@ -1,7 +1,10 @@
 # Star Destroyer
 
 ## Description
-This project showcases the use of firebase and json data. We used firebase to store our data. We used axios promises to retrieve the data capturing the response.
+
+A project that features all missions, personnel, weapons, enemies, and sectors in our very own Star Wars galaxy. Users are able to create a mission. As well as edit the mission planetery sector and enemy target. Users can also add personnel and weapons for their missions.
+
+This project features the use of firebase and json data. We used firebase to store our data. We used axios promises to retrieve the data.
 
 ### Feature List
 - Google Login Button with Firebase
