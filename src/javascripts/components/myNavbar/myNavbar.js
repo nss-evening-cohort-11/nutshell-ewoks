@@ -31,6 +31,7 @@ const sectorsNavbarClickEvent = () => {
     mainDiv.addClass('hide');
     enemyView.addClass('hide');
     missionView.addClass('hide');
+    galaxyView.addClass('hide');
   });
 };
 

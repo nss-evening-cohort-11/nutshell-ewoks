@@ -3,37 +3,37 @@
     "name": "Officer",
     "description": "Commissioned military class responsible for authority and command.",
     "imageUrl": "https://vignette.wikia.nocookie.net/starwars/images/d/d6/AdmiralOzzel-bodyshot.png/revision/latest/scale-to-width-down/232?cb=20141113205943",
-    "uid": "AIzaSyCV2O2onURVROTbY9qotpDJIrGqVH6l00Q"
+    "uid": "PShzVoAcz3b3FgSGIbQmOTJLCds1"
   },
   "occupationType2": {
     "name": "Engineer",
     "description": "Imperial engineers are the repairman units for the Empire.",
     "imageUrl": "https://vignette.wikia.nocookie.net/starwars/images/4/4a/Battlefield_engineers_TCG.JPG/revision/latest/scale-to-width-down/340?cb=20130701090011",
-    "uid": "AIzaSyCV2O2onURVROTbY9qotpDJIrGqVH6l00Q"
+    "uid": ""
   },
   "occupationType3": {
     "name": "Medical",
     "description": "A type of soldier and officer attached to the Galactic Empire's ground and naval forces that has specialized medical training.",
     "imageUrl": "https://vignette.wikia.nocookie.net/starwars/images/d/df/Vaccination.png/revision/latest/scale-to-width-down/350?cb=20130321221117",
-    "uid": "AIzaSyCV2O2onURVROTbY9qotpDJIrGqVH6l00Q"
+    "uid": ""
   },
   "occupationType4": {
     "name": "Security",
     "description": "A law-enforcement and intelligence agency of the Galactic Empire charged with matters of internal state security and ensuring the loyalty of citizens.",
     "imageUrl": "https://vignette.wikia.nocookie.net/starwars/images/8/8d/Orson_Krennic_RO.png/revision/latest/scale-to-width-down/500?cb=20170127054235",
-    "uid": "AIzaSyCV2O2onURVROTbY9qotpDJIrGqVH6l00Q"
+    "uid": ""
   },
   "occupationType5": {
     "name": "Technician",
     "description": "Imperial weapons technicians, also known as Imperial gunners, operate turbolasers and ion cannons of capital ships and military bases.",
     "imageUrl": "https://vignette.wikia.nocookie.net/starwars/images/7/70/Imperial_weapons_technician.png/revision/latest/scale-to-width-down/211?cb=20170508044222",
-    "uid": "AIzaSyCV2O2onURVROTbY9qotpDJIrGqVH6l00Q"
+    "uid": ""
   },
   "occupationType6": {
     "name": "Stormtrooper",
     "description": "Stormtroopers serve as frontline assault forces and form the backbone of the Imperial Military.",
     "imageUrl": "https://vignette.wikia.nocookie.net/starwars/images/c/ca/Anovos_Stormtrooper.png/revision/latest/scale-to-width-down/500?cb=20160407220950",
-    "uid": "AIzaSyCV2O2onURVROTbY9qotpDJIrGqVH6l00Q"
+    "uid": ""
   }
 }
    
